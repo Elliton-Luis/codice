@@ -10,17 +10,25 @@
     <div class="container">
         <header>
             <h1>Quiz Bíblico Católico</h1>
-            <div class="timer">
+            <div class="timer hidden">
                 Tempo: <span id="cronometer-display">60s</span>
             </div>
-            <div class="score">
+            <div class="score hidden">
                 Acertos: <span id="correct-score">0</span> | Erros: <span id="incorrect-score">0</span>
             </div>
         </header>
         <main>
-            <div id="quiz-card" class="quiz-card">
+            <div id="difficulty-selection" class="difficulty-selection">
+                <p class="selection-prompt">Escolha o nível de dificuldade:</p>
+                <button class="button difficulty-btn" data-difficulty="EASY">Fácil</button>
+                <button class="button difficulty-btn" data-difficulty="MEDIUM">Médio</button>
+                <button class="button difficulty-btn" data-difficulty="HARD">Difícil</button>
+            </div>
+
+            <div id="quiz-card" class="quiz-card hidden">
                 <p id="question-text" class="question-text"></p>
                 <div id="alternatives-container" class="alternatives-container">
+                    <!-- Alternatives will be loaded here by JavaScript -->
                 </div>
                 <div id="feedback-container" class="feedback-container hidden">
                     <p id="feedback-message" class="feedback-message"></p>

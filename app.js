@@ -12,8 +12,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const loadingMessage = document.getElementById('loading-message');
     const quizCard = document.getElementById('quiz-card');
     const cronometerDisplay = document.getElementById('cronometer-display');
+    const difficultySelection = document.getElementById('difficulty-selection');
+    const difficultyButtons = document.querySelectorAll('.difficulty-btn');
+    const timerElement = document.querySelector('.timer');
+    const scoreElement = document.querySelector('.score');
 
-    let questions = [];
+    let allQuestions = []; // Store all questions loaded from the file
+    let questions = []; // Questions for the current difficulty
     let currentQuestionIndex = 0;
     let answeredQuestions = new Set(); // To avoid immediate repetition
     let correctScore = 0;
@@ -21,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let timeLeft = 60; // Initial time in seconds
     let timerInterval;
     let gameOver = false;
+    let selectedDifficulty = '';
 
     // Function to shuffle an array
     function shuffleArray(array) {
@@ -31,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return array;
     }
 
-    async function loadQuestions() {
+    async function loadAllQuestions() {
         try {
             const response = await fetch('questions.txt');
             if (!response.ok) {
@@ -39,25 +45,38 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             const text = await response.text();
             const lines = text.split('\n').filter(line => line.trim() !== '');
-            questions = lines.map(line => {
+            allQuestions = lines.map(line => {
                 const parts = line.split(' | ');
                 return {
                     question: parts[0],
                     alternatives: [parts[1], parts[2], parts[3], parts[4]],
                     correctAnswerIndex: parseInt(parts[5]),
                     explanation: parts[6],
-                    reference: parts[7]
+                    reference: parts[7],
+                    difficulty: parts[8].trim()
                 };
             });
-            quizCard.classList.remove('hidden');
             loadingMessage.classList.add('hidden');
-            startCronometer();
-            displayRandomQuestion();
+            difficultySelection.classList.remove('hidden'); // Show difficulty selection
         } catch (error) {
             console.error('Erro ao carregar perguntas:', error);
             questionTextElement.textContent = 'Erro ao carregar as perguntas. Por favor, tente novamente mais tarde.';
             loadingMessage.classList.add('hidden');
         }
+    }
+
+    function selectDifficulty(difficulty) {
+        selectedDifficulty = difficulty;
+        questions = allQuestions.filter(q => q.difficulty === difficulty);
+        shuffleArray(questions); // Shuffle questions for the selected difficulty
+
+        difficultySelection.classList.add('hidden');
+        quizCard.classList.remove('hidden');
+        timerElement.classList.remove('hidden');
+        scoreElement.classList.remove('hidden');
+
+        startCronometer();
+        displayRandomQuestion();
     }
 
     function startCronometer() {
@@ -96,25 +115,25 @@ document.addEventListener('DOMContentLoaded', () => {
                     <p class="game-over-result ${correctScore >= (2 * incorrectScore) ? 'win' : 'lose'}">
                         ${correctScore >= (2 * incorrectScore) ? 'Você Venceu!' : 'Você Perdeu!'}
                     </p>
+                    <button id="restart-btn" class="button">Jogar Novamente</button>
                 </div>
             </main>
         `;
+        document.getElementById('restart-btn').addEventListener('click', () => location.reload());
     }
 
     function displayRandomQuestion() {
-        if (gameOver) return;
-
-        if (questions.length === 0) {
-            questionTextElement.textContent = 'Nenhuma pergunta disponível.';
+        if (gameOver || questions.length === 0) {
             return;
         }
 
         let availableQuestions = questions.filter((_, index) => !answeredQuestions.has(index));
 
         if (availableQuestions.length === 0) {
-            // All questions have been answered, reset and reshuffle
+            // All questions for the current difficulty have been answered, reset and reshuffle
             answeredQuestions.clear();
             availableQuestions = questions;
+            shuffleArray(availableQuestions);
         }
 
         const randomIndex = Math.floor(Math.random() * availableQuestions.length);
@@ -188,7 +207,17 @@ document.addEventListener('DOMContentLoaded', () => {
         displayRandomQuestion();
     });
 
+    // Event listeners for difficulty selection buttons
+    difficultyButtons.forEach(button => {
+        button.addEventListener('click', (event) => {
+            selectDifficulty(event.target.dataset.difficulty);
+        });
+    });
+
     // Initial load
     quizCard.classList.add('hidden'); // Hide quiz until questions are loaded
-    loadQuestions();
+    timerElement.classList.add('hidden');
+    scoreElement.classList.add('hidden');
+    difficultySelection.classList.add('hidden'); // Hide difficulty until questions are loaded
+    loadAllQuestions();
 });

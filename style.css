@@ -60,6 +60,35 @@ header h1 {
     font-weight: bold;
 }
 
+.difficulty-selection {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.selection-prompt {
+    font-size: 1.4em;
+    color: var(--color-dark-brown);
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.difficulty-btn {
+    width: 60%;
+    max-width: 300px; /* Limit button width on larger screens */
+    padding: 15px 20px;
+    font-size: 1.2em;
+    background-color: var(--color-gold);
+    color: white;
+    border: 1px solid var(--color-brown);
+}
+
+.difficulty-btn:hover {
+    background-color: #c09d30; /* Darker gold on hover */
+}
+
 .game-over-container {
     background-color: var(--color-cream);
     border: 1px solid var(--color-gold);
