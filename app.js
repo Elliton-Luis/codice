@@ -184,6 +184,7 @@ document.addEventListener('DOMContentLoaded', () => {
             feedbackMessage.classList.remove('incorrect');
             feedbackMessage.classList.add('correct');
             correctScore++;
+            addBonusTime();
         } else {
             selectedButton.classList.add('incorrect');
             incorrectScore++;
@@ -209,6 +210,32 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateScoreDisplay() {
         correctScoreSpan.textContent = correctScore;
         incorrectScoreSpan.textContent = incorrectScore;
+    }
+
+    function addBonusTime() {
+        if (gameOver) return;
+        let bonus = 0;
+        if (hardcoreMode) {
+            if (correctScore > 0 && correctScore % 5 === 0) {
+                bonus = 3;
+            }
+        } else {
+            switch (selectedDifficulty) {
+                case 'EASY':
+                    bonus = 3;
+                    break;
+                case 'MEDIUM':
+                    bonus = 2;
+                    break;
+                case 'HARD':
+                    bonus = 1;
+                    break;
+            }
+        }
+        if (bonus > 0) {
+            timeLeft += bonus;
+            cronometerDisplay.textContent = `${timeLeft}s`;
+        }
     }
 
     nextQuestionBtn.addEventListener('click', () => {
