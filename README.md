@@ -1,4 +1,6 @@
-# Quiz Teológico e Bíblico - https://codice-mu.vercel.app/
+# Quiz Teológico e Bíblico 
+
+**[Clique aqui para jogar a versão ao vivo!](https://codice-mu.vercel.app/)**
 
 Um projeto focado em testar e expandir o conhecimento bíblico e teológico através de uma plataforma interativa. O jogo conta com perguntas de diferentes níveis de dificuldade e modos de jogo dinâmicos para desafiar a precisão e a velocidade do jogador.
 
@@ -23,7 +25,7 @@ Abaixo está o rastreamento de tudo o que já foi validado e o que está planeja
   - A cada 5 questões **Hard**: +3 segundos (foco em pressão e conhecimento).
 - [X] **Tempo de Leitura** - enquanto a explicação o tempo é parado, exceto no hardcore
 - [X] Criar parte de **Ajuda**
-- [] **Visual** - Ajeitar Grid de Questões 
+- [X] **Visual** - Ajeitar Grid de Questões 
 - [ ] **Migração de Stack:** Refatoração do frontend para **React** e construção da API REST com **FastAPI**.
 - [ ] **Integração de Banco de Dados:** Implementação do **SQLite** para armazenar e servir as perguntas, substituindo os dados estáticos em código.
 - [ ] **Sistema de Pontuação:** Multiplicadores baseados na dificuldade da questão e velocidade de resposta.
