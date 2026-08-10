@@ -516,6 +516,34 @@ document.addEventListener('DOMContentLoaded', () => {
         difficultySelection.classList.remove('hidden');
     });
 
+    // Reset stats with confirmation modal
+    const resetStatsBtn = document.getElementById('reset-stats-btn');
+    const resetModal = document.getElementById('reset-modal');
+    const resetCancelBtn = document.getElementById('reset-cancel-btn');
+    const resetConfirmBtn = document.getElementById('reset-confirm-btn');
+
+    resetStatsBtn.addEventListener('click', () => {
+        resetModal.classList.remove('hidden');
+    });
+
+    resetCancelBtn.addEventListener('click', () => {
+        resetModal.classList.add('hidden');
+    });
+
+    resetModal.addEventListener('click', (event) => {
+        if (event.target === resetModal) {
+            resetModal.classList.add('hidden');
+        }
+    });
+
+    resetConfirmBtn.addEventListener('click', () => {
+        localStorage.removeItem(WINSTREAKS_KEY);
+        localStorage.removeItem(STATS_KEY);
+        resetModal.classList.add('hidden');
+        displayStatsScreen();
+        updateDifficultyRecords();
+    });
+
     // Initial load
     quizCard.classList.add('hidden'); // Hide quiz until questions are loaded
     timerElement.classList.add('hidden');

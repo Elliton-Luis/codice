@@ -79,6 +79,7 @@
                         <tbody id="stats-table-body"></tbody>
                     </table>
                 </div>
+                <button id="reset-stats-btn" class="button reset-stats-btn">Zerar Tudo</button>
                 <button id="stats-back-btn" class="button">Voltar ao Início</button>
             </div>
 
@@ -102,6 +103,16 @@
                 Carregando perguntas...
             </div>
         </main>
+    </div>
+    <div id="reset-modal" class="modal-overlay hidden">
+        <div class="modal-box">
+            <h2 class="modal-title">Zerar Estatísticas</h2>
+            <p class="modal-text">Essa ação não pode ser desfeita, ao clicar aqui você perde todos os seus dados.</p>
+            <div class="modal-buttons">
+                <button id="reset-cancel-btn" class="button button-secondary">Cancelar</button>
+                <button id="reset-confirm-btn" class="button reset-confirm-btn">Zerar Tudo</button>
+            </div>
+        </div>
     </div>
     <script src="app.js"></script>
 </body>
