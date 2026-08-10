@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let timerInterval;
     let gameOver = false;
     let selectedDifficulty = '';
+    let hardcoreMode = false;
 
     // Function to shuffle an array
     function shuffleArray(array) {
@@ -65,9 +66,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    function selectDifficulty(difficulty) {
+    function selectDifficulty(difficulty, hardcore = false) {
         selectedDifficulty = difficulty;
-        questions = allQuestions.filter(q => q.difficulty === difficulty);
+        hardcoreMode = hardcore;
+        questions = allQuestions.filter(q => q.difficulty === (hardcore ? 'HARD' : difficulty));
         shuffleArray(questions); // Shuffle questions for the selected difficulty
 
         difficultySelection.classList.add('hidden');
@@ -184,10 +186,15 @@ document.addEventListener('DOMContentLoaded', () => {
             correctScore++;
         } else {
             selectedButton.classList.add('incorrect');
+            incorrectScore++;
+            updateScoreDisplay();
+            if (hardcoreMode) {
+                endGame(true);
+                return;
+            }
             feedbackMessage.textContent = 'Incorreto!';
             feedbackMessage.classList.remove('correct');
             feedbackMessage.classList.add('incorrect');
-            incorrectScore++;
         }
         updateScoreDisplay();
 
@@ -218,7 +225,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Event listeners for difficulty selection buttons
     difficultyButtons.forEach(button => {
         button.addEventListener('click', (event) => {
-            selectDifficulty(event.target.dataset.difficulty);
+            const clickedButton = event.target.closest('.difficulty-btn') || event.target;
+            selectDifficulty(clickedButton.dataset.difficulty, clickedButton.dataset.hardcore === 'true');
         });
     });
 
