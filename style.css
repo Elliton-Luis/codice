@@ -119,35 +119,36 @@ header h1 {
 }
 
 .easy-btn {
-    background-color: var(--color-gold);
+    background-color: #05309d; /* Light yellow */
+    color: var(--color-dark-brown);
 }
 
 .medium-btn {
-    background-color: #B87333; /* Copper */
+    background-color: #E76F51; /* Orange */
 }
 
 .hard-btn {
-    background-color: var(--color-wine);
+    background-color: #D62828; /* Light red */
 }
 
 .hardcore-btn {
-    background-color: var(--color-error);
+    background-color: var(--color-wine); /* Dark red (wine) */
 }
 
 .easy-btn:hover {
-    background-color: #c09d30; /* Darker gold on hover */
+    background-color: #D9B64A; /* Darker yellow on hover */
 }
 
 .medium-btn:hover {
-    background-color: #9a5f2a; /* Darker copper on hover */
+    background-color: #CF5E3F; /* Darker orange on hover */
 }
 
 .hard-btn:hover {
-    background-color: #6a001a; /* Darker wine on hover */
+    background-color: #B51F1F; /* Darker red on hover */
 }
 
 .hardcore-btn:hover {
-    background-color: #a52833; /* Darker red on hover */
+    background-color: #6a001a; /* Darker wine on hover */
 }
 
 .help-btn {
@@ -156,12 +157,12 @@ header h1 {
     width: auto;
     min-width: 220px;
     margin-top: 10px;
-    background-color: var(--color-brown);
+    background-color: #B08968; /* Medium-light brown */
     border: 1px solid var(--color-brown);
 }
 
 .help-btn:hover {
-    background-color: var(--color-dark-brown);
+    background-color: #97744F; /* Darker medium-light brown on hover */
 }
 
 .help-screen {
