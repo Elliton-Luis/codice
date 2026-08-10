@@ -95,13 +95,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 1000);
     }
 
-    function endGame() {
+    function endGame(forcedLoss = false) {
+        clearInterval(timerInterval);
         gameOver = true;
         quizCard.classList.add('hidden'); // Hide the quiz card
-        displayGameOverScreen();
+        displayGameOverScreen(forcedLoss);
     }
 
-    function displayGameOverScreen() {
+    function displayGameOverScreen(forcedLoss = false) {
+        const lost = forcedLoss || correctScore < (2 * incorrectScore);
         const gameContainer = document.querySelector('.container');
         gameContainer.innerHTML = `
             <header>
@@ -112,8 +114,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     <p class="game-over-message">Fim do Jogo!</p>
                     <p class="game-over-summary">Acertos: ${correctScore}</p>
                     <p class="game-over-summary">Erros: ${incorrectScore}</p>
-                    <p class="game-over-result ${correctScore >= (2 * incorrectScore) ? 'win' : 'lose'}">
-                        ${correctScore >= (2 * incorrectScore) ? 'Você Venceu!' : 'Você Perdeu!'}
+                    <p class="game-over-result ${lost ? 'lose' : 'win'}">
+                        ${lost ? 'Você Perdeu!' : 'Você Venceu!'}
                     </p>
                     <button id="restart-btn" class="button">Jogar Novamente</button>
                 </div>
@@ -205,6 +207,12 @@ document.addEventListener('DOMContentLoaded', () => {
     nextQuestionBtn.addEventListener('click', () => {
         if (gameOver) return;
         displayRandomQuestion();
+    });
+
+    const giveUpBtn = document.getElementById('give-up-btn');
+    giveUpBtn.addEventListener('click', () => {
+        if (gameOver) return;
+        endGame(true);
     });
 
     // Event listeners for difficulty selection buttons
