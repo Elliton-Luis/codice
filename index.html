@@ -119,42 +119,50 @@
     </div>
     <div id="print-area" class="print-area">
         <div class="print-card">
-            <h1 class="print-title">Quiz Bíblico Católico</h1>
-            <p class="print-subtitle">Minhas Estatísticas de Jogo</p>
-            <div class="print-summary">
-                <div class="print-stat">
-                    <span class="print-stat-value" id="print-total-answered">0</span>
-                    <span class="print-stat-label">Questões Respondidas</span>
+            <div class="print-inner">
+                <div class="print-ornament">✝</div>
+                <h1 class="print-title">Quiz Bíblico Católico</h1>
+                <p class="print-subtitle">Minhas Estatísticas de Jogo</p>
+                <div class="print-divider">
+                    <span class="print-divider-line"></span>
+                    <span class="print-divider-diamond">◆</span>
+                    <span class="print-divider-line"></span>
                 </div>
-                <div class="print-stat">
-                    <span class="print-stat-value" id="print-total-correct">0</span>
-                    <span class="print-stat-label">Acertos</span>
+                <div class="print-summary">
+                    <div class="print-stat">
+                        <span class="print-stat-value" id="print-total-answered">0</span>
+                        <span class="print-stat-label">Questões Respondidas</span>
+                    </div>
+                    <div class="print-stat">
+                        <span class="print-stat-value" id="print-total-correct">0</span>
+                        <span class="print-stat-label">Acertos</span>
+                    </div>
+                    <div class="print-stat">
+                        <span class="print-stat-value" id="print-hit-rate">0%</span>
+                        <span class="print-stat-label">Aproveitamento</span>
+                    </div>
+                    <div class="print-stat">
+                        <span class="print-stat-value" id="print-max-streak">0</span>
+                        <span class="print-stat-label">Maior Winstreak</span>
+                    </div>
                 </div>
-                <div class="print-stat">
-                    <span class="print-stat-value" id="print-hit-rate">0%</span>
-                    <span class="print-stat-label">Aproveitamento</span>
+                <table class="print-table">
+                    <thead>
+                        <tr><th>Nível</th><th>Respondidas</th><th>Acertos</th><th>Aproveitamento</th></tr>
+                    </thead>
+                    <tbody id="print-table-body"></tbody>
+                </table>
+                <div class="print-quote">
+                    <p class="print-quote-text">"A Sagrada Escritura ensina firmemente com sua verdade eterna, deleita docemente com sua suavidade e move eficazmente com sua autoridade."</p>
+                    <p class="print-quote-author">— São Tomás de Aquino</p>
                 </div>
-                <div class="print-stat">
-                    <span class="print-stat-value" id="print-max-streak">0</span>
-                    <span class="print-stat-label">Maior Winstreak</span>
+                <div class="print-footer">
+                    <p>Quiz Bíblico Católico · <span id="print-date"></span></p>
                 </div>
-            </div>
-            <table class="print-table">
-                <thead>
-                    <tr><th>Nível</th><th>Respondidas</th><th>Acertos</th><th>Aproveitamento</th></tr>
-                </thead>
-                <tbody id="print-table-body"></tbody>
-            </table>
-            <div class="print-quote">
-                <p class="print-quote-text">"Continue sempre estudando a Bíblia, ela é a fonte da Verdade e meio da revelação da graça Divina."</p>
-                <p class="print-quote-secondary">"A Sagrada Escritura ensina firmemente com sua verdade eterna, deleita docemente com sua suavidade e move eficazmente com sua autoridade."</p>
-                <p class="print-quote-author">— São Tomás de Aquino</p>
-            </div>
-            <div class="print-footer">
-                <p>Quiz Bíblico Católico · <span id="print-date"></span></p>
             </div>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
     <script src="app.js"></script>
 </body>
 </html>

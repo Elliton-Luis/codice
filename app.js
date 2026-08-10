@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const printHitRateElement = document.getElementById('print-hit-rate');
     const printMaxStreakElement = document.getElementById('print-max-streak');
     const printDateElement = document.getElementById('print-date');
+    const printAreaElement = document.getElementById('print-area');
 
     let allQuestions = []; // Store all questions loaded from the file
     let questions = []; // Questions for the current difficulty
@@ -542,12 +543,32 @@ document.addEventListener('DOMContentLoaded', () => {
         difficultySelection.classList.remove('hidden');
     });
 
-    // Export results via print (save as PDF)
+    // Export results as a downloadable image
     const exportBtn = document.getElementById('export-btn');
     exportBtn.addEventListener('click', () => {
         fillPrintArea();
-        window.print();
+        exportAsImage();
     });
+
+    function exportAsImage() {
+        if (typeof html2canvas === 'undefined') {
+            alert('Não foi possível gerar a imagem. Verifique sua conexão com a internet.');
+            return;
+        }
+        html2canvas(printAreaElement, {
+            backgroundColor: null,
+            scale: 2,
+            useCORS: true,
+            logging: false
+        }).then(canvas => {
+            const link = document.createElement('a');
+            link.download = 'quiz-biblia-estatisticas.png';
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        }).catch(() => {
+            alert('Não foi possível gerar a imagem.');
+        });
+    }
 
     // Reset stats with confirmation modal
     const resetStatsBtn = document.getElementById('reset-stats-btn');

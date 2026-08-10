@@ -659,65 +659,99 @@ header h1 {
     background-color: #1e7e34;
 }
 
-/* Printable export card (hidden on screen, shown only when printing) */
+/* Export image card (always rendered off-screen, captured by html2canvas) */
 .print-area {
-    display: none;
+    position: absolute;
+    left: -9999px;
+    top: 0;
 }
 
 .print-card {
-    background-color: #fff;
+    width: 720px;
+    background: linear-gradient(160deg, #2b0a10 0%, #4a1119 45%, #301015 100%);
     border: 3px double var(--color-gold);
-    border-radius: 10px;
-    padding: 45px 40px;
-    max-width: 720px;
-    margin: 0 auto;
+    border-radius: 14px;
+    padding: 12px;
     text-align: center;
     font-family: 'Georgia', serif;
-    color: var(--color-dark-brown);
+    color: var(--color-cream);
+}
+
+.print-inner {
+    border: 1px solid rgba(212, 175, 55, 0.55);
+    border-radius: 10px;
+    padding: 40px 42px;
+}
+
+.print-ornament {
+    font-size: 2.4em;
+    color: var(--color-gold);
+    line-height: 1;
+    margin-bottom: 12px;
 }
 
 .print-title {
-    color: var(--color-wine);
-    font-size: 2.4em;
-    letter-spacing: 1px;
-    margin: 0 0 6px;
+    color: var(--color-gold);
+    font-size: 2.6em;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin: 0 0 8px;
 }
 
 .print-subtitle {
-    color: var(--color-brown);
+    color: #f7e6bf;
     font-style: italic;
-    font-size: 1.15em;
-    margin: 0 0 30px;
+    font-size: 1.25em;
+    margin: 0 0 24px;
+}
+
+.print-divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0 0 28px;
+}
+
+.print-divider-line {
+    flex: 1;
+    height: 1px;
+    background: var(--color-gold);
+    opacity: 0.6;
+}
+
+.print-divider-diamond {
+    color: var(--color-gold);
+    font-size: 0.8em;
 }
 
 .print-summary {
     display: flex;
     justify-content: center;
-    gap: 12px;
-    flex-wrap: wrap;
-    margin-bottom: 30px;
+    gap: 14px;
+    margin-bottom: 28px;
 }
 
 .print-stat {
-    border: 1.5px solid var(--color-gold);
+    border: 2px solid rgba(212, 175, 55, 0.85);
     border-radius: 10px;
-    padding: 14px 22px;
-    min-width: 130px;
+    padding: 18px 24px;
+    min-width: 138px;
+    background: rgba(255, 255, 255, 0.05);
 }
 
 .print-stat-value {
     display: block;
-    font-size: 2em;
+    font-size: 2.6em;
     font-weight: bold;
-    color: var(--color-wine);
+    color: var(--color-gold);
     line-height: 1.1;
 }
 
 .print-stat-label {
     display: block;
-    font-size: 0.75em;
-    color: var(--color-brown);
-    margin-top: 6px;
+    font-size: 0.78em;
+    color: #f7e6bf;
+    margin-top: 8px;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -725,79 +759,56 @@ header h1 {
 .print-table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 30px;
+    margin-bottom: 28px;
 }
 
 .print-table th,
 .print-table td {
-    padding: 10px 12px;
-    font-size: 1em;
+    padding: 12px 14px;
+    font-size: 1.1em;
 }
 
 .print-table th {
-    color: var(--color-wine);
+    color: var(--color-gold);
     border-bottom: 2px solid var(--color-gold);
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    font-size: 0.85em;
+    font-size: 0.95em;
 }
 
 .print-table td {
-    border-bottom: 1px solid rgba(92, 64, 51, 0.2);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+    color: #fdf6e3;
 }
 
 .print-quote {
-    border-top: 1px solid var(--color-gold);
-    padding-top: 22px;
+    border: 2px solid rgba(212, 175, 55, 0.6);
+    border-radius: 10px;
+    padding: 26px 30px;
+    background: rgba(255, 255, 255, 0.05);
 }
 
 .print-quote-text {
     font-style: italic;
-    font-size: 1.2em;
+    font-size: 1.5em;
+    font-weight: bold;
     line-height: 1.6;
-    margin: 0 0 10px;
-}
-
-.print-quote-secondary {
-    font-style: italic;
-    font-size: 0.95em;
-    color: var(--color-brown);
-    line-height: 1.6;
-    margin: 0 0 12px;
+    color: #fdf6e3;
+    margin: 0 0 16px;
 }
 
 .print-quote-author {
-    color: var(--color-wine);
+    color: var(--color-gold);
     font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 1.1em;
     margin: 0;
 }
 
 .print-footer {
-    margin-top: 22px;
-    font-size: 0.8em;
-    color: var(--color-brown);
-}
-
-@media print {
-    @page {
-        size: auto;
-        margin: 15mm;
-    }
-
-    body {
-        background-color: #fff;
-        padding: 0;
-        display: block;
-    }
-
-    .container,
-    .modal-overlay {
-        display: none !important;
-    }
-
-    .print-area {
-        display: block;
-    }
+    margin-top: 24px;
+    font-size: 0.85em;
+    color: #f7e6bf;
 }
 
 .reset-stats-btn {
