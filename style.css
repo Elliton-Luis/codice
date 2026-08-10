@@ -92,14 +92,16 @@ header h1 {
 }
 
 .difficulty-selection {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 15px;
-    margin-bottom: 30px;
-    align-items: center;
+    max-width: 500px;
+    margin: 0 auto 30px;
+    align-items: stretch;
 }
 
 .selection-prompt {
+    grid-column: 1 / -1;
     font-size: 1.4em;
     color: var(--color-dark-brown);
     margin-bottom: 10px;
@@ -107,22 +109,41 @@ header h1 {
 }
 
 .difficulty-btn {
-    width: 60%;
-    max-width: 300px; /* Limit button width on larger screens */
+    width: 100%;
     padding: 15px 20px;
     font-size: 1.2em;
     background-color: var(--color-gold);
     color: white;
     border: 1px solid var(--color-brown);
+    margin-top: 0;
 }
 
-.difficulty-btn:hover {
-    background-color: #c09d30; /* Darker gold on hover */
+.easy-btn {
+    background-color: var(--color-gold);
+}
+
+.medium-btn {
+    background-color: #B87333; /* Copper */
+}
+
+.hard-btn {
+    background-color: var(--color-wine);
 }
 
 .hardcore-btn {
     background-color: var(--color-error);
-    border: 1px solid var(--color-brown);
+}
+
+.easy-btn:hover {
+    background-color: #c09d30; /* Darker gold on hover */
+}
+
+.medium-btn:hover {
+    background-color: #9a5f2a; /* Darker copper on hover */
+}
+
+.hard-btn:hover {
+    background-color: #6a001a; /* Darker wine on hover */
 }
 
 .hardcore-btn:hover {
@@ -130,6 +151,11 @@ header h1 {
 }
 
 .help-btn {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: auto;
+    min-width: 220px;
+    margin-top: 10px;
     background-color: var(--color-brown);
     border: 1px solid var(--color-brown);
 }
