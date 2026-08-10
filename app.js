@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // ---- Element references ----
     const questionTextElement = document.getElementById('question-text');
     const alternativesContainer = document.getElementById('alternatives-container');
     const feedbackContainer = document.getElementById('feedback-container');
@@ -19,26 +20,53 @@ document.addEventListener('DOMContentLoaded', () => {
     const timeBonusElement = document.getElementById('time-bonus');
     const recordTagElement = document.getElementById('record-tag');
     const difficultyTagElement = document.getElementById('difficulty-tag');
+    const giveUpBtn = document.getElementById('give-up-btn');
+    const helpScreen = document.getElementById('help-screen');
+    const helpBtn = document.getElementById('help-btn');
+    const helpBackBtn = document.getElementById('help-back-btn');
+    const statsScreen = document.getElementById('stats-screen');
+    const statsBtn = document.getElementById('stats-btn');
+    const statsBackBtn = document.getElementById('stats-back-btn');
     const statsTableBodyElement = document.getElementById('stats-table-body');
     const statsTotalAnsweredElement = document.getElementById('stats-total-answered');
     const statsTotalCorrectElement = document.getElementById('stats-total-correct');
     const statsHitRateElement = document.getElementById('stats-hit-rate');
     const statsMaxStreakElement = document.getElementById('stats-max-streak');
+    const gameOverScreen = document.getElementById('game-over-screen');
+    const gameOverMessageElement = document.getElementById('game-over-message');
+    const gameOverSummaryElement = document.getElementById('game-over-summary');
+    const gameOverNewRecordElement = document.getElementById('game-over-new-record');
+    const gameOverRecordElement = document.getElementById('game-over-record');
+    const gameOverResultElement = document.getElementById('game-over-result');
+    const restartBtn = document.getElementById('restart-btn');
+    const exitBtn = document.getElementById('exit-btn');
+    const exportBtn = document.getElementById('export-btn');
+    const resetStatsBtn = document.getElementById('reset-stats-btn');
+    const resetModal = document.getElementById('reset-modal');
+    const resetCancelBtn = document.getElementById('reset-cancel-btn');
+    const resetConfirmBtn = document.getElementById('reset-confirm-btn');
+    const printAreaElement = document.getElementById('print-area');
     const printTableBodyElement = document.getElementById('print-table-body');
     const printTotalAnsweredElement = document.getElementById('print-total-answered');
     const printTotalCorrectElement = document.getElementById('print-total-correct');
     const printHitRateElement = document.getElementById('print-hit-rate');
     const printMaxStreakElement = document.getElementById('print-max-streak');
     const printDateElement = document.getElementById('print-date');
-    const printAreaElement = document.getElementById('print-area');
+    const printEmptyElement = document.getElementById('print-empty');
+    const printContentElement = document.getElementById('print-content');
+    const printTableElement = document.getElementById('print-table');
+    const printStatCorrectElement = document.getElementById('print-stat-correct');
+    const printStatRateElement = document.getElementById('print-stat-rate');
+    const printStatStreakElement = document.getElementById('print-stat-streak');
 
-    let allQuestions = []; // Store all questions loaded from the file
-    let questions = []; // Questions for the current difficulty
+    // ---- Game state ----
+    let allQuestions = [];
+    let questions = [];
     let currentQuestionIndex = 0;
-    let answeredQuestions = new Set(); // To avoid immediate repetition
+    let answeredQuestions = new Set();
     let correctScore = 0;
     let incorrectScore = 0;
-    let timeLeft = 30; // Initial time in seconds
+    let timeLeft = 30;
     let timerInterval;
     let bonusFlashTimeout;
     let gameOver = false;
@@ -50,8 +78,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const WINSTREAKS_KEY = 'quizWinstreaks';
     const STATS_KEY = 'quizStats';
-    const CATEGORY_LABELS = { facil: 'Fácil', medio: 'Médio', dificil: 'Difícil', hardcore: 'Hardcore', lite: 'Lite' };
+    const INITIAL_TIME = 30;
+    const CATEGORY_LABELS = { facil: 'Fácil', medio: 'Médio', dificil: 'Difícil', hardcore: 'Hardcore', lite: 'Sem Pressão' };
 
+    // ---- Storage helpers ----
     function getCategoryKey(difficulty, hardcore) {
         if (hardcore) return 'hardcore';
         switch (difficulty) {
@@ -63,20 +93,20 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    function getWinstreaks() {
+    function readStorage(key) {
         try {
-            return JSON.parse(localStorage.getItem(WINSTREAKS_KEY)) || {};
+            return JSON.parse(localStorage.getItem(key)) || {};
         } catch (error) {
             return {};
         }
     }
 
+    function getWinstreaks() {
+        return readStorage(WINSTREAKS_KEY);
+    }
+
     function getStats() {
-        try {
-            return JSON.parse(localStorage.getItem(STATS_KEY)) || {};
-        } catch (error) {
-            return {};
-        }
+        return readStorage(STATS_KEY);
     }
 
     function saveAnswerStat(category, correct) {
@@ -92,46 +122,58 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem(STATS_KEY, JSON.stringify(stats));
     }
 
-    function fillPrintArea() {
+    function maxWinstreak() {
+        return Object.values(getWinstreaks()).reduce((max, v) => Math.max(max, v), 0);
+    }
+
+    // ---- Stats / export shared helpers ----
+    function computeTotals() {
         const stats = getStats();
-        const streaks = getWinstreaks();
-        let totalAnswered = 0;
-        let totalCorrect = 0;
-        const rowsHtml = Object.entries(CATEGORY_LABELS).map(([key, label]) => {
+        const rows = Object.entries(CATEGORY_LABELS).map(([key, label]) => {
             const s = stats[key] || { answered: 0, correct: 0 };
-            totalAnswered += s.answered;
-            totalCorrect += s.correct;
             const rate = s.answered > 0 ? Math.round((s.correct / s.answered) * 100) : 0;
-            return `<tr><td>${label}</td><td>${s.answered}</td><td>${s.correct}</td><td>${rate}%</td></tr>`;
-        }).join('');
-        printTableBodyElement.innerHTML = rowsHtml;
-        printTotalAnsweredElement.textContent = totalAnswered;
-        printTotalCorrectElement.textContent = totalCorrect;
-        printHitRateElement.textContent = `${totalAnswered > 0 ? Math.round((totalCorrect / totalAnswered) * 100) : 0}%`;
-        printMaxStreakElement.textContent = Object.values(streaks).reduce((max, v) => Math.max(max, v), 0);
-        printDateElement.textContent = new Date().toLocaleDateString('pt-BR');
+            return { label, answered: s.answered, correct: s.correct, rate };
+        });
+        const totalAnswered = rows.reduce((sum, r) => sum + r.answered, 0);
+        const totalCorrect = rows.reduce((sum, r) => sum + r.correct, 0);
+        return { rows, totalAnswered, totalCorrect };
     }
 
     function displayStatsScreen() {
-        const stats = getStats();
-        const streaks = getWinstreaks();
-        let totalAnswered = 0;
-        let totalCorrect = 0;
-        const rowsHtml = Object.entries(CATEGORY_LABELS).map(([key, label]) => {
-            const s = stats[key] || { answered: 0, correct: 0 };
-            totalAnswered += s.answered;
-            totalCorrect += s.correct;
-            const rate = s.answered > 0 ? Math.round((s.correct / s.answered) * 100) : 0;
-            return `<tr><td class="stats-label">${label}</td><td>${s.answered}</td><td>${s.correct}</td><td>${rate}%</td></tr>`;
-        }).join('');
-        statsTableBodyElement.innerHTML = rowsHtml;
-
-        const overallRate = totalAnswered > 0 ? Math.round((totalCorrect / totalAnswered) * 100) : 0;
+        const { rows, totalAnswered, totalCorrect } = computeTotals();
+        statsTableBodyElement.innerHTML = rows.map(r =>
+            `<tr><td class="stats-label">${r.label}</td><td>${r.answered}</td><td>${r.correct}</td><td>${r.rate}%</td></tr>`
+        ).join('');
         statsTotalAnsweredElement.textContent = totalAnswered;
         statsTotalCorrectElement.textContent = totalCorrect;
-        statsHitRateElement.textContent = `Aproveitamento: ${overallRate}%`;
-        const maxStreak = Object.values(streaks).reduce((max, v) => Math.max(max, v), 0);
-        statsMaxStreakElement.textContent = maxStreak;
+        statsHitRateElement.textContent = `Aproveitamento: ${totalAnswered > 0 ? Math.round((totalCorrect / totalAnswered) * 100) : 0}%`;
+        statsMaxStreakElement.textContent = maxWinstreak();
+    }
+
+    function fillPrintArea() {
+        const { rows, totalAnswered, totalCorrect } = computeTotals();
+        const hasStats = totalAnswered > 0;
+
+        printEmptyElement.classList.toggle('hidden', hasStats);
+        printContentElement.classList.toggle('hidden', !hasStats);
+        printTableElement.classList.toggle('hidden', !hasStats);
+
+        const nonZeroRows = rows.filter(r => r.answered > 0);
+        printTableBodyElement.innerHTML = nonZeroRows.map(r =>
+            `<tr><td>${r.label}</td><td>${r.answered}</td><td>${r.correct}</td><td>${r.rate}%</td></tr>`
+        ).join('');
+
+        printTotalAnsweredElement.textContent = totalAnswered;
+        printTotalCorrectElement.textContent = totalCorrect;
+        printHitRateElement.textContent = `${totalAnswered > 0 ? Math.round((totalCorrect / totalAnswered) * 100) : 0}%`;
+        printMaxStreakElement.textContent = maxWinstreak();
+        printDateElement.textContent = new Date().toLocaleDateString('pt-BR');
+
+        const streak = maxWinstreak();
+        const rate = totalAnswered > 0 ? Math.round((totalCorrect / totalAnswered) * 100) : 0;
+        printStatCorrectElement.classList.toggle('hidden', totalCorrect === 0);
+        printStatRateElement.classList.toggle('hidden', rate === 0);
+        printStatStreakElement.classList.toggle('hidden', streak === 0);
     }
 
     function updateDifficultyRecords() {
@@ -150,6 +192,29 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // ---- Screen navigation ----
+    function hideAllScreens() {
+        difficultySelection.classList.add('hidden');
+        helpScreen.classList.add('hidden');
+        statsScreen.classList.add('hidden');
+        gameOverScreen.classList.add('hidden');
+        quizCard.classList.add('hidden');
+        timerElement.classList.add('hidden');
+        scoreElement.classList.add('hidden');
+    }
+
+    function showHome() {
+        hideAllScreens();
+        difficultySelection.classList.remove('hidden');
+        updateDifficultyRecords();
+    }
+
+    function openScreen(open, close) {
+        close.classList.add('hidden');
+        open.classList.remove('hidden');
+    }
+
+    // ---- Record tag ----
     function updateRecordTag() {
         if (gameOver) return;
         const category = getCategoryKey(selectedDifficulty, hardcoreMode);
@@ -159,22 +224,28 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
         const remaining = record - correctScore;
+        recordTagElement.classList.remove('record-beaten');
         if (remaining >= 1 && remaining <= 3) {
             recordTagElement.textContent = remaining === 1
                 ? 'Falta 1 resposta para o seu recorde!'
                 : `Faltam ${remaining} respostas para o seu recorde!`;
             recordTagElement.classList.remove('hidden');
-            recordTagElement.classList.remove('record-beaten');
         } else if (remaining <= 0) {
             recordTagElement.textContent = 'Você bateu seu recorde! Continue assim!';
-            recordTagElement.classList.remove('hidden');
             recordTagElement.classList.add('record-beaten');
+            recordTagElement.classList.remove('hidden');
         } else {
             recordTagElement.classList.add('hidden');
         }
     }
 
-    // Function to shuffle an array
+    function updateScoreDisplay() {
+        correctScoreSpan.textContent = correctScore;
+        incorrectScoreSpan.textContent = incorrectScore;
+        updateRecordTag();
+    }
+
+    // ---- Question loading ----
     function shuffleArray(array) {
         for (let i = array.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
@@ -190,21 +261,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
             const text = await response.text();
-            const lines = text.split('\n').filter(line => line.trim() !== '');
-            allQuestions = lines.map(line => {
-                const parts = line.split(' | ');
-                return {
-                    question: parts[0],
-                    alternatives: [parts[1], parts[2], parts[3], parts[4]],
-                    correctAnswerIndex: parseInt(parts[5]),
-                    explanation: parts[6],
-                    reference: parts[7],
-                    difficulty: parts[8].trim()
-                };
-            });
+            allQuestions = text.split('\n')
+                .filter(line => line.trim() !== '')
+                .map(line => {
+                    const parts = line.split(' | ');
+                    return {
+                        question: parts[0],
+                        alternatives: [parts[1], parts[2], parts[3], parts[4]],
+                        correctAnswerIndex: parseInt(parts[5]),
+                        explanation: parts[6],
+                        reference: parts[7],
+                        difficulty: parts[8].trim()
+                    };
+                });
             loadingMessage.classList.add('hidden');
-            difficultySelection.classList.remove('hidden'); // Show difficulty selection
-            updateDifficultyRecords(); // Show stored records on the difficulty buttons
+            showHome();
         } catch (error) {
             console.error('Erro ao carregar perguntas:', error);
             questionTextElement.textContent = 'Erro ao carregar as perguntas. Por favor, tente novamente mais tarde.';
@@ -212,12 +283,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    function selectDifficulty(difficulty, hardcore = false, fun = false) {
-        selectedDifficulty = difficulty;
-        hardcoreMode = hardcore;
-        funMode = fun;
-        funCompleted = false;
-        if (fun) {
+    // ---- Game flow ----
+    function buildQuestions() {
+        if (funMode) {
             const grouped = {};
             allQuestions.forEach(q => {
                 (grouped[q.difficulty] = grouped[q.difficulty] || []).push(q);
@@ -228,15 +296,30 @@ document.addEventListener('DOMContentLoaded', () => {
             });
             currentQuestionIndex = 0;
         } else {
-            questions = allQuestions.filter(q => q.difficulty === (hardcore ? 'HARD' : difficulty));
-            shuffleArray(questions); // Shuffle questions for the selected difficulty
+            questions = shuffleArray(allQuestions.filter(q => q.difficulty === (hardcoreMode ? 'HARD' : selectedDifficulty)));
         }
+    }
 
-        difficultySelection.classList.add('hidden');
+    function resetGameState() {
+        correctScore = 0;
+        incorrectScore = 0;
+        timeLeft = INITIAL_TIME;
+        currentQuestionIndex = 0;
+        answeredQuestions.clear();
+        funCompleted = false;
+        timerPaused = false;
+        clearInterval(timerInterval);
+        updateScoreDisplay();
+    }
+
+    function startGame() {
+        gameOver = false;
+        resetGameState();
+        buildQuestions();
+        hideAllScreens();
         quizCard.classList.remove('hidden');
         scoreElement.classList.remove('hidden');
-
-        if (fun) {
+        if (funMode) {
             timerElement.classList.add('hidden');
             giveUpBtn.textContent = 'Finalizar';
             displayFunQuestion();
@@ -248,6 +331,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    function selectDifficulty(difficulty, hardcore = false, fun = false) {
+        selectedDifficulty = difficulty;
+        hardcoreMode = hardcore;
+        funMode = fun;
+        startGame();
+    }
+
     function startCronometer() {
         cronometerDisplay.textContent = `${timeLeft}s`;
         timerInterval = setInterval(() => {
@@ -256,7 +346,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
             if (timerPaused) {
-                return; // Keep the time frozen while the explanation is on screen
+                return;
             }
             timeLeft--;
             cronometerDisplay.textContent = `${timeLeft}s`;
@@ -270,63 +360,75 @@ document.addEventListener('DOMContentLoaded', () => {
     function endGame(forcedLoss = false) {
         clearInterval(timerInterval);
         gameOver = true;
-        quizCard.classList.add('hidden'); // Hide the quiz card
-        displayGameOverScreen(forcedLoss);
+        timerPaused = false;
+        quizCard.classList.add('hidden');
+        timerElement.classList.add('hidden');
+        scoreElement.classList.add('hidden');
+        showGameOverScreen(forcedLoss);
     }
 
-    function displayGameOverScreen(forcedLoss = false) {
-        const lost = forcedLoss || correctScore < (2 * incorrectScore);
-        const gameContainer = document.querySelector('.container');
-        const endMessage = (funMode && funCompleted) ? 'Você completou todas as perguntas!' : 'Fim do Jogo!';
-
+    function showGameOverScreen(forcedLoss) {
+        const lost = forcedLoss || correctScore < 2 * incorrectScore;
         const category = getCategoryKey(selectedDifficulty, hardcoreMode);
         const categoryLabel = CATEGORY_LABELS[category] || '';
         let currentRecord = getWinstreaks()[category] || 0;
         let newRecord = false;
-        if (!lost && category) {
-            if (correctScore > currentRecord) {
-                const streaks = getWinstreaks();
-                streaks[category] = correctScore;
-                localStorage.setItem(WINSTREAKS_KEY, JSON.stringify(streaks));
-                newRecord = true;
-                currentRecord = correctScore;
-                updateDifficultyRecords();
+
+        // In Lite mode the winstreak always counts when the game ends; otherwise only on a win.
+        if ((funMode || !lost) && category && correctScore > currentRecord) {
+            const streaks = getWinstreaks();
+            streaks[category] = correctScore;
+            localStorage.setItem(WINSTREAKS_KEY, JSON.stringify(streaks));
+            newRecord = true;
+            currentRecord = correctScore;
+            updateDifficultyRecords();
+        }
+
+        gameOverMessageElement.textContent = funCompleted ? 'Você completou todas as perguntas!' : 'Fim do Jogo!';
+        gameOverSummaryElement.textContent = `Acertos: ${correctScore} · Erros: ${incorrectScore}`;
+
+        gameOverResultElement.classList.remove('win', 'lose');
+        gameOverResultElement.classList.add('hidden');
+        gameOverNewRecordElement.classList.add('hidden');
+        gameOverRecordElement.classList.add('hidden');
+
+        if (funMode) {
+            // Lite: no win/lose result, only errors, corrects and the record.
+            if (newRecord) {
+                gameOverNewRecordElement.textContent = `Novo recorde em ${categoryLabel}: ${currentRecord} acertos!`;
+                gameOverNewRecordElement.classList.remove('hidden');
+            } else if (category && currentRecord > 0) {
+                gameOverRecordElement.textContent = `Seu recorde em ${categoryLabel}: ${currentRecord} acertos`;
+                gameOverRecordElement.classList.remove('hidden');
+            }
+        } else {
+            gameOverResultElement.textContent = lost ? 'Você Perdeu!' : 'Você Venceu!';
+            gameOverResultElement.classList.remove('hidden');
+            gameOverResultElement.classList.add(lost ? 'lose' : 'win');
+            if (newRecord) {
+                gameOverNewRecordElement.textContent = `Novo recorde em ${categoryLabel}: ${currentRecord} acertos!`;
+                gameOverNewRecordElement.classList.remove('hidden');
+            } else if (!lost && category && currentRecord > 0) {
+                gameOverRecordElement.textContent = `Seu recorde em ${categoryLabel}: ${currentRecord} acertos`;
+                gameOverRecordElement.classList.remove('hidden');
             }
         }
 
-        gameContainer.innerHTML = `
-            <header>
-                <h1>Quiz Bíblico Católico</h1>
-            </header>
-            <main>
-                <div class="game-over-container">
-                    <p class="game-over-message">${endMessage}</p>
-                    <p class="game-over-summary">Acertos: ${correctScore}</p>
-                    <p class="game-over-summary">Erros: ${incorrectScore}</p>
-                    ${newRecord ? `<p class="game-over-new-record">Novo recorde em ${categoryLabel}: ${currentRecord} acertos!</p>` : ''}
-                    ${!lost && category && !newRecord ? `<p class="game-over-record">Seu recorde em ${categoryLabel}: ${currentRecord} acertos</p>` : ''}
-                    <p class="game-over-result ${lost ? 'lose' : 'win'}">
-                        ${lost ? 'Você Perdeu!' : 'Você Venceu!'}
-                    </p>
-                    <button id="restart-btn" class="button">Jogar Novamente</button>
-                </div>
-            </main>
-        `;
-        document.getElementById('restart-btn').addEventListener('click', () => location.reload());
+        gameOverScreen.classList.remove('hidden');
     }
 
+    // ---- Question rendering ----
     function renderQuestion(question) {
         questionTextElement.textContent = question.question;
 
         alternativesContainer.innerHTML = '';
-        // Shuffle alternatives to ensure correct answer isn't always in the same position visually
         const shuffledAlternatives = shuffleArray(question.alternatives.map((alt, idx) => ({ alt, originalIndex: idx })));
 
         shuffledAlternatives.forEach(item => {
             const button = document.createElement('button');
             button.classList.add('alternative-btn');
             button.textContent = item.alt;
-            button.dataset.originalIndex = item.originalIndex; // Store original index
+            button.dataset.originalIndex = item.originalIndex;
             button.addEventListener('click', () => handleAnswer(button, item.originalIndex));
             alternativesContainer.appendChild(button);
         });
@@ -353,9 +455,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         let availableQuestions = questions.filter((_, index) => !answeredQuestions.has(index));
-
         if (availableQuestions.length === 0) {
-            // All questions for the current difficulty have been answered, reset and reshuffle
             answeredQuestions.clear();
             availableQuestions = questions;
             shuffleArray(availableQuestions);
@@ -364,7 +464,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const randomIndex = Math.floor(Math.random() * availableQuestions.length);
         currentQuestionIndex = questions.indexOf(availableQuestions[randomIndex]);
         answeredQuestions.add(currentQuestionIndex);
-
         renderQuestion(questions[currentQuestionIndex]);
     }
 
@@ -372,7 +471,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (gameOver) return;
         if (currentQuestionIndex >= questions.length) {
             funCompleted = true;
-            endGame(false); // All questions answered
+            endGame(false);
             return;
         }
         answeredQuestions.add(currentQuestionIndex);
@@ -387,7 +486,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const statCategory = funMode ? 'lite' : getCategoryKey(selectedDifficulty, hardcoreMode);
         saveAnswerStat(statCategory, isCorrect);
 
-        // Disable all alternative buttons after an answer is selected
         Array.from(alternativesContainer.children).forEach(button => {
             button.disabled = true;
             if (parseInt(button.dataset.originalIndex) === currentQuestion.correctAnswerIndex) {
@@ -401,7 +499,7 @@ document.addEventListener('DOMContentLoaded', () => {
             updateScoreDisplay();
             addBonusTime();
             if (hardcoreMode) {
-                displayRandomQuestion(); // Hardcore: no answer, just the next question
+                displayRandomQuestion();
                 return;
             }
             feedbackMessage.textContent = 'Correto!';
@@ -423,18 +521,13 @@ document.addEventListener('DOMContentLoaded', () => {
         correctAnswerElement.textContent = `A resposta correta era: ${currentQuestion.alternatives[currentQuestion.correctAnswerIndex]}`;
         explanationElement.textContent = `Explicação: ${currentQuestion.explanation}`;
         referenceElement.textContent = `Referência: ${currentQuestion.reference}`;
-        timerPaused = true; // Pause the timer so the player can read the explanation
+        timerPaused = true;
 
         feedbackContainer.classList.remove('hidden');
         alternativesContainer.classList.add('hidden');
     }
 
-    function updateScoreDisplay() {
-        correctScoreSpan.textContent = correctScore;
-        incorrectScoreSpan.textContent = incorrectScore;
-        updateRecordTag();
-    }
-
+    // ---- Time bonus ----
     function addBonusTime() {
         if (gameOver) return;
         let bonus = 0;
@@ -443,17 +536,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 bonus = 3;
             }
         } else {
-            switch (selectedDifficulty) {
-                case 'EASY':
-                    bonus = 3;
-                    break;
-                case 'MEDIUM':
-                    bonus = 2;
-                    break;
-                case 'HARD':
-                    bonus = 1;
-                    break;
-            }
+            bonus = { EASY: 3, MEDIUM: 2, HARD: 1 }[selectedDifficulty] || 0;
         }
         if (bonus > 0) {
             timeLeft += bonus;
@@ -467,7 +550,7 @@ document.addEventListener('DOMContentLoaded', () => {
         timeBonusElement.textContent = `+${bonus}s`;
         timeBonusElement.classList.remove('hidden');
         timeBonusElement.style.animation = 'none';
-        void timeBonusElement.offsetWidth; // Restart the animation
+        void timeBonusElement.offsetWidth;
         timeBonusElement.style.animation = '';
     }
 
@@ -479,77 +562,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 1000);
     }
 
-    timeBonusElement.addEventListener('animationend', () => {
-        timeBonusElement.classList.add('hidden');
-    });
-
-    nextQuestionBtn.addEventListener('click', () => {
-        if (gameOver) return;
-        if (funMode) {
-            currentQuestionIndex++;
-            displayFunQuestion();
-            return;
-        }
-        timerPaused = false; // Resume the timer when moving to the next question
-        displayRandomQuestion();
-    });
-
-    const giveUpBtn = document.getElementById('give-up-btn');
-    giveUpBtn.addEventListener('click', () => {
-        if (gameOver) return;
-        if (funMode) {
-            endGame(false); // Finalizar: ends the game and evaluates normally
-            return;
-        }
-        endGame(true);
-    });
-
-    // Event listeners for difficulty selection buttons
-    difficultyButtons.forEach(button => {
-        button.addEventListener('click', (event) => {
-            const clickedButton = event.target.closest('.difficulty-btn') || event.target;
-            selectDifficulty(clickedButton.dataset.difficulty, clickedButton.dataset.hardcore === 'true', clickedButton.dataset.fun === 'true');
-        });
-    });
-
-    // Help screen
-    const helpBtn = document.getElementById('help-btn');
-    const helpScreen = document.getElementById('help-screen');
-    const helpBackBtn = document.getElementById('help-back-btn');
-
-    helpBtn.addEventListener('click', () => {
-        difficultySelection.classList.add('hidden');
-        helpScreen.classList.remove('hidden');
-    });
-
-    helpBackBtn.addEventListener('click', () => {
-        helpScreen.classList.add('hidden');
-        difficultySelection.classList.remove('hidden');
-    });
-
-    // Stats screen
-    const statsBtn = document.getElementById('stats-btn');
-    const statsScreen = document.getElementById('stats-screen');
-    const statsBackBtn = document.getElementById('stats-back-btn');
-
-    statsBtn.addEventListener('click', () => {
-        difficultySelection.classList.add('hidden');
-        displayStatsScreen();
-        statsScreen.classList.remove('hidden');
-    });
-
-    statsBackBtn.addEventListener('click', () => {
-        statsScreen.classList.add('hidden');
-        difficultySelection.classList.remove('hidden');
-    });
-
-    // Export results as a downloadable image
-    const exportBtn = document.getElementById('export-btn');
-    exportBtn.addEventListener('click', () => {
-        fillPrintArea();
-        exportAsImage();
-    });
-
+    // ---- Export image ----
     function exportAsImage() {
         if (typeof html2canvas === 'undefined') {
             alert('Não foi possível gerar a imagem. Verifique sua conexão com a internet.');
@@ -570,26 +583,58 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Reset stats with confirmation modal
-    const resetStatsBtn = document.getElementById('reset-stats-btn');
-    const resetModal = document.getElementById('reset-modal');
-    const resetCancelBtn = document.getElementById('reset-cancel-btn');
-    const resetConfirmBtn = document.getElementById('reset-confirm-btn');
-
-    resetStatsBtn.addEventListener('click', () => {
-        resetModal.classList.remove('hidden');
+    // ---- Event listeners ----
+    timeBonusElement.addEventListener('animationend', () => {
+        timeBonusElement.classList.add('hidden');
     });
 
-    resetCancelBtn.addEventListener('click', () => {
-        resetModal.classList.add('hidden');
+    nextQuestionBtn.addEventListener('click', () => {
+        if (gameOver) return;
+        if (funMode) {
+            currentQuestionIndex++;
+            displayFunQuestion();
+            return;
+        }
+        timerPaused = false;
+        displayRandomQuestion();
     });
 
+    giveUpBtn.addEventListener('click', () => {
+        if (gameOver) return;
+        endGame(funMode ? false : true);
+    });
+
+    difficultyButtons.forEach(button => {
+        button.addEventListener('click', (event) => {
+            const clickedButton = event.target.closest('.difficulty-btn') || event.target;
+            selectDifficulty(clickedButton.dataset.difficulty, clickedButton.dataset.hardcore === 'true', clickedButton.dataset.fun === 'true');
+        });
+    });
+
+    helpBtn.addEventListener('click', () => openScreen(helpScreen, difficultySelection));
+    helpBackBtn.addEventListener('click', () => showHome());
+
+    statsBtn.addEventListener('click', () => {
+        displayStatsScreen();
+        openScreen(statsScreen, difficultySelection);
+    });
+    statsBackBtn.addEventListener('click', () => showHome());
+
+    restartBtn.addEventListener('click', () => startGame());
+    exitBtn.addEventListener('click', () => showHome());
+
+    exportBtn.addEventListener('click', () => {
+        fillPrintArea();
+        exportAsImage();
+    });
+
+    resetStatsBtn.addEventListener('click', () => resetModal.classList.remove('hidden'));
+    resetCancelBtn.addEventListener('click', () => resetModal.classList.add('hidden'));
     resetModal.addEventListener('click', (event) => {
         if (event.target === resetModal) {
             resetModal.classList.add('hidden');
         }
     });
-
     resetConfirmBtn.addEventListener('click', () => {
         localStorage.removeItem(WINSTREAKS_KEY);
         localStorage.removeItem(STATS_KEY);
@@ -598,10 +643,7 @@ document.addEventListener('DOMContentLoaded', () => {
         updateDifficultyRecords();
     });
 
-    // Initial load
-    quizCard.classList.add('hidden'); // Hide quiz until questions are loaded
-    timerElement.classList.add('hidden');
-    scoreElement.classList.add('hidden');
-    difficultySelection.classList.add('hidden'); // Hide difficulty until questions are loaded
+    // ---- Initial load ----
+    hideAllScreens();
     loadAllQuestions();
 });

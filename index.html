@@ -9,7 +9,13 @@
 <body>
     <div class="container">
         <header>
+            <p class="header-ornament">✝</p>
             <h1>Quiz Bíblico Católico</h1>
+            <div class="header-divider">
+                <span class="header-divider-line"></span>
+                <span class="header-divider-diamond">◆</span>
+                <span class="header-divider-line"></span>
+            </div>
             <div class="timer hidden">
                 <span class="timer-wrapper">Tempo: <span id="cronometer-display">30s</span> <span id="time-bonus" class="time-bonus hidden"></span></span>
             </div>
@@ -54,6 +60,18 @@
                         <span class="badge badge-victory">Vitória</span>
                         <p class="help-text">Para vencer, o número de respostas certas deve ser no mínimo o dobro do número de erros.</p>
                     </div>
+                    <div class="help-item">
+                        <span class="badge badge-lite">Sem Pressão</span>
+                        <p class="help-text">Modo sem cronômetro: as perguntas aparecem em ordem (Fáceis, Médias e Difíceis), cada uma com uma <span class="badge badge-medium badge-inline">etiqueta</span> indicando a categoria. O jogo termina no botão <b>Finalizar</b> ou ao responder todas as perguntas.</p>
+                    </div>
+                    <div class="help-item">
+                        <span class="badge badge-record">Recorde</span>
+                        <p class="help-text">Cada nível guarda a sua melhor partida (winstreak). A 3 acertos do recorde, uma tag acima da pergunta mostra quanto falta; ao superá-lo, o app avisa com um novo recorde.</p>
+                    </div>
+                    <div class="help-item">
+                        <span class="badge badge-stats">Estatísticas</span>
+                        <p class="help-text">A tela <b>Estatísticas</b> reúne as respostas por nível, o aproveitamento geral e o maior winstreak. De lá você pode <b>Exportar</b> uma imagem bonita dos resultados ou <b>Zerar Tudo</b> (com confirmação).</p>
+                    </div>
                 </div>
                 <button id="help-back-btn" class="button">Voltar ao Início</button>
             </div>
@@ -84,6 +102,20 @@
                     <button id="reset-stats-btn" class="button reset-stats-btn">Zerar Tudo</button>
                 </div>
                 <button id="stats-back-btn" class="button">Voltar ao Início</button>
+            </div>
+
+            <div id="game-over-screen" class="game-over-screen hidden">
+                <div class="game-over-container">
+                    <p id="game-over-message" class="game-over-message"></p>
+                    <p id="game-over-summary" class="game-over-summary"></p>
+                    <p id="game-over-new-record" class="game-over-new-record hidden"></p>
+                    <p id="game-over-record" class="game-over-record hidden"></p>
+                    <p id="game-over-result" class="game-over-result"></p>
+                    <div class="game-over-actions">
+                        <button id="restart-btn" class="button">Jogar de Novo</button>
+                        <button id="exit-btn" class="button button-secondary">Sair para Início</button>
+                    </div>
+                </div>
             </div>
 
             <div id="quiz-card" class="quiz-card hidden">
@@ -122,42 +154,52 @@
             <div class="print-inner">
                 <div class="print-ornament">✝</div>
                 <h1 class="print-title">Quiz Bíblico Católico</h1>
-                <p class="print-subtitle">Minhas Estatísticas de Jogo</p>
+                <p class="print-subtitle">Meu desempenho no jogo</p>
                 <div class="print-divider">
                     <span class="print-divider-line"></span>
                     <span class="print-divider-diamond">◆</span>
                     <span class="print-divider-line"></span>
                 </div>
-                <div class="print-summary">
-                    <div class="print-stat">
-                        <span class="print-stat-value" id="print-total-answered">0</span>
-                        <span class="print-stat-label">Questões Respondidas</span>
-                    </div>
-                    <div class="print-stat">
-                        <span class="print-stat-value" id="print-total-correct">0</span>
-                        <span class="print-stat-label">Acertos</span>
-                    </div>
-                    <div class="print-stat">
-                        <span class="print-stat-value" id="print-hit-rate">0%</span>
-                        <span class="print-stat-label">Aproveitamento</span>
-                    </div>
-                    <div class="print-stat">
-                        <span class="print-stat-value" id="print-max-streak">0</span>
-                        <span class="print-stat-label">Maior Winstreak</span>
-                    </div>
+
+                <div id="print-empty" class="print-empty hidden">
+                    <p class="print-empty-title">Ainda sem estatísticas</p>
+                    <p class="print-empty-text">Responda perguntas e volte aqui para compartilhar seu resultado.</p>
                 </div>
-                <table class="print-table">
-                    <thead>
-                        <tr><th>Nível</th><th>Respondidas</th><th>Acertos</th><th>Aproveitamento</th></tr>
-                    </thead>
-                    <tbody id="print-table-body"></tbody>
-                </table>
+
+                <div id="print-content">
+                    <div class="print-hero">
+                        <span class="print-hero-value" id="print-total-answered">0</span>
+                        <span class="print-hero-label">Questões Respondidas</span>
+                    </div>
+                    <div class="print-summary">
+                        <div class="print-stat" id="print-stat-correct">
+                            <span class="print-stat-value" id="print-total-correct">0</span>
+                            <span class="print-stat-label">Acertos</span>
+                        </div>
+                        <div class="print-stat" id="print-stat-rate">
+                            <span class="print-stat-value" id="print-hit-rate">0%</span>
+                            <span class="print-stat-label">Aproveitamento</span>
+                        </div>
+                        <div class="print-stat" id="print-stat-streak">
+                            <span class="print-stat-value" id="print-max-streak">0</span>
+                            <span class="print-stat-label">Maior Winstreak</span>
+                        </div>
+                    </div>
+                    <table class="print-table" id="print-table">
+                        <thead>
+                            <tr><th>Nível</th><th>Respondidas</th><th>Acertos</th><th>Aproveitamento</th></tr>
+                        </thead>
+                        <tbody id="print-table-body"></tbody>
+                    </table>
+                </div>
+
                 <div class="print-quote">
                     <p class="print-quote-text">"A Sagrada Escritura ensina firmemente com sua verdade eterna, deleita docemente com sua suavidade e move eficazmente com sua autoridade."</p>
                     <p class="print-quote-author">— São Tomás de Aquino</p>
                 </div>
                 <div class="print-footer">
-                    <p>Quiz Bíblico Católico · <span id="print-date"></span></p>
+                    <p class="print-footer-brand">Quiz Bíblico Católico</p>
+                    <p class="print-footer-date"><span id="print-date"></span></p>
                 </div>
             </div>
         </div>
