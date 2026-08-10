@@ -29,13 +29,28 @@
 
             <div id="help-screen" class="help-screen hidden">
                 <h2 class="help-title">Como Jogar</h2>
-                <ul class="help-list">
-                    <li>O tempo de jogo começa em 30 segundos.</li>
-                    <li>O tempo pausa enquanto a explicação da pergunta estiver na tela, exceto no modo Hardcore, onde ele nunca para.</li>
-                    <li>Ao acertar uma pergunta, você ganha tempo: Fácil +3s, Médio +2s e Difícil +1s.</li>
-                    <li>No modo Hardcore, um único erro encerra o jogo. Você ganha +3s a cada 5 acertos e não vê explicações.</li>
-                    <li>Para vencer, o número de respostas certas deve ser no mínimo o dobro do número de erros.</li>
-                </ul>
+                <div class="help-list">
+                    <div class="help-item">
+                        <span class="badge badge-timer">Tempo</span>
+                        <p class="help-text">O tempo de jogo começa em 30 segundos.</p>
+                    </div>
+                    <div class="help-item">
+                        <span class="badge badge-pause">Pausa</span>
+                        <p class="help-text">O tempo pausa enquanto a explicação da pergunta estiver na tela, exceto no modo <span class="badge badge-hardcore badge-inline">Hardcore</span>, onde ele nunca para.</p>
+                    </div>
+                    <div class="help-item">
+                        <span class="badge badge-bonus">Bônus</span>
+                        <p class="help-text">Ao acertar uma pergunta, você ganha tempo: <span class="badge badge-easy badge-inline">Fácil +3s</span> <span class="badge badge-medium badge-inline">Médio +2s</span> <span class="badge badge-hard badge-inline">Difícil +1s</span></p>
+                    </div>
+                    <div class="help-item">
+                        <span class="badge badge-hardcore">Hardcore</span>
+                        <p class="help-text">Um único erro encerra o jogo. Você ganha <span class="badge badge-bonus badge-inline">+3s a cada 5 acertos</span> e não vê explicações.</p>
+                    </div>
+                    <div class="help-item">
+                        <span class="badge badge-victory">Vitória</span>
+                        <p class="help-text">Para vencer, o número de respostas certas deve ser no mínimo o dobro do número de erros.</p>
+                    </div>
+                </div>
                 <button id="help-back-btn" class="button">Voltar ao Início</button>
             </div>
 

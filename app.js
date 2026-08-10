@@ -186,11 +186,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (isCorrect) {
             selectedButton.classList.add('correct');
+            correctScore++;
+            updateScoreDisplay();
+            addBonusTime();
+            if (hardcoreMode) {
+                displayRandomQuestion(); // Hardcore: no answer, just the next question
+                return;
+            }
             feedbackMessage.textContent = 'Correto!';
             feedbackMessage.classList.remove('incorrect');
             feedbackMessage.classList.add('correct');
-            correctScore++;
-            addBonusTime();
         } else {
             selectedButton.classList.add('incorrect');
             incorrectScore++;
@@ -203,20 +208,11 @@ document.addEventListener('DOMContentLoaded', () => {
             feedbackMessage.classList.remove('correct');
             feedbackMessage.classList.add('incorrect');
         }
-        updateScoreDisplay();
 
         correctAnswerElement.textContent = `A resposta correta era: ${currentQuestion.alternatives[currentQuestion.correctAnswerIndex]}`;
-        if (hardcoreMode) {
-            explanationElement.classList.add('hidden');
-            referenceElement.classList.add('hidden');
-            timerPaused = false; // In hardcore the time never stops
-        } else {
-            explanationElement.textContent = `Explicação: ${currentQuestion.explanation}`;
-            referenceElement.textContent = `Referência: ${currentQuestion.reference}`;
-            explanationElement.classList.remove('hidden');
-            referenceElement.classList.remove('hidden');
-            timerPaused = true; // Pause the timer so the player can read the explanation
-        }
+        explanationElement.textContent = `Explicação: ${currentQuestion.explanation}`;
+        referenceElement.textContent = `Referência: ${currentQuestion.reference}`;
+        timerPaused = true; // Pause the timer so the player can read the explanation
 
         feedbackContainer.classList.remove('hidden');
         alternativesContainer.classList.add('hidden');
