@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const scoreElement = document.querySelector('.score');
     const timeBonusElement = document.getElementById('time-bonus');
     const recordTagElement = document.getElementById('record-tag');
+    const difficultyTagElement = document.getElementById('difficulty-tag');
     const statsTableBodyElement = document.getElementById('stats-table-body');
     const statsTotalAnsweredElement = document.getElementById('stats-total-answered');
     const statsTotalCorrectElement = document.getElementById('stats-total-correct');
@@ -36,11 +37,13 @@ document.addEventListener('DOMContentLoaded', () => {
     let gameOver = false;
     let selectedDifficulty = '';
     let hardcoreMode = false;
+    let funMode = false;
+    let funCompleted = false;
     let timerPaused = false;
 
     const WINSTREAKS_KEY = 'quizWinstreaks';
     const STATS_KEY = 'quizStats';
-    const CATEGORY_LABELS = { facil: 'Fácil', medio: 'Médio', dificil: 'Difícil', hardcore: 'Hardcore' };
+    const CATEGORY_LABELS = { facil: 'Fácil', medio: 'Médio', dificil: 'Difícil', hardcore: 'Hardcore', lite: 'Lite' };
 
     function getCategoryKey(difficulty, hardcore) {
         if (hardcore) return 'hardcore';
@@ -48,6 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
             case 'EASY': return 'facil';
             case 'MEDIUM': return 'medio';
             case 'HARD': return 'dificil';
+            case 'LITE': return 'lite';
             default: return '';
         }
     }
@@ -107,6 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const streaks = getWinstreaks();
         difficultyButtons.forEach(button => {
             const category = getCategoryKey(button.dataset.difficulty, button.dataset.hardcore === 'true');
+            if (!category) return;
             const record = streaks[category] || 0;
             let recordSpan = button.querySelector('.difficulty-record');
             if (!recordSpan) {
@@ -180,19 +185,40 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    function selectDifficulty(difficulty, hardcore = false) {
+    function selectDifficulty(difficulty, hardcore = false, fun = false) {
         selectedDifficulty = difficulty;
         hardcoreMode = hardcore;
-        questions = allQuestions.filter(q => q.difficulty === (hardcore ? 'HARD' : difficulty));
-        shuffleArray(questions); // Shuffle questions for the selected difficulty
+        funMode = fun;
+        funCompleted = false;
+        if (fun) {
+            const grouped = {};
+            allQuestions.forEach(q => {
+                (grouped[q.difficulty] = grouped[q.difficulty] || []).push(q);
+            });
+            questions = [];
+            ['EASY', 'MEDIUM', 'HARD'].forEach(d => {
+                if (grouped[d]) questions.push(...shuffleArray(grouped[d]));
+            });
+            currentQuestionIndex = 0;
+        } else {
+            questions = allQuestions.filter(q => q.difficulty === (hardcore ? 'HARD' : difficulty));
+            shuffleArray(questions); // Shuffle questions for the selected difficulty
+        }
 
         difficultySelection.classList.add('hidden');
         quizCard.classList.remove('hidden');
-        timerElement.classList.remove('hidden');
         scoreElement.classList.remove('hidden');
 
-        startCronometer();
-        displayRandomQuestion();
+        if (fun) {
+            timerElement.classList.add('hidden');
+            giveUpBtn.textContent = 'Finalizar';
+            displayFunQuestion();
+        } else {
+            timerElement.classList.remove('hidden');
+            giveUpBtn.textContent = 'Desistir';
+            startCronometer();
+            displayRandomQuestion();
+        }
     }
 
     function startCronometer() {
@@ -224,6 +250,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function displayGameOverScreen(forcedLoss = false) {
         const lost = forcedLoss || correctScore < (2 * incorrectScore);
         const gameContainer = document.querySelector('.container');
+        const endMessage = (funMode && funCompleted) ? 'Você completou todas as perguntas!' : 'Fim do Jogo!';
 
         const category = getCategoryKey(selectedDifficulty, hardcoreMode);
         const categoryLabel = CATEGORY_LABELS[category] || '';
@@ -246,7 +273,7 @@ document.addEventListener('DOMContentLoaded', () => {
             </header>
             <main>
                 <div class="game-over-container">
-                    <p class="game-over-message">Fim do Jogo!</p>
+                    <p class="game-over-message">${endMessage}</p>
                     <p class="game-over-summary">Acertos: ${correctScore}</p>
                     <p class="game-over-summary">Erros: ${incorrectScore}</p>
                     ${newRecord ? `<p class="game-over-new-record">Novo recorde em ${categoryLabel}: ${currentRecord} acertos!</p>` : ''}
@@ -259,6 +286,38 @@ document.addEventListener('DOMContentLoaded', () => {
             </main>
         `;
         document.getElementById('restart-btn').addEventListener('click', () => location.reload());
+    }
+
+    function renderQuestion(question) {
+        questionTextElement.textContent = question.question;
+
+        alternativesContainer.innerHTML = '';
+        // Shuffle alternatives to ensure correct answer isn't always in the same position visually
+        const shuffledAlternatives = shuffleArray(question.alternatives.map((alt, idx) => ({ alt, originalIndex: idx })));
+
+        shuffledAlternatives.forEach(item => {
+            const button = document.createElement('button');
+            button.classList.add('alternative-btn');
+            button.textContent = item.alt;
+            button.dataset.originalIndex = item.originalIndex; // Store original index
+            button.addEventListener('click', () => handleAnswer(button, item.originalIndex));
+            alternativesContainer.appendChild(button);
+        });
+
+        feedbackContainer.classList.add('hidden');
+        alternativesContainer.classList.remove('hidden');
+        updateDifficultyTag(question.difficulty);
+    }
+
+    function updateDifficultyTag(difficulty) {
+        if (!funMode) {
+            difficultyTagElement.classList.add('hidden');
+            return;
+        }
+        difficultyTagElement.textContent = difficulty === 'EASY' ? 'Fácil' : difficulty === 'MEDIUM' ? 'Médio' : 'Difícil';
+        difficultyTagElement.className = 'difficulty-tag';
+        difficultyTagElement.classList.add('difficulty-tag-' + difficulty.toLowerCase());
+        difficultyTagElement.classList.remove('hidden');
     }
 
     function displayRandomQuestion() {
@@ -279,24 +338,18 @@ document.addEventListener('DOMContentLoaded', () => {
         currentQuestionIndex = questions.indexOf(availableQuestions[randomIndex]);
         answeredQuestions.add(currentQuestionIndex);
 
-        const currentQuestion = questions[currentQuestionIndex];
-        questionTextElement.textContent = currentQuestion.question;
+        renderQuestion(questions[currentQuestionIndex]);
+    }
 
-        alternativesContainer.innerHTML = '';
-        // Shuffle alternatives to ensure correct answer isn't always in the same position visually
-        const shuffledAlternatives = shuffleArray(currentQuestion.alternatives.map((alt, idx) => ({ alt, originalIndex: idx })));
-
-        shuffledAlternatives.forEach(item => {
-            const button = document.createElement('button');
-            button.classList.add('alternative-btn');
-            button.textContent = item.alt;
-            button.dataset.originalIndex = item.originalIndex; // Store original index
-            button.addEventListener('click', () => handleAnswer(button, item.originalIndex));
-            alternativesContainer.appendChild(button);
-        });
-
-        feedbackContainer.classList.add('hidden');
-        alternativesContainer.classList.remove('hidden');
+    function displayFunQuestion() {
+        if (gameOver) return;
+        if (currentQuestionIndex >= questions.length) {
+            funCompleted = true;
+            endGame(false); // All questions answered
+            return;
+        }
+        answeredQuestions.add(currentQuestionIndex);
+        renderQuestion(questions[currentQuestionIndex]);
     }
 
     function handleAnswer(selectedButton, selectedIndex) {
@@ -304,7 +357,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const currentQuestion = questions[currentQuestionIndex];
         const isCorrect = selectedIndex === currentQuestion.correctAnswerIndex;
-        saveAnswerStat(getCategoryKey(selectedDifficulty, hardcoreMode), isCorrect);
+        const statCategory = funMode ? 'lite' : getCategoryKey(selectedDifficulty, hardcoreMode);
+        saveAnswerStat(statCategory, isCorrect);
 
         // Disable all alternative buttons after an answer is selected
         Array.from(alternativesContainer.children).forEach(button => {
@@ -404,6 +458,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     nextQuestionBtn.addEventListener('click', () => {
         if (gameOver) return;
+        if (funMode) {
+            currentQuestionIndex++;
+            displayFunQuestion();
+            return;
+        }
         timerPaused = false; // Resume the timer when moving to the next question
         displayRandomQuestion();
     });
@@ -411,6 +470,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const giveUpBtn = document.getElementById('give-up-btn');
     giveUpBtn.addEventListener('click', () => {
         if (gameOver) return;
+        if (funMode) {
+            endGame(false); // Finalizar: ends the game and evaluates normally
+            return;
+        }
         endGame(true);
     });
 
@@ -418,7 +481,7 @@ document.addEventListener('DOMContentLoaded', () => {
     difficultyButtons.forEach(button => {
         button.addEventListener('click', (event) => {
             const clickedButton = event.target.closest('.difficulty-btn') || event.target;
-            selectDifficulty(clickedButton.dataset.difficulty, clickedButton.dataset.hardcore === 'true');
+            selectDifficulty(clickedButton.dataset.difficulty, clickedButton.dataset.hardcore === 'true', clickedButton.dataset.fun === 'true');
         });
     });
 

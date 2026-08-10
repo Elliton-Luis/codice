@@ -477,6 +477,13 @@ header h1 {
     background-color: var(--color-wine); /* Dark red (wine) */
 }
 
+.fun-btn {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: calc(50% - 7.5px);
+    background-color: #5AA469; /* Soft green */
+}
+
 .easy-btn:hover {
     background-color: #DF8F88; /* Slightly darker pink on hover */
 }
@@ -491,6 +498,35 @@ header h1 {
 
 .hardcore-btn:hover {
     background-color: #6a001a; /* Darker wine on hover */
+}
+
+.fun-btn:hover {
+    background-color: #478756; /* Darker green on hover */
+}
+
+.difficulty-tag {
+    align-self: center;
+    font-size: 0.9em;
+    font-weight: bold;
+    padding: 5px 14px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.difficulty-tag-easy {
+    background-color: #F3A8A2;
+    color: var(--color-dark-brown);
+}
+
+.difficulty-tag-medium {
+    background-color: #E76F51;
+    color: white;
+}
+
+.difficulty-tag-hard {
+    background-color: #D62828;
+    color: white;
 }
 
 .secondary-buttons {
