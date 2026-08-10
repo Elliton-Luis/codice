@@ -32,6 +32,42 @@ document.addEventListener('DOMContentLoaded', () => {
     let hardcoreMode = false;
     let timerPaused = false;
 
+    const WINSTREAKS_KEY = 'quizWinstreaks';
+    const CATEGORY_LABELS = { facil: 'Fácil', medio: 'Médio', dificil: 'Difícil', hardcore: 'Hardcore' };
+
+    function getCategoryKey(difficulty, hardcore) {
+        if (hardcore) return 'hardcore';
+        switch (difficulty) {
+            case 'EASY': return 'facil';
+            case 'MEDIUM': return 'medio';
+            case 'HARD': return 'dificil';
+            default: return '';
+        }
+    }
+
+    function getWinstreaks() {
+        try {
+            return JSON.parse(localStorage.getItem(WINSTREAKS_KEY)) || {};
+        } catch (error) {
+            return {};
+        }
+    }
+
+    function updateDifficultyRecords() {
+        const streaks = getWinstreaks();
+        difficultyButtons.forEach(button => {
+            const category = getCategoryKey(button.dataset.difficulty, button.dataset.hardcore === 'true');
+            const record = streaks[category] || 0;
+            let recordSpan = button.querySelector('.difficulty-record');
+            if (!recordSpan) {
+                recordSpan = document.createElement('span');
+                recordSpan.className = 'difficulty-record';
+                button.appendChild(recordSpan);
+            }
+            recordSpan.textContent = record > 0 ? `Recorde: ${record} acertos` : 'Sem recorde ainda';
+        });
+    }
+
     // Function to shuffle an array
     function shuffleArray(array) {
         for (let i = array.length - 1; i > 0; i--) {
@@ -62,6 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
             loadingMessage.classList.add('hidden');
             difficultySelection.classList.remove('hidden'); // Show difficulty selection
+            updateDifficultyRecords(); // Show stored records on the difficulty buttons
         } catch (error) {
             console.error('Erro ao carregar perguntas:', error);
             questionTextElement.textContent = 'Erro ao carregar as perguntas. Por favor, tente novamente mais tarde.';
@@ -113,6 +150,22 @@ document.addEventListener('DOMContentLoaded', () => {
     function displayGameOverScreen(forcedLoss = false) {
         const lost = forcedLoss || correctScore < (2 * incorrectScore);
         const gameContainer = document.querySelector('.container');
+
+        const category = getCategoryKey(selectedDifficulty, hardcoreMode);
+        const categoryLabel = CATEGORY_LABELS[category] || '';
+        let currentRecord = getWinstreaks()[category] || 0;
+        let newRecord = false;
+        if (!lost && category) {
+            if (correctScore > currentRecord) {
+                const streaks = getWinstreaks();
+                streaks[category] = correctScore;
+                localStorage.setItem(WINSTREAKS_KEY, JSON.stringify(streaks));
+                newRecord = true;
+                currentRecord = correctScore;
+                updateDifficultyRecords();
+            }
+        }
+
         gameContainer.innerHTML = `
             <header>
                 <h1>Quiz Bíblico Católico</h1>
@@ -122,6 +175,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     <p class="game-over-message">Fim do Jogo!</p>
                     <p class="game-over-summary">Acertos: ${correctScore}</p>
                     <p class="game-over-summary">Erros: ${incorrectScore}</p>
+                    ${newRecord ? `<p class="game-over-new-record">Novo recorde em ${categoryLabel}: ${currentRecord} acertos!</p>` : ''}
+                    ${!lost && category && !newRecord ? `<p class="game-over-record">Seu recorde em ${categoryLabel}: ${currentRecord} acertos</p>` : ''}
                     <p class="game-over-result ${lost ? 'lose' : 'win'}">
                         ${lost ? 'Você Perdeu!' : 'Você Venceu!'}
                     </p>
