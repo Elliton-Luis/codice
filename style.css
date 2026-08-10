@@ -643,6 +643,163 @@ header h1 {
     font-weight: bold;
 }
 
+.stats-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 5px;
+}
+
+.export-btn {
+    background-color: var(--color-success);
+}
+
+.export-btn:hover {
+    background-color: #1e7e34;
+}
+
+/* Printable export card (hidden on screen, shown only when printing) */
+.print-area {
+    display: none;
+}
+
+.print-card {
+    background-color: #fff;
+    border: 3px double var(--color-gold);
+    border-radius: 10px;
+    padding: 45px 40px;
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Georgia', serif;
+    color: var(--color-dark-brown);
+}
+
+.print-title {
+    color: var(--color-wine);
+    font-size: 2.4em;
+    letter-spacing: 1px;
+    margin: 0 0 6px;
+}
+
+.print-subtitle {
+    color: var(--color-brown);
+    font-style: italic;
+    font-size: 1.15em;
+    margin: 0 0 30px;
+}
+
+.print-summary {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.print-stat {
+    border: 1.5px solid var(--color-gold);
+    border-radius: 10px;
+    padding: 14px 22px;
+    min-width: 130px;
+}
+
+.print-stat-value {
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+    color: var(--color-wine);
+    line-height: 1.1;
+}
+
+.print-stat-label {
+    display: block;
+    font-size: 0.75em;
+    color: var(--color-brown);
+    margin-top: 6px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.print-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+.print-table th,
+.print-table td {
+    padding: 10px 12px;
+    font-size: 1em;
+}
+
+.print-table th {
+    color: var(--color-wine);
+    border-bottom: 2px solid var(--color-gold);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.85em;
+}
+
+.print-table td {
+    border-bottom: 1px solid rgba(92, 64, 51, 0.2);
+}
+
+.print-quote {
+    border-top: 1px solid var(--color-gold);
+    padding-top: 22px;
+}
+
+.print-quote-text {
+    font-style: italic;
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin: 0 0 10px;
+}
+
+.print-quote-secondary {
+    font-style: italic;
+    font-size: 0.95em;
+    color: var(--color-brown);
+    line-height: 1.6;
+    margin: 0 0 12px;
+}
+
+.print-quote-author {
+    color: var(--color-wine);
+    font-weight: bold;
+    margin: 0;
+}
+
+.print-footer {
+    margin-top: 22px;
+    font-size: 0.8em;
+    color: var(--color-brown);
+}
+
+@media print {
+    @page {
+        size: auto;
+        margin: 15mm;
+    }
+
+    body {
+        background-color: #fff;
+        padding: 0;
+        display: block;
+    }
+
+    .container,
+    .modal-overlay {
+        display: none !important;
+    }
+
+    .print-area {
+        display: block;
+    }
+}
+
 .reset-stats-btn {
     background-color: var(--color-error);
 }

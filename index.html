@@ -79,7 +79,10 @@
                         <tbody id="stats-table-body"></tbody>
                     </table>
                 </div>
-                <button id="reset-stats-btn" class="button reset-stats-btn">Zerar Tudo</button>
+                <div class="stats-actions">
+                    <button id="export-btn" class="button export-btn">Exportar Resultados</button>
+                    <button id="reset-stats-btn" class="button reset-stats-btn">Zerar Tudo</button>
+                </div>
                 <button id="stats-back-btn" class="button">Voltar ao Início</button>
             </div>
 
@@ -111,6 +114,44 @@
             <div class="modal-buttons">
                 <button id="reset-cancel-btn" class="button button-secondary">Cancelar</button>
                 <button id="reset-confirm-btn" class="button reset-confirm-btn">Zerar Tudo</button>
+            </div>
+        </div>
+    </div>
+    <div id="print-area" class="print-area">
+        <div class="print-card">
+            <h1 class="print-title">Quiz Bíblico Católico</h1>
+            <p class="print-subtitle">Minhas Estatísticas de Jogo</p>
+            <div class="print-summary">
+                <div class="print-stat">
+                    <span class="print-stat-value" id="print-total-answered">0</span>
+                    <span class="print-stat-label">Questões Respondidas</span>
+                </div>
+                <div class="print-stat">
+                    <span class="print-stat-value" id="print-total-correct">0</span>
+                    <span class="print-stat-label">Acertos</span>
+                </div>
+                <div class="print-stat">
+                    <span class="print-stat-value" id="print-hit-rate">0%</span>
+                    <span class="print-stat-label">Aproveitamento</span>
+                </div>
+                <div class="print-stat">
+                    <span class="print-stat-value" id="print-max-streak">0</span>
+                    <span class="print-stat-label">Maior Winstreak</span>
+                </div>
+            </div>
+            <table class="print-table">
+                <thead>
+                    <tr><th>Nível</th><th>Respondidas</th><th>Acertos</th><th>Aproveitamento</th></tr>
+                </thead>
+                <tbody id="print-table-body"></tbody>
+            </table>
+            <div class="print-quote">
+                <p class="print-quote-text">"Continue sempre estudando a Bíblia, ela é a fonte da Verdade e meio da revelação da graça Divina."</p>
+                <p class="print-quote-secondary">"A Sagrada Escritura ensina firmemente com sua verdade eterna, deleita docemente com sua suavidade e move eficazmente com sua autoridade."</p>
+                <p class="print-quote-author">— São Tomás de Aquino</p>
+            </div>
+            <div class="print-footer">
+                <p>Quiz Bíblico Católico · <span id="print-date"></span></p>
             </div>
         </div>
     </div>

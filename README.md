@@ -24,12 +24,13 @@ Abaixo está o rastreamento de tudo o que já foi validado e o que está planeja
   - Acertar questão **Hard**: +1 segundos.
   - A cada 5 questões **Hard**: +3 segundos (foco em pressão e conhecimento).
 - [X] **Tempo de Leitura** - enquanto a explicação o tempo é parado, exceto no hardcore
-- [X] Criar parte de **Ajuda**
-- [X] **Visual** - Ajeitar Grid de Questões 
+- [X] Criar parte de **Ajuda**.
+- [X] **Visual** - Ajeitar Grid de Questões.
+- [X] **Sem Pressão** Adicição do Modo sem cronometro.
+- [X] **Exportar Resultados** Agora você pode compartilhar seus resultados com os outros.
 - [ ] **Migração de Stack:** Refatoração do frontend para **React** e construção da API REST com **FastAPI**.
 - [ ] **Integração de Banco de Dados:** Implementação do **SQLite** para armazenar e servir as perguntas, substituindo os dados estáticos em código.
 - [ ] **Sistema de Pontuação:** Multiplicadores baseados na dificuldade da questão e velocidade de resposta.
-- [ ] **Leaderboard / Ranking:** Tabela de classificação para registrar os melhores desempenhos no Modo Hardcore.
 
 ---
 

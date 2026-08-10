@@ -24,6 +24,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const statsTotalCorrectElement = document.getElementById('stats-total-correct');
     const statsHitRateElement = document.getElementById('stats-hit-rate');
     const statsMaxStreakElement = document.getElementById('stats-max-streak');
+    const printTableBodyElement = document.getElementById('print-table-body');
+    const printTotalAnsweredElement = document.getElementById('print-total-answered');
+    const printTotalCorrectElement = document.getElementById('print-total-correct');
+    const printHitRateElement = document.getElementById('print-hit-rate');
+    const printMaxStreakElement = document.getElementById('print-max-streak');
+    const printDateElement = document.getElementById('print-date');
 
     let allQuestions = []; // Store all questions loaded from the file
     let questions = []; // Questions for the current difficulty
@@ -83,6 +89,26 @@ document.addEventListener('DOMContentLoaded', () => {
             stats[category].correct++;
         }
         localStorage.setItem(STATS_KEY, JSON.stringify(stats));
+    }
+
+    function fillPrintArea() {
+        const stats = getStats();
+        const streaks = getWinstreaks();
+        let totalAnswered = 0;
+        let totalCorrect = 0;
+        const rowsHtml = Object.entries(CATEGORY_LABELS).map(([key, label]) => {
+            const s = stats[key] || { answered: 0, correct: 0 };
+            totalAnswered += s.answered;
+            totalCorrect += s.correct;
+            const rate = s.answered > 0 ? Math.round((s.correct / s.answered) * 100) : 0;
+            return `<tr><td>${label}</td><td>${s.answered}</td><td>${s.correct}</td><td>${rate}%</td></tr>`;
+        }).join('');
+        printTableBodyElement.innerHTML = rowsHtml;
+        printTotalAnsweredElement.textContent = totalAnswered;
+        printTotalCorrectElement.textContent = totalCorrect;
+        printHitRateElement.textContent = `${totalAnswered > 0 ? Math.round((totalCorrect / totalAnswered) * 100) : 0}%`;
+        printMaxStreakElement.textContent = Object.values(streaks).reduce((max, v) => Math.max(max, v), 0);
+        printDateElement.textContent = new Date().toLocaleDateString('pt-BR');
     }
 
     function displayStatsScreen() {
@@ -514,6 +540,13 @@ document.addEventListener('DOMContentLoaded', () => {
     statsBackBtn.addEventListener('click', () => {
         statsScreen.classList.add('hidden');
         difficultySelection.classList.remove('hidden');
+    });
+
+    // Export results via print (save as PDF)
+    const exportBtn = document.getElementById('export-btn');
+    exportBtn.addEventListener('click', () => {
+        fillPrintArea();
+        window.print();
     });
 
     // Reset stats with confirmation modal
