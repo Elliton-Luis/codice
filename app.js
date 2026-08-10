@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const timerElement = document.querySelector('.timer');
     const scoreElement = document.querySelector('.score');
     const timeBonusElement = document.getElementById('time-bonus');
+    const recordTagElement = document.getElementById('record-tag');
 
     let allQuestions = []; // Store all questions loaded from the file
     let questions = []; // Questions for the current difficulty
@@ -66,6 +67,30 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             recordSpan.textContent = record > 0 ? `Recorde: ${record} acertos` : 'Sem recorde ainda';
         });
+    }
+
+    function updateRecordTag() {
+        if (gameOver) return;
+        const category = getCategoryKey(selectedDifficulty, hardcoreMode);
+        const record = getWinstreaks()[category] || 0;
+        if (record <= 0 || correctScore <= 0) {
+            recordTagElement.classList.add('hidden');
+            return;
+        }
+        const remaining = record - correctScore;
+        if (remaining >= 1 && remaining <= 3) {
+            recordTagElement.textContent = remaining === 1
+                ? 'Falta 1 resposta para o seu recorde!'
+                : `Faltam ${remaining} respostas para o seu recorde!`;
+            recordTagElement.classList.remove('hidden');
+            recordTagElement.classList.remove('record-beaten');
+        } else if (remaining <= 0) {
+            recordTagElement.textContent = 'Você bateu seu recorde! Continue assim!';
+            recordTagElement.classList.remove('hidden');
+            recordTagElement.classList.add('record-beaten');
+        } else {
+            recordTagElement.classList.add('hidden');
+        }
     }
 
     // Function to shuffle an array
@@ -276,6 +301,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateScoreDisplay() {
         correctScoreSpan.textContent = correctScore;
         incorrectScoreSpan.textContent = incorrectScore;
+        updateRecordTag();
     }
 
     function addBonusTime() {
