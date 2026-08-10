@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let gameOver = false;
     let selectedDifficulty = '';
     let hardcoreMode = false;
+    let timerPaused = false;
 
     // Function to shuffle an array
     function shuffleArray(array) {
@@ -89,6 +90,9 @@ document.addEventListener('DOMContentLoaded', () => {
             if (gameOver) {
                 clearInterval(timerInterval);
                 return;
+            }
+            if (timerPaused) {
+                return; // Keep the time frozen while the explanation is on screen
             }
             timeLeft--;
             cronometerDisplay.textContent = `${timeLeft}s`;
@@ -207,6 +211,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         feedbackContainer.classList.remove('hidden');
         alternativesContainer.classList.add('hidden');
+        timerPaused = true; // Pause the timer so the player can read the explanation
     }
 
     function updateScoreDisplay() {
@@ -264,6 +269,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     nextQuestionBtn.addEventListener('click', () => {
         if (gameOver) return;
+        timerPaused = false; // Resume the timer when moving to the next question
         displayRandomQuestion();
     });
 

@@ -1,4 +1,4 @@
-# Quiz Teológico e Bíblico
+# Quiz Teológico e Bíblico - https://codice-mu.vercel.app/
 
 Um projeto focado em testar e expandir o conhecimento bíblico e teológico através de uma plataforma interativa. O jogo conta com perguntas de diferentes níveis de dificuldade e modos de jogo dinâmicos para desafiar a precisão e a velocidade do jogador.
 
