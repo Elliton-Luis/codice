@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
             totalAnswered += s.answered;
             totalCorrect += s.correct;
             const rate = s.answered > 0 ? Math.round((s.correct / s.answered) * 100) : 0;
-            return `<div class="stats-row"><span class="stats-label">${label}</span><span>${s.answered}</span><span>${s.correct}</span><span>${rate}%</span></div>`;
+            return `<tr><td class="stats-label">${label}</td><td>${s.answered}</td><td>${s.correct}</td><td>${rate}%</td></tr>`;
         }).join('');
         statsTableBodyElement.innerHTML = rowsHtml;
 

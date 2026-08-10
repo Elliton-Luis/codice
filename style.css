@@ -610,25 +610,33 @@ header h1 {
     padding: 5px 18px;
     margin-bottom: 25px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    overflow-x: auto;
 }
 
-.stats-row {
-    display: grid;
-    grid-template-columns: 1fr repeat(3, auto);
-    gap: 20px;
-    align-items: center;
-    padding: 12px 0;
-    border-bottom: 1px solid rgba(92, 64, 51, 0.15);
+.stats-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.stats-table th,
+.stats-table td {
+    padding: 12px 8px;
+    text-align: center;
     color: var(--color-dark-brown);
 }
 
-.stats-row:last-child {
-    border-bottom: none;
-}
-
-.stats-row-header {
+.stats-table th {
     font-weight: bold;
     color: var(--color-brown);
+}
+
+.stats-table td:first-child,
+.stats-table th:first-child {
+    text-align: left;
+}
+
+.stats-table tbody tr:nth-child(even) {
+    background-color: rgba(92, 64, 51, 0.06);
 }
 
 .stats-label {
