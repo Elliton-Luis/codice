@@ -1,0 +1,207 @@
+/* Colors Palette */
+:root {
+    --color-parchment: #F5DEB3;
+    --color-wine: #800020;
+    --color-gold: #D4AF37;
+    --color-cream: #FFFDD0;
+    --color-brown: #5C4033;
+    --color-dark-brown: #36251E;
+    --color-light-gray: #D3D3D3;
+    --color-success: #28A745;
+    --color-error: #DC3545;
+}
+
+body {
+    font-family: 'Georgia', serif; /* A more traditional font */
+    background-color: var(--color-dark-brown);
+    color: var(--color-dark-brown);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to the top, not center vertically */
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: var(--color-parchment);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+header h1 {
+    color: var(--color-wine);
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.score {
+    color: var(--color-brown);
+    font-size: 1.2em;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+.quiz-card {
+    background-color: var(--color-cream);
+    border: 1px solid var(--color-gold);
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.question-text {
+    font-size: 1.5em;
+    color: var(--color-dark-brown);
+    margin-bottom: 30px;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+.alternatives-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.alternative-btn {
+    background-color: var(--color-parchment);
+    color: var(--color-dark-brown);
+    border: 1px solid var(--color-brown);
+    border-radius: 5px;
+    padding: 15px 20px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.alternative-btn:hover:not(:disabled) {
+    background-color: var(--color-light-gray);
+    border-color: var(--color-gold);
+}
+
+.alternative-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.alternative-btn.correct {
+    background-color: var(--color-success);
+    color: white;
+    border-color: var(--color-success);
+    font-weight: bold;
+}
+
+.alternative-btn.incorrect {
+    background-color: var(--color-error);
+    color: white;
+    border-color: var(--color-error);
+    font-weight: bold;
+}
+
+.feedback-container {
+    text-align: left;
+    margin-top: 20px;
+    padding: 15px;
+    border-top: 1px solid var(--color-gold);
+}
+
+.feedback-message {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.feedback-message.correct {
+    color: var(--color-success);
+}
+
+.feedback-message.incorrect {
+    color: var(--color-error);
+}
+
+.correct-answer, .explanation, .reference {
+    font-size: 1.1em;
+    margin-bottom: 8px;
+    color: var(--color-dark-brown);
+}
+
+.reference {
+    font-style: italic;
+    color: var(--color-brown);
+}
+
+.button {
+    background-color: var(--color-wine);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.button:hover {
+    background-color: #6a001a; /* Darker wine on hover */
+}
+
+.hidden {
+    display: none;
+}
+
+.loading-message {
+    font-size: 1.3em;
+    color: var(--color-gold);
+    margin-top: 50px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    .question-text {
+        font-size: 1.2em;
+    }
+
+    .alternative-btn {
+        font-size: 1em;
+        padding: 12px 15px;
+    }
+
+    .button {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+
+    .feedback-message {
+        font-size: 1.1em;
+    }
+
+    .correct-answer, .explanation, .reference {
+        font-size: 1em;
+    }
+}

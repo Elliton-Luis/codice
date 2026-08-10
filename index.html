@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Bíblico Católico</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Quiz Bíblico Católico</h1>
+            <div class="score">
+                Acertos: <span id="correct-score">0</span> | Erros: <span id="incorrect-score">0</span>
+            </div>
+        </header>
+        <main>
+            <div id="quiz-card" class="quiz-card">
+                <p id="question-text" class="question-text"></p>
+                <div id="alternatives-container" class="alternatives-container">
+                </div>
+                <div id="feedback-container" class="feedback-container hidden">
+                    <p id="feedback-message" class="feedback-message"></p>
+                    <p id="correct-answer" class="correct-answer"></p>
+                    <p id="explanation" class="explanation"></p>
+                    <p id="reference" class="reference"></p>
+                    <button id="next-question-btn" class="button">Próxima Pergunta</button>
+                </div>
+            </div>
+            <div id="loading-message" class="loading-message">
+                Carregando perguntas...
+            </div>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
