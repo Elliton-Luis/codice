@@ -235,6 +235,15 @@ header h1 {
     background-color: #6a001a; /* Darker wine on hover */
 }
 
+.give-up-btn {
+    background-color: var(--color-error);
+    margin-top: 10px;
+}
+
+.give-up-btn:hover {
+    background-color: #a52833; /* Darker red on hover */
+}
+
 .hidden {
     display: none;
 }
