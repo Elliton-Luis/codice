@@ -206,12 +206,20 @@ document.addEventListener('DOMContentLoaded', () => {
         updateScoreDisplay();
 
         correctAnswerElement.textContent = `A resposta correta era: ${currentQuestion.alternatives[currentQuestion.correctAnswerIndex]}`;
-        explanationElement.textContent = `Explicação: ${currentQuestion.explanation}`;
-        referenceElement.textContent = `Referência: ${currentQuestion.reference}`;
+        if (hardcoreMode) {
+            explanationElement.classList.add('hidden');
+            referenceElement.classList.add('hidden');
+            timerPaused = false; // In hardcore the time never stops
+        } else {
+            explanationElement.textContent = `Explicação: ${currentQuestion.explanation}`;
+            referenceElement.textContent = `Referência: ${currentQuestion.reference}`;
+            explanationElement.classList.remove('hidden');
+            referenceElement.classList.remove('hidden');
+            timerPaused = true; // Pause the timer so the player can read the explanation
+        }
 
         feedbackContainer.classList.remove('hidden');
         alternativesContainer.classList.add('hidden');
-        timerPaused = true; // Pause the timer so the player can read the explanation
     }
 
     function updateScoreDisplay() {
