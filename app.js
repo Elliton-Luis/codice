@@ -18,6 +18,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const scoreElement = document.querySelector('.score');
     const timeBonusElement = document.getElementById('time-bonus');
     const recordTagElement = document.getElementById('record-tag');
+    const statsTableBodyElement = document.getElementById('stats-table-body');
+    const statsTotalAnsweredElement = document.getElementById('stats-total-answered');
+    const statsTotalCorrectElement = document.getElementById('stats-total-correct');
+    const statsHitRateElement = document.getElementById('stats-hit-rate');
+    const statsMaxStreakElement = document.getElementById('stats-max-streak');
 
     let allQuestions = []; // Store all questions loaded from the file
     let questions = []; // Questions for the current difficulty
@@ -34,6 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let timerPaused = false;
 
     const WINSTREAKS_KEY = 'quizWinstreaks';
+    const STATS_KEY = 'quizStats';
     const CATEGORY_LABELS = { facil: 'Fácil', medio: 'Médio', dificil: 'Difícil', hardcore: 'Hardcore' };
 
     function getCategoryKey(difficulty, hardcore) {
@@ -52,6 +58,49 @@ document.addEventListener('DOMContentLoaded', () => {
         } catch (error) {
             return {};
         }
+    }
+
+    function getStats() {
+        try {
+            return JSON.parse(localStorage.getItem(STATS_KEY)) || {};
+        } catch (error) {
+            return {};
+        }
+    }
+
+    function saveAnswerStat(category, correct) {
+        if (!category) return;
+        const stats = getStats();
+        if (!stats[category]) {
+            stats[category] = { answered: 0, correct: 0 };
+        }
+        stats[category].answered++;
+        if (correct) {
+            stats[category].correct++;
+        }
+        localStorage.setItem(STATS_KEY, JSON.stringify(stats));
+    }
+
+    function displayStatsScreen() {
+        const stats = getStats();
+        const streaks = getWinstreaks();
+        let totalAnswered = 0;
+        let totalCorrect = 0;
+        const rowsHtml = Object.entries(CATEGORY_LABELS).map(([key, label]) => {
+            const s = stats[key] || { answered: 0, correct: 0 };
+            totalAnswered += s.answered;
+            totalCorrect += s.correct;
+            const rate = s.answered > 0 ? Math.round((s.correct / s.answered) * 100) : 0;
+            return `<div class="stats-row"><span class="stats-label">${label}</span><span>${s.answered}</span><span>${s.correct}</span><span>${rate}%</span></div>`;
+        }).join('');
+        statsTableBodyElement.innerHTML = rowsHtml;
+
+        const overallRate = totalAnswered > 0 ? Math.round((totalCorrect / totalAnswered) * 100) : 0;
+        statsTotalAnsweredElement.textContent = totalAnswered;
+        statsTotalCorrectElement.textContent = totalCorrect;
+        statsHitRateElement.textContent = `Aproveitamento: ${overallRate}%`;
+        const maxStreak = Object.values(streaks).reduce((max, v) => Math.max(max, v), 0);
+        statsMaxStreakElement.textContent = maxStreak;
     }
 
     function updateDifficultyRecords() {
@@ -255,6 +304,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const currentQuestion = questions[currentQuestionIndex];
         const isCorrect = selectedIndex === currentQuestion.correctAnswerIndex;
+        saveAnswerStat(getCategoryKey(selectedDifficulty, hardcoreMode), isCorrect);
 
         // Disable all alternative buttons after an answer is selected
         Array.from(alternativesContainer.children).forEach(button => {
@@ -384,6 +434,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     helpBackBtn.addEventListener('click', () => {
         helpScreen.classList.add('hidden');
+        difficultySelection.classList.remove('hidden');
+    });
+
+    // Stats screen
+    const statsBtn = document.getElementById('stats-btn');
+    const statsScreen = document.getElementById('stats-screen');
+    const statsBackBtn = document.getElementById('stats-back-btn');
+
+    statsBtn.addEventListener('click', () => {
+        difficultySelection.classList.add('hidden');
+        displayStatsScreen();
+        statsScreen.classList.remove('hidden');
+    });
+
+    statsBackBtn.addEventListener('click', () => {
+        statsScreen.classList.add('hidden');
         difficultySelection.classList.remove('hidden');
     });
 

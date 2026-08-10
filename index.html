@@ -24,7 +24,10 @@
                 <button class="button difficulty-btn medium-btn" data-difficulty="MEDIUM">Médio</button>
                 <button class="button difficulty-btn hard-btn" data-difficulty="HARD">Difícil</button>
                 <button class="button difficulty-btn hardcore-btn" data-difficulty="HARD" data-hardcore="true">Hardcore</button>
-                <button id="help-btn" class="button help-btn">Ajuda</button>
+                <div class="secondary-buttons">
+                    <button id="help-btn" class="button help-btn">Ajuda</button>
+                    <button id="stats-btn" class="button stats-btn">Estatísticas</button>
+                </div>
             </div>
 
             <div id="help-screen" class="help-screen hidden">
@@ -52,6 +55,26 @@
                     </div>
                 </div>
                 <button id="help-back-btn" class="button">Voltar ao Início</button>
+            </div>
+
+            <div id="stats-screen" class="stats-screen hidden">
+                <h2 class="stats-title">Estatísticas Gerais</h2>
+                <div class="stats-card">
+                    <p class="stats-total">Questões respondidas: <span id="stats-total-answered">0</span></p>
+                    <p class="stats-total">Acertos: <span id="stats-total-correct">0</span></p>
+                    <p class="stats-max-streak">Maior Winstreak: <span id="stats-max-streak">0</span></p>
+                    <p class="stats-hit-rate" id="stats-hit-rate">Aproveitamento: 0%</p>
+                </div>
+                <div class="stats-table">
+                    <div class="stats-row stats-row-header">
+                        <span>Nível</span>
+                        <span>Respondidas</span>
+                        <span>Acertos</span>
+                        <span>Aproveitamento</span>
+                    </div>
+                    <div id="stats-table-body"></div>
+                </div>
+                <button id="stats-back-btn" class="button">Voltar ao Início</button>
             </div>
 
             <div id="quiz-card" class="quiz-card hidden">

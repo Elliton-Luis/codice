@@ -493,12 +493,18 @@ header h1 {
     background-color: #6a001a; /* Darker wine on hover */
 }
 
-.help-btn {
+.secondary-buttons {
     grid-column: 1 / -1;
-    justify-self: center;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.help-btn {
     width: auto;
     min-width: 220px;
-    margin-top: 10px;
     background-color: #B08968; /* Medium-light brown */
     border: none;
     border-radius: 10px;
@@ -506,4 +512,89 @@ header h1 {
 
 .help-btn:hover {
     background-color: #97744F; /* Darker medium-light brown on hover */
+}
+
+.stats-btn {
+    width: auto;
+    min-width: 220px;
+    background-color: var(--color-brown);
+    border: none;
+    border-radius: 10px;
+}
+
+.stats-btn:hover {
+    background-color: #46322A; /* Darker brown on hover */
+}
+
+.stats-screen {
+    text-align: center;
+}
+
+.stats-title {
+    color: var(--color-wine);
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.stats-card {
+    background-color: var(--color-cream);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.stats-total {
+    font-size: 1.15em;
+    margin-bottom: 8px;
+    color: var(--color-dark-brown);
+}
+
+.stats-max-streak {
+    display: inline-block;
+    background-color: var(--color-gold);
+    color: var(--color-dark-brown);
+    font-size: 1.15em;
+    font-weight: bold;
+    padding: 6px 16px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.stats-hit-rate {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: var(--color-wine);
+    margin-top: 12px;
+}
+
+.stats-table {
+    background-color: var(--color-cream);
+    border-radius: 12px;
+    padding: 5px 18px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.stats-row {
+    display: grid;
+    grid-template-columns: 1fr repeat(3, auto);
+    gap: 20px;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(92, 64, 51, 0.15);
+    color: var(--color-dark-brown);
+}
+
+.stats-row:last-child {
+    border-bottom: none;
+}
+
+.stats-row-header {
+    font-weight: bold;
+    color: var(--color-brown);
+}
+
+.stats-label {
+    font-weight: bold;
 }
