@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const difficultyButtons = document.querySelectorAll('.difficulty-btn');
     const timerElement = document.querySelector('.timer');
     const scoreElement = document.querySelector('.score');
+    const timeBonusElement = document.getElementById('time-bonus');
 
     let allQuestions = []; // Store all questions loaded from the file
     let questions = []; // Questions for the current difficulty
@@ -23,8 +24,9 @@ document.addEventListener('DOMContentLoaded', () => {
     let answeredQuestions = new Set(); // To avoid immediate repetition
     let correctScore = 0;
     let incorrectScore = 0;
-    let timeLeft = 60; // Initial time in seconds
+    let timeLeft = 30; // Initial time in seconds
     let timerInterval;
+    let bonusFlashTimeout;
     let gameOver = false;
     let selectedDifficulty = '';
     let hardcoreMode = false;
@@ -235,8 +237,30 @@ document.addEventListener('DOMContentLoaded', () => {
         if (bonus > 0) {
             timeLeft += bonus;
             cronometerDisplay.textContent = `${timeLeft}s`;
+            showTimeBonus(bonus);
+            flashCronometer();
         }
     }
+
+    function showTimeBonus(bonus) {
+        timeBonusElement.textContent = `+${bonus}s`;
+        timeBonusElement.classList.remove('hidden');
+        timeBonusElement.style.animation = 'none';
+        void timeBonusElement.offsetWidth; // Restart the animation
+        timeBonusElement.style.animation = '';
+    }
+
+    function flashCronometer() {
+        cronometerDisplay.classList.add('cronometer-bonus');
+        clearTimeout(bonusFlashTimeout);
+        bonusFlashTimeout = setTimeout(() => {
+            cronometerDisplay.classList.remove('cronometer-bonus');
+        }, 1000);
+    }
+
+    timeBonusElement.addEventListener('animationend', () => {
+        timeBonusElement.classList.add('hidden');
+    });
 
     nextQuestionBtn.addEventListener('click', () => {
         if (gameOver) return;

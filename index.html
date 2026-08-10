@@ -11,7 +11,7 @@
         <header>
             <h1>Quiz Bíblico Católico</h1>
             <div class="timer hidden">
-                Tempo: <span id="cronometer-display">60s</span>
+                <span class="timer-wrapper">Tempo: <span id="cronometer-display">30s</span> <span id="time-bonus" class="time-bonus hidden"></span></span>
             </div>
             <div class="score hidden">
                 Acertos: <span id="correct-score">0</span> | Erros: <span id="incorrect-score">0</span>
@@ -31,7 +31,6 @@
                 <div id="alternatives-container" class="alternatives-container">
                     <!-- Alternatives will be loaded here by JavaScript -->
                 </div>
-                <button id="give-up-btn" class="button give-up-btn">Desistir</button>
                 <div id="feedback-container" class="feedback-container hidden">
                     <p id="feedback-message" class="feedback-message"></p>
                     <p id="correct-answer" class="correct-answer"></p>
@@ -39,6 +38,7 @@
                     <p id="reference" class="reference"></p>
                     <button id="next-question-btn" class="button">Próxima Pergunta</button>
                 </div>
+                <button id="give-up-btn" class="button give-up-btn">Desistir</button>
             </div>
             <div id="loading-message" class="loading-message">
                 Carregando perguntas...

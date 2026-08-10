@@ -14,12 +14,14 @@ Abaixo está o rastreamento de tudo o que já foi validado e o que está planeja
 
 - [x] **Curadoria de Conteúdo:** Estruturação inicial de perguntas profundas (níveis Easy, Medium e Hard) com justificativas e referências bíblicas/teológicas.
 - [x] **Prova de Conceito (PoC):** Criação da interface base e lógica de validação de respostas utilizando HTML, CSS e JavaScript puro.
-- [ ] **Modo Hardcore (Morte Súbita):** Implementação da regra onde 1 único erro resulta no fim imediato do jogo.
-- [ ] **Modo Time Attack (Mecânica de Bônus de Tempo):** 
+- [X] **Modo Hardcore (Morte Súbita):** Implementação da regra onde 1 único erro resulta no fim imediato do jogo.
+- [X] **Modo Time Attack (Mecânica de Bônus de Tempo):** 
   - O jogador corre contra o relógio.
   - Acertar questão **Easy**: +3 segundos.
-  - Acertar questão **Medium**: +1 segundo.
-  - Acertar questão **Hard**: +0 segundos (foco em pressão e conhecimento).
+  - Acertar questão **Medium**: +2 segundo.
+  - Acertar questão **Hard**: +1 segundos.
+  - A cada 5 questões **Hard**: +3 segundos (foco em pressão e conhecimento).
+- [ ] Criar parte de **Ajuda**
 - [ ] **Migração de Stack:** Refatoração do frontend para **React** e construção da API REST com **FastAPI**.
 - [ ] **Integração de Banco de Dados:** Implementação do **SQLite** para armazenar e servir as perguntas, substituindo os dados estáticos em código.
 - [ ] **Sistema de Pontuação:** Multiplicadores baseados na dificuldade da questão e velocidade de resposta.
