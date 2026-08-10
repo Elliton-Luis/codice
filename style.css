@@ -129,6 +129,40 @@ header h1 {
     background-color: #a52833; /* Darker red on hover */
 }
 
+.help-btn {
+    background-color: var(--color-brown);
+    border: 1px solid var(--color-brown);
+}
+
+.help-btn:hover {
+    background-color: var(--color-dark-brown);
+}
+
+.help-screen {
+    text-align: center;
+}
+
+.help-title {
+    color: var(--color-wine);
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.help-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto 25px;
+    max-width: 600px;
+    text-align: left;
+}
+
+.help-list li {
+    margin-bottom: 12px;
+    line-height: 1.5;
+    font-size: 1.1em;
+    color: var(--color-dark-brown);
+}
+
 .game-over-container {
     background-color: var(--color-cream);
     border: 1px solid var(--color-gold);

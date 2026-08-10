@@ -295,6 +295,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Help screen
+    const helpBtn = document.getElementById('help-btn');
+    const helpScreen = document.getElementById('help-screen');
+    const helpBackBtn = document.getElementById('help-back-btn');
+
+    helpBtn.addEventListener('click', () => {
+        difficultySelection.classList.add('hidden');
+        helpScreen.classList.remove('hidden');
+    });
+
+    helpBackBtn.addEventListener('click', () => {
+        helpScreen.classList.add('hidden');
+        difficultySelection.classList.remove('hidden');
+    });
+
     // Initial load
     quizCard.classList.add('hidden'); // Hide quiz until questions are loaded
     timerElement.classList.add('hidden');

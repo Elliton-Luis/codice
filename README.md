@@ -22,7 +22,8 @@ Abaixo está o rastreamento de tudo o que já foi validado e o que está planeja
   - Acertar questão **Hard**: +1 segundos.
   - A cada 5 questões **Hard**: +3 segundos (foco em pressão e conhecimento).
 - [X] **Tempo de Leitura** - enquanto a explicação o tempo é parado, exceto no hardcore
-- [ ] Criar parte de **Ajuda**
+- [X] Criar parte de **Ajuda**
+- [] **Visual** - Ajeitar Grid de Questões 
 - [ ] **Migração de Stack:** Refatoração do frontend para **React** e construção da API REST com **FastAPI**.
 - [ ] **Integração de Banco de Dados:** Implementação do **SQLite** para armazenar e servir as perguntas, substituindo os dados estáticos em código.
 - [ ] **Sistema de Pontuação:** Multiplicadores baseados na dificuldade da questão e velocidade de resposta.

@@ -20,10 +20,23 @@
         <main>
             <div id="difficulty-selection" class="difficulty-selection">
                 <p class="selection-prompt">Escolha o nível de dificuldade:</p>
-                <button class="button difficulty-btn" data-difficulty="EASY">Fácil</button>
-                <button class="button difficulty-btn" data-difficulty="MEDIUM">Médio</button>
-                <button class="button difficulty-btn" data-difficulty="HARD">Difícil</button>
+                <button class="button difficulty-btn easy-btn" data-difficulty="EASY">Fácil</button>
+                <button class="button difficulty-btn medium-btn" data-difficulty="MEDIUM">Médio</button>
+                <button class="button difficulty-btn hard-btn" data-difficulty="HARD">Difícil</button>
                 <button class="button difficulty-btn hardcore-btn" data-difficulty="HARD" data-hardcore="true">Hardcore</button>
+                <button id="help-btn" class="button help-btn">Ajuda</button>
+            </div>
+
+            <div id="help-screen" class="help-screen hidden">
+                <h2 class="help-title">Como Jogar</h2>
+                <ul class="help-list">
+                    <li>O tempo de jogo começa em 30 segundos.</li>
+                    <li>O tempo pausa enquanto a explicação da pergunta estiver na tela, exceto no modo Hardcore, onde ele nunca para.</li>
+                    <li>Ao acertar uma pergunta, você ganha tempo: Fácil +3s, Médio +2s e Difícil +1s.</li>
+                    <li>No modo Hardcore, um único erro encerra o jogo. Você ganha +3s a cada 5 acertos e não vê explicações.</li>
+                    <li>Para vencer, o número de respostas certas deve ser no mínimo o dobro do número de erros.</li>
+                </ul>
+                <button id="help-back-btn" class="button">Voltar ao Início</button>
             </div>
 
             <div id="quiz-card" class="quiz-card hidden">
