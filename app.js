@@ -305,25 +305,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function loadAllQuestions() {
         try {
-            const response = await fetch('questions.txt');
+            const response = await fetch('questions.json');
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
-            const text = await response.text();
-            allQuestions = text.split('\n')
-                .filter(line => line.trim() !== '')
-                .map(line => {
-                    const parts = line.split(' | ');
-                    return {
-                        question: parts[0],
-                        alternatives: [parts[1], parts[2], parts[3], parts[4]],
-                        correctAnswerIndex: parseInt(parts[5]),
-                        explanation: parts[6],
-                        reference: parts[7],
-                        difficulty: parts[8].trim(),
-                        category: parts.length > 9 ? parts[9].trim() : 'biblia'
-                    };
-                });
+            const questions = await response.json();
+            allQuestions = questions.map(q => ({
+                question: q.question,
+                alternatives: q.options,
+                correctAnswerIndex: q.answer,
+                explanation: q.explanation,
+                reference: q.reference,
+                difficulty: q.difficulty,
+                category: q.category
+            }));
             loadingMessage.classList.add('hidden');
             showHome();
         } catch (error) {

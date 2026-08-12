@@ -1,0 +1,4502 @@
+[
+  {
+    "category": "biblia",
+    "difficulty": "MEDIUM",
+    "question": "Em qual capítulo do livro de Atos dos Apóstolos é narrada a visão de Pedro com um lençol cheio de animais descer do céu?",
+    "options": [
+      "Atos 2",
+      "Atos 8",
+      "Atos 10",
+      "Atos 15"
+    ],
+    "answer": 2,
+    "explanation": "Em Atos 10, Pedro tem a visão do lençol, que o preparou para pregar ao centurião Cornélio, marcando a expansão do evangelho.",
+    "reference": "Atos 10:9-16",
+    "id": 1
+  },
+  {
+    "category": "biblia",
+    "difficulty": "HARD",
+    "question": "O que significou a visão de Pedro sobre os animais que a lei judaica considerava impuros em Atos 10?",
+    "options": [
+      "Que a lei alimentar havia mudado estritamente para a saúde",
+      "Que Deus não faz acepção de pessoas e a salvação é para todos os povos gentios",
+      "Que ele deveria abrir mão da pregação e focar nos judeus",
+      "Que o fim do mundo estava muito próximo"
+    ],
+    "answer": 1,
+    "explanation": "A visão revelou a Pedro que Deus purificou os gentios, abrindo a porta da salvação e da Igreja para todos os povos, quebrando a barreira da separação.",
+    "reference": "Atos 10:34-35",
+    "id": 2
+  },
+  {
+    "category": "biblia",
+    "difficulty": "MEDIUM",
+    "question": "Em qual capítulo o profeta Ezequiel tem a visão do vale de ossos secos que voltam à vida por meio do sopro do Espírito?",
+    "options": [
+      "Ezequiel 1",
+      "Ezequiel 18",
+      "Ezequiel 37",
+      "Ezequiel 47"
+    ],
+    "answer": 2,
+    "explanation": "A visão do vale de ossos secos em Ezequiel 37 é uma profecia poderosa sobre a restauração nacional e espiritual do povo de Israel.",
+    "reference": "Ezequiel 37:1-14",
+    "id": 3
+  },
+  {
+    "category": "biblia",
+    "difficulty": "HARD",
+    "question": "Qual capítulo do livro de Isaías é amplamente conhecido por descrever o sofrimento do Messias, chamando-o de \"Servo Sofredor\"?",
+    "options": [
+      "Isaías 6",
+      "Isaías 40",
+      "Isaías 53",
+      "Isaías 61"
+    ],
+    "answer": 2,
+    "explanation": "Isaías 53 é o ápice do Cântico do Servo Sofredor, profetizando detalhadamente os padecimentos, a rejeição e a morte expiatória de Cristo.",
+    "reference": "Isaías 53",
+    "id": 4
+  },
+  {
+    "category": "biblia",
+    "difficulty": "HARD",
+    "question": "O que significou o rasgar do véu do santuário do templo de alto a baixo, no momento exato da morte de Jesus na cruz?",
+    "options": [
+      "O fim irrevogável da aliança de Deus com os homens",
+      "A destruição iminente e física do Templo de Jerusalém",
+      "O livre e direto acesso a Deus Pai mediado pelo sacrifício de Cristo",
+      "Um evento natural causado por um terremoto comum na região"
+    ],
+    "answer": 2,
+    "explanation": "O véu separava o Santo dos Santos. Seu rasgo simboliza que, pelo sangue de Jesus, a humanidade não está mais separada e tem livre acesso à presença de Deus.",
+    "reference": "Hebreus 10:19-20",
+    "id": 5
+  },
+  {
+    "category": "biblia",
+    "difficulty": "MEDIUM",
+    "question": "Qual Salmo foi escrito pelo Rei Davi como uma oração de profundo arrependimento após o profeta Natã confrontá-lo sobre seu pecado com Bate-Seba?",
+    "options": [
+      "Salmo 23",
+      "Salmo 51",
+      "Salmo 91",
+      "Salmo 119"
+    ],
+    "answer": 1,
+    "explanation": "O Salmo 51, que começa com \"Tem misericórdia de mim, ó Deus\", é o modelo bíblico de confissão e pedido de purificação de um coração quebrantado.",
+    "reference": "Salmos 51",
+    "id": 6
+  },
+  {
+    "category": "biblia",
+    "difficulty": "MEDIUM",
+    "question": "Em qual capítulo da Primeira Carta aos Coríntios São Paulo escreve o famoso \"Hino ao Amor\" (ou Caridade), dizendo que sem ele seríamos como o metal que soa?",
+    "options": [
+      "1 Coríntios 11",
+      "1 Coríntios 12",
+      "1 Coríntios 13",
+      "1 Coríntios 15"
+    ],
+    "answer": 2,
+    "explanation": "No capítulo 13, Paulo descreve que sem o amor, de nada valem os profecias, a fé que move montanhas ou as línguas dos anjos, pois o amor é o dom supremo.",
+    "reference": "1 Coríntios 13:1-13",
+    "id": 7
+  },
+  {
+    "category": "biblia",
+    "difficulty": "MEDIUM",
+    "question": "Em qual capítulo do Evangelho de João ocorre o diálogo noturno entre Jesus e o fariseu Nicodemos sobre a necessidade de \"nascer de novo\"?",
+    "options": [
+      "João 1",
+      "João 3",
+      "João 4",
+      "João 6"
+    ],
+    "answer": 1,
+    "explanation": "Jesus explica a Nicodemos em João 3 que para ver o Reino de Deus é necessário nascer da água e do Espírito, capítulo que também traz João 3:16.",
+    "reference": "João 3:1-21",
+    "id": 8
+  },
+  {
+    "category": "biblia",
+    "difficulty": "HARD",
+    "question": "Na explicação da Parábola do Semeador dada por Jesus, o que representa a \"semente que caiu entre os espinhos\"?",
+    "options": [
+      "Aqueles que ouvem a palavra, mas não a compreendem",
+      "Aqueles que abandonam a fé rapidamente por causa de tribulação ou perseguição",
+      "Aqueles em quem os cuidados do mundo e a ilusão das riquezas sufocam a palavra",
+      "Aqueles que ouvem a palavra e produzem frutos a cem por um"
+    ],
+    "answer": 2,
+    "explanation": "Jesus ensina que os espinhos simbolizam as preocupações desta vida e o engano das riquezas, que sufocam a Palavra, tornando a pessoa infrutífera.",
+    "reference": "Marcos 4:18-19",
+    "id": 9
+  },
+  {
+    "category": "biblia",
+    "difficulty": "MEDIUM",
+    "question": "Qual capítulo da Carta aos Hebreus é amplamente conhecido como a \"Galeria dos Heróis da Fé\", conceituando a fé e listando personagens do Antigo Testamento?",
+    "options": [
+      "Hebreus 4",
+      "Hebreus 10",
+      "Hebreus 11",
+      "Hebreus 12"
+    ],
+    "answer": 2,
+    "explanation": "Hebreus 11 define a fé como \"a certeza das coisas que se esperam\" e lista exemplos notáveis de homens e mulheres que viveram confiando em Deus.",
+    "reference": "Hebreus 11",
+    "id": 10
+  },
+  {
+    "category": "biblia",
+    "difficulty": "MEDIUM",
+    "question": "Onde na Bíblia encontramos a visão de João descrevendo os \"novos céus e a nova terra\" e a Nova Jerusalém descendo do céu, adornada como uma noiva?",
+    "options": [
+      "Apocalipse 1",
+      "Apocalipse 12",
+      "Apocalipse 20",
+      "Apocalipse 21"
+    ],
+    "answer": 3,
+    "explanation": "Apocalipse 21 detalha a visão da restauração gloriosa de todas as coisas e a promessa definitiva de que Deus habitará para sempre com o seu povo.",
+    "reference": "Apocalipse 21:1-4",
+    "id": 11
+  },
+  {
+    "category": "biblia",
+    "difficulty": "HARD",
+    "question": "O que significa o conceito teológico de \"Kenosis\" (esvaziamento), descrito por Paulo no famoso hino cristológico da Carta aos Filipenses capítulo 2?",
+    "options": [
+      "A perda definitiva da natureza divina de Cristo ao nascer em Belém",
+      "O ato de Jesus esvaziar-se de sua glória para assumir a forma de servo e natureza humana",
+      "O esvaziamento do Espírito Santo sobre os apóstolos no Pentecostes",
+      "A ordem para que os cristãos doem todos os seus bens materiais aos pobres"
+    ],
+    "answer": 1,
+    "explanation": "Filipenses 2:7 fala sobre como Cristo, sendo igual a Deus, esvaziou-se a si mesmo (Kenosis), assumindo a condição de servo e tornando-se obediente até a morte de cruz.",
+    "reference": "Filipenses 2:5-8",
+    "id": 12
+  },
+  {
+    "category": "biblia",
+    "difficulty": "MEDIUM",
+    "question": "Qual grandioso capítulo da Carta aos Romanos começa afirmando que \"nenhuma condenação há para os que estão em Cristo Jesus\" e termina declarando que \"nada nos separará do amor de Deus\"?",
+    "options": [
+      "Romanos 3",
+      "Romanos 6",
+      "Romanos 8",
+      "Romanos 12"
+    ],
+    "answer": 2,
+    "explanation": "Romanos 8 é considerado um dos capítulos mais profundos do Novo Testamento, tratando da vida no Espírito, da filiação divina e da segurança inabalável do crente.",
+    "reference": "Romanos 8:1-39",
+    "id": 13
+  },
+  {
+    "category": "biblia",
+    "difficulty": "HARD",
+    "question": "Qual é o tema central e profético do chamado \"Sermão Escatológico\" (ou Sermão do Monte das Oliveiras), registrado detalhadamente em Mateus 24?",
+    "options": [
+      "As Bem-Aventuranças e o ensino moral sobre a Lei",
+      "O fim dos tempos, a destruição do Templo de Jerusalém e os sinais da volta do Filho do Homem",
+      "A instituição da Eucaristia e a traição de Judas",
+      "O embate com os fariseus sobre regras de pureza e sábados"
+    ],
+    "answer": 1,
+    "explanation": "Em Mateus 24, Jesus responde, em particular, às perguntas dos discípulos sobre quando o templo seria destruído e quais seriam os sinais do fim dos tempos.",
+    "reference": "Mateus 24:3",
+    "id": 14
+  },
+  {
+    "category": "biblia",
+    "difficulty": "HARD",
+    "question": "Em Gênesis 3:15, Deus diz à serpente: \"Porei inimizade entre ti e a mulher, entre a tua descendência e o descendente dela...\". Como a teologia cristã denomina este versículo específico?",
+    "options": [
+      "O Grande Mandamento",
+      "O Protoevangelho (O Primeiro Evangelho)",
+      "A Aliança Abraâmica",
+      "O Pacto do Sinai"
+    ],
+    "answer": 1,
+    "explanation": "Gênesis 3:15 é conhecido como o Protoevangelho, pois é a primeira promessa bíblica de um Redentor, profetizando que a descendência da mulher (Cristo) esmagaria a cabeça da serpente (Satanás).",
+    "reference": "Gênesis 3:15",
+    "id": 15
+  },
+  {
+    "category": "biblia",
+    "difficulty": "EASY",
+    "question": "Qual livro da Bíblia conta a história de Rute e sua fidelidade à sogra Noemi?",
+    "options": [
+      "Rute",
+      "Ester",
+      "Judite",
+      "Tobias"
+    ],
+    "answer": 0,
+    "explanation": "O Livro de Rute narra a história da fiel Rute, que acompanhou sua sogra Noemi e se tornou bisavó do rei Davi.",
+    "reference": "Rute 1:16-17",
+    "id": 16
+  },
+  {
+    "category": "biblia",
+    "difficulty": "EASY",
+    "question": "Quem foi o gigante filisteu derrotado por Davi com uma funda e uma pedra?",
+    "options": [
+      "Golias",
+      "Sansão",
+      "Absalão",
+      "Saul"
+    ],
+    "answer": 0,
+    "explanation": "Davi venceu o gigante Golias com uma funda e uma pedra, confiando no poder de Deus.",
+    "reference": "1 Samuel 17",
+    "id": 17
+  },
+  {
+    "category": "biblia",
+    "difficulty": "EASY",
+    "question": "Em qual rio Jesus foi batizado por João Batista?",
+    "options": [
+      "Nilo",
+      "Jordão",
+      "Eufrates",
+      "Tigre"
+    ],
+    "answer": 1,
+    "explanation": "Jesus foi batizado por João Batista no rio Jordão, onde o Espírito Santo desceu sobre Ele.",
+    "reference": "Mateus 3:13-17",
+    "id": 18
+  },
+  {
+    "category": "santos",
+    "difficulty": "EASY",
+    "question": "Qual era a profissão de São Lucas, autor do terceiro Evangelho?",
+    "options": [
+      "Pescador",
+      "Médico",
+      "Carpinteiro",
+      "Soldado"
+    ],
+    "answer": 1,
+    "explanation": "São Lucas era médico, como São Paulo o chama na Carta aos Colossenses.",
+    "reference": "Colossenses 4:14",
+    "id": 19
+  },
+  {
+    "category": "biblia",
+    "difficulty": "EASY",
+    "question": "Quantas pragas Deus enviou sobre o Egito antes da libertação de Israel?",
+    "options": [
+      "7",
+      "10",
+      "12",
+      "40"
+    ],
+    "answer": 1,
+    "explanation": "Deus enviou dez pragas sobre o Egito antes que o Faraó permitisse a saída do povo de Israel.",
+    "reference": "Êxodo 7-12",
+    "id": 20
+  },
+  {
+    "category": "biblia",
+    "difficulty": "EASY",
+    "question": "Qual discípulo de Jesus era cobrador de impostos antes de segui-lo?",
+    "options": [
+      "Pedro",
+      "Mateus",
+      "Tiago",
+      "André"
+    ],
+    "answer": 1,
+    "explanation": "Mateus, também chamado Levi, era cobrador de impostos quando Jesus o chamou para segui-lo.",
+    "reference": "Mateus 9:9",
+    "id": 21
+  },
+  {
+    "category": "biblia",
+    "difficulty": "EASY",
+    "question": "Quem era a esposa de Abraão e mãe de Isaac?",
+    "options": [
+      "Sara",
+      "Rebeca",
+      "Raquel",
+      "Lia"
+    ],
+    "answer": 0,
+    "explanation": "Sara, esposa de Abraão, deu à luz Isaac segundo a promessa de Deus.",
+    "reference": "Gênesis 21:1-3",
+    "id": 22
+  },
+  {
+    "category": "biblia",
+    "difficulty": "EASY",
+    "question": "Quem anunciou aos pastores de Belém o nascimento de Jesus?",
+    "options": [
+      "Um anjo do Senhor",
+      "Maria",
+      "Os três reis magos",
+      "João Batista"
+    ],
+    "answer": 0,
+    "explanation": "Um anjo do Senhor apareceu aos pastores e anunciou o nascimento do Salvador.",
+    "reference": "Lucas 2:8-12",
+    "id": 23
+  },
+  {
+    "category": "biblia",
+    "difficulty": "MEDIUM",
+    "question": "Qual era o nome da irmã de Moisés que liderou as mulheres de Israel em cânticos de louvor?",
+    "options": [
+      "Miriã",
+      "Débora",
+      "Ana",
+      "Isabel"
+    ],
+    "answer": 0,
+    "explanation": "Miriã, irmã de Moisés e Arão, conduziu as mulheres em cânticos de louvor após a travessia do Mar Vermelho.",
+    "reference": "Êxodo 15:20-21",
+    "id": 24
+  },
+  {
+    "category": "biblia",
+    "difficulty": "EASY",
+    "question": "Quem foi escolhido para substituir Judas Iscariotes no colégio dos apóstolos?",
+    "options": [
+      "Matias",
+      "Barnabé",
+      "Estêvão",
+      "Paulo"
+    ],
+    "answer": 0,
+    "explanation": "Matias foi escolhido por sorteio para ocupar o lugar de Judas no colégio apostólico.",
+    "reference": "Atos 1:26",
+    "id": 25
+  },
+  {
+    "category": "biblia",
+    "difficulty": "EASY",
+    "question": "Quantos dias e noites Jesus jejuou no deserto antes de ser tentado pelo demônio?",
+    "options": [
+      "7",
+      "40",
+      "12",
+      "30"
+    ],
+    "answer": 1,
+    "explanation": "Jesus jejuou por quarenta dias e quarenta noites no deserto antes de ser tentado.",
+    "reference": "Mateus 4:2",
+    "id": 26
+  },
+  {
+    "category": "biblia",
+    "difficulty": "EASY",
+    "question": "Qual é o último livro da Bíblia Sagrada?",
+    "options": [
+      "Judas",
+      "Apocalipse",
+      "Malaquias",
+      "Hebreus"
+    ],
+    "answer": 1,
+    "explanation": "Apocalipse é o último livro da Bíblia e revela o triunfo final de Cristo sobre o mal.",
+    "reference": "Apocalipse 22:21",
+    "id": 27
+  },
+  {
+    "category": "biblia",
+    "difficulty": "EASY",
+    "question": "Quem foi ungido por Samuel como o primeiro rei de Israel?",
+    "options": [
+      "Davi",
+      "Saul",
+      "Salomão",
+      "Josias"
+    ],
+    "answer": 1,
+    "explanation": "Saul foi ungido por Samuel como o primeiro rei de Israel.",
+    "reference": "1 Samuel 10:1",
+    "id": 28
+  },
+  {
+    "category": "biblia",
+    "difficulty": "EASY",
+    "question": "Qual filho do rei Davi se rebelou contra o pai tentando tomar seu trono?",
+    "options": [
+      "Absalão",
+      "Adonias",
+      "Amnom",
+      "Salomão"
+    ],
+    "answer": 0,
+    "explanation": "Absalão, filho de Davi, se rebelou contra o pai e tentou tomar o trono de Israel.",
+    "reference": "2 Samuel 15",
+    "id": 29
+  },
+  {
+    "category": "biblia",
+    "difficulty": "EASY",
+    "question": "Qual é o primeiro livro do Novo Testamento?",
+    "options": [
+      "Mateus",
+      "Gênesis",
+      "Marcos",
+      "João"
+    ],
+    "answer": 0,
+    "explanation": "O Evangelho de Mateus abre o Novo Testamento.",
+    "reference": "Mateus 1:1",
+    "id": 30
+  },
+  {
+    "category": "biblia",
+    "difficulty": "MEDIUM",
+    "question": "Quem foi o pai do rei Davi?",
+    "options": [
+      "Jessé",
+      "Saul",
+      "Abraão",
+      "Noé"
+    ],
+    "answer": 0,
+    "explanation": "Jessé, o bete-lemita, era o pai do rei Davi.",
+    "reference": "1 Samuel 16:1",
+    "id": 31
+  },
+  {
+    "category": "biblia",
+    "difficulty": "EASY",
+    "question": "Qual profeta foi alimentado por corvos às margens do riacho de Querite?",
+    "options": [
+      "Elias",
+      "Eliseu",
+      "Isaías",
+      "Jeremias"
+    ],
+    "answer": 0,
+    "explanation": "Durante a seca, Deus mandou corvos levarem pão e carne ao profeta Elias.",
+    "reference": "1 Reis 17:4-6",
+    "id": 32
+  },
+  {
+    "category": "biblia",
+    "difficulty": "EASY",
+    "question": "Em qual cidade Jesus celebrou a Última Ceia com os apóstolos?",
+    "options": [
+      "Jerusalém",
+      "Belém",
+      "Nazaré",
+      "Cafarnaum"
+    ],
+    "answer": 0,
+    "explanation": "Jesus celebrou a Última Ceia em Jerusalém, na sala da Páscoa.",
+    "reference": "Lucas 22:7-13",
+    "id": 33
+  },
+  {
+    "category": "biblia",
+    "difficulty": "EASY",
+    "question": "Quem foi o primeiro homem criado por Deus?",
+    "options": [
+      "Adão",
+      "Noé",
+      "Abraão",
+      "Moisés"
+    ],
+    "answer": 0,
+    "explanation": "Adão foi criado por Deus à sua imagem e semelhança.",
+    "reference": "Gênesis 2:7",
+    "id": 34
+  },
+  {
+    "category": "biblia",
+    "difficulty": "EASY",
+    "question": "Qual era o nome da mãe de Samuel, que o dedicou ao Senhor?",
+    "options": [
+      "Ana",
+      "Isabel",
+      "Sara",
+      "Rebeca"
+    ],
+    "answer": 0,
+    "explanation": "Ana orou a Deus por um filho e dedicou Samuel ao serviço do Senhor.",
+    "reference": "1 Samuel 1:20",
+    "id": 35
+  },
+  {
+    "category": "biblia",
+    "difficulty": "EASY",
+    "question": "Quem foi o juiz que derrotou os midianitas com apenas trezentos homens?",
+    "options": [
+      "Gideão",
+      "Sansão",
+      "Jefté",
+      "Otoniel"
+    ],
+    "answer": 0,
+    "explanation": "Gideão venceu os midianitas com trezentos homens, confiando em Deus.",
+    "reference": "Juízes 7",
+    "id": 36
+  },
+  {
+    "category": "biblia",
+    "difficulty": "EASY",
+    "question": "Qual apóstolo era irmão de Pedro?",
+    "options": [
+      "André",
+      "Tiago",
+      "João",
+      "Filipe"
+    ],
+    "answer": 0,
+    "explanation": "André, irmão de Simão Pedro, foi o primeiro a seguir Jesus.",
+    "reference": "Mateus 4:18",
+    "id": 37
+  },
+  {
+    "category": "biblia",
+    "difficulty": "EASY",
+    "question": "Qual é o nome do mar que se abriu para Israel atravessar em seco?",
+    "options": [
+      "Mar Vermelho",
+      "Mar da Galileia",
+      "Mar Morto",
+      "Mar Mediterrâneo"
+    ],
+    "answer": 0,
+    "explanation": "Deus abriu o Mar Vermelho para Israel atravessar em seco.",
+    "reference": "Êxodo 14:21-22",
+    "id": 38
+  },
+  {
+    "category": "biblia",
+    "difficulty": "EASY",
+    "question": "Quantos livros possui o Novo Testamento?",
+    "options": [
+      "27",
+      "39",
+      "66",
+      "24"
+    ],
+    "answer": 0,
+    "explanation": "O Novo Testamento possui 27 livros.",
+    "reference": "Índice do Novo Testamento",
+    "id": 39
+  },
+  {
+    "category": "biblia",
+    "difficulty": "EASY",
+    "question": "Qual profeta ungiu Davi como rei de Israel?",
+    "options": [
+      "Samuel",
+      "Natã",
+      "Elias",
+      "Gade"
+    ],
+    "answer": 0,
+    "explanation": "O profeta Samuel ungiu Davi diante de seus irmãos.",
+    "reference": "1 Samuel 16:13",
+    "id": 40
+  },
+  {
+    "category": "biblia",
+    "difficulty": "EASY",
+    "question": "Qual livro da Bíblia narra a criação do mundo?",
+    "options": [
+      "Gênesis",
+      "Êxodo",
+      "Salmos",
+      "Apocalipse"
+    ],
+    "answer": 0,
+    "explanation": "O livro do Gênesis relata a criação dos céus e da terra.",
+    "reference": "Gênesis 1:1",
+    "id": 41
+  },
+  {
+    "category": "biblia",
+    "difficulty": "EASY",
+    "question": "Qual amigo de Jesus foi ressuscitado quatro dias após sua morte?",
+    "options": [
+      "Lázaro",
+      "Nicodemos",
+      "Bartimeu",
+      "Jairo"
+    ],
+    "answer": 0,
+    "explanation": "Jesus ressuscitou Lázaro de Betânia, seu amigo.",
+    "reference": "João 11:43-44",
+    "id": 42
+  },
+  {
+    "category": "biblia",
+    "difficulty": "EASY",
+    "question": "Qual é o maior Salmo da Bíblia?",
+    "options": [
+      "Salmo 119",
+      "Salmo 23",
+      "Salmo 51",
+      "Salmo 150"
+    ],
+    "answer": 0,
+    "explanation": "O Salmo 119 é o mais longo, com 176 versículos.",
+    "reference": "Salmos 119",
+    "id": 43
+  },
+  {
+    "category": "biblia",
+    "difficulty": "EASY",
+    "question": "Quem deu água ao servo de Abraão e tornou-se esposa de Isaac?",
+    "options": [
+      "Rebeca",
+      "Raquel",
+      "Lia",
+      "Sara"
+    ],
+    "answer": 0,
+    "explanation": "Rebeca deu água ao servo de Abraão e casou-se com Isaac.",
+    "reference": "Gênesis 24:15-20",
+    "id": 44
+  },
+  {
+    "category": "biblia",
+    "difficulty": "EASY",
+    "question": "Quem foi o pai adotivo de Jesus?",
+    "options": [
+      "José",
+      "Zacarias",
+      "Joaquim",
+      "Simeão"
+    ],
+    "answer": 0,
+    "explanation": "José, o carpinteiro de Nazaré, foi o pai adotivo de Jesus.",
+    "reference": "Mateus 1:19-21",
+    "id": 45
+  },
+  {
+    "category": "biblia",
+    "difficulty": "EASY",
+    "question": "Qual é o segundo mandamento da Lei de Deus?",
+    "options": [
+      "Não tomar o santo nome de Deus em vão",
+      "Não matar",
+      "Não furtar",
+      "Honrar pai e mãe"
+    ],
+    "answer": 0,
+    "explanation": "O segundo mandamento proíbe tomar o santo nome de Deus em vão.",
+    "reference": "Êxodo 20:7",
+    "id": 46
+  },
+  {
+    "category": "biblia",
+    "difficulty": "EASY",
+    "question": "Qual era a cidade onde moravam José e Maria?",
+    "options": [
+      "Nazaré",
+      "Belém",
+      "Jerusalém",
+      "Jericó"
+    ],
+    "answer": 0,
+    "explanation": "José e Maria moravam em Nazaré, na Galileia.",
+    "reference": "Lucas 2:39",
+    "id": 47
+  },
+  {
+    "category": "biblia",
+    "difficulty": "EASY",
+    "question": "Quem escreveu o livro do Apocalipse?",
+    "options": [
+      "João",
+      "Pedro",
+      "Paulo",
+      "Tiago"
+    ],
+    "answer": 0,
+    "explanation": "João escreveu o Apocalipse, a revelação de Jesus Cristo.",
+    "reference": "Apocalipse 1:1",
+    "id": 48
+  },
+  {
+    "category": "biblia",
+    "difficulty": "EASY",
+    "question": "Quantos dias Jesus permaneceu no sepulcro?",
+    "options": [
+      "Três dias",
+      "Dois dias",
+      "Quarenta dias",
+      "Um dia"
+    ],
+    "answer": 0,
+    "explanation": "Jesus esteve no sepulcro de sexta-feira à noite até o domingo de manhã.",
+    "reference": "Mateus 27:63",
+    "id": 49
+  },
+  {
+    "category": "biblia",
+    "difficulty": "EASY",
+    "question": "Qual rainha intercedeu pela salvação do povo judeu na Pérsia?",
+    "options": [
+      "Ester",
+      "Rute",
+      "Judite",
+      "Débora"
+    ],
+    "answer": 0,
+    "explanation": "A rainha Ester intercedeu pelo seu povo diante do rei.",
+    "reference": "Ester 4:16",
+    "id": 50
+  },
+  {
+    "category": "biblia",
+    "difficulty": "EASY",
+    "question": "Quem construiu o Templo de Jerusalém?",
+    "options": [
+      "Salomão",
+      "Davi",
+      "Saul",
+      "Roboão"
+    ],
+    "answer": 0,
+    "explanation": "O rei Salomão construiu o Templo do Senhor em Jerusalém.",
+    "reference": "1 Reis 6",
+    "id": 51
+  },
+  {
+    "category": "biblia",
+    "difficulty": "MEDIUM",
+    "question": "Qual era o nome da mãe de Moisés?",
+    "options": [
+      "Joquebede",
+      "Miriã",
+      "Séfora",
+      "Zípora"
+    ],
+    "answer": 0,
+    "explanation": "Joquebede escondeu o bebê Moisés no cesto às margens do Nilo.",
+    "reference": "Êxodo 2:2-3",
+    "id": 52
+  },
+  {
+    "category": "biblia",
+    "difficulty": "EASY",
+    "question": "Qual profeta confrontou o rei Davi por seu pecado com Bate-Seba?",
+    "options": [
+      "Natã",
+      "Samuel",
+      "Elias",
+      "Eliseu"
+    ],
+    "answer": 0,
+    "explanation": "O profeta Natã confrontou Davi com a parábola da ovelha.",
+    "reference": "2 Samuel 12:1",
+    "id": 53
+  },
+  {
+    "category": "biblia",
+    "difficulty": "EASY",
+    "question": "Qual cidade teve suas muralhas derrubadas ao som das trombetas?",
+    "options": [
+      "Jericó",
+      "Ai",
+      "Jerusalém",
+      "Siquém"
+    ],
+    "answer": 0,
+    "explanation": "As muralhas de Jericó caíram quando o povo tocou as trombetas.",
+    "reference": "Josué 6:20",
+    "id": 54
+  },
+  {
+    "category": "biblia",
+    "difficulty": "EASY",
+    "question": "Quem foi a mãe de João Batista?",
+    "options": [
+      "Isabel",
+      "Ana",
+      "Maria",
+      "Marta"
+    ],
+    "answer": 0,
+    "explanation": "Isabel, prima de Maria, foi a mãe de João Batista.",
+    "reference": "Lucas 1:36",
+    "id": 55
+  },
+  {
+    "category": "biblia",
+    "difficulty": "EASY",
+    "question": "Qual discípulo traiu Jesus por trinta moedas de prata?",
+    "options": [
+      "Judas Iscariotes",
+      "Judas Tadeu",
+      "Tomé",
+      "Pedro"
+    ],
+    "answer": 0,
+    "explanation": "Judas Iscariotes entregou Jesus por trinta moedas de prata.",
+    "reference": "Mateus 26:15",
+    "id": 56
+  },
+  {
+    "category": "biblia",
+    "difficulty": "MEDIUM",
+    "question": "Qual livro do Antigo Testamento é atribuído a Jeremias e contém cânticos fúnebres?",
+    "options": [
+      "Lamentações",
+      "Miqueias",
+      "Sofonias",
+      "Ageu"
+    ],
+    "answer": 0,
+    "explanation": "O livro das Lamentações lamenta a destruição de Jerusalém.",
+    "reference": "Lamentações 1",
+    "id": 57
+  },
+  {
+    "category": "biblia",
+    "difficulty": "MEDIUM",
+    "question": "Quem acompanhou Paulo em sua primeira viagem missionária?",
+    "options": [
+      "Barnabé",
+      "Silas",
+      "Tito",
+      "Timóteo"
+    ],
+    "answer": 0,
+    "explanation": "Barnabé acompanhou Paulo na primeira viagem missionária.",
+    "reference": "Atos 13:2",
+    "id": 58
+  },
+  {
+    "category": "biblia",
+    "difficulty": "MEDIUM",
+    "question": "Qual apóstolo era chamado de Dídimo, que significa gêmeo?",
+    "options": [
+      "Tomé",
+      "Filipe",
+      "Bartolomeu",
+      "Mateus"
+    ],
+    "answer": 0,
+    "explanation": "Tomé era chamado Dídimo, palavra grega que significa gêmeo.",
+    "reference": "João 20:24",
+    "id": 59
+  },
+  {
+    "category": "biblia",
+    "difficulty": "EASY",
+    "question": "Em qual jardim Jesus foi preso após orar?",
+    "options": [
+      "Getsêmani",
+      "Éden",
+      "Golgota",
+      "Siloé"
+    ],
+    "answer": 0,
+    "explanation": "Jesus foi preso no Jardim do Getsêmani, após sua agonia.",
+    "reference": "Mateus 26:36",
+    "id": 60
+  },
+  {
+    "category": "biblia",
+    "difficulty": "EASY",
+    "question": "Quantos anos os israelitas peregrinaram pelo deserto?",
+    "options": [
+      "40 anos",
+      "30 anos",
+      "12 anos",
+      "70 anos"
+    ],
+    "answer": 0,
+    "explanation": "Israel peregrinou quarenta anos no deserto antes de entrar na terra prometida.",
+    "reference": "Números 14:33-34",
+    "id": 61
+  },
+  {
+    "category": "biblia",
+    "difficulty": "EASY",
+    "question": "Qual era a profissão de Pedro, André, Tiago e João?",
+    "options": [
+      "Pescadores",
+      "Carpinteiros",
+      "Pastores",
+      "Comerciantes"
+    ],
+    "answer": 0,
+    "explanation": "Eles eram pescadores no mar da Galileia quando Jesus os chamou.",
+    "reference": "Mateus 4:18-22",
+    "id": 62
+  },
+  {
+    "category": "biblia",
+    "difficulty": "MEDIUM",
+    "question": "O que significa o nome Emanuel, citado pelo profeta Isaías?",
+    "options": [
+      "Deus conosco",
+      "Deus salva",
+      "Deus é grande",
+      "Príncipe da paz"
+    ],
+    "answer": 0,
+    "explanation": "Emanuel significa \"Deus conosco\", cumprido no nascimento de Jesus.",
+    "reference": "Mateus 1:23",
+    "id": 63
+  },
+  {
+    "category": "biblia",
+    "difficulty": "MEDIUM",
+    "question": "Quantos livros possui o Antigo Testamento na Bíblia Católica?",
+    "options": [
+      "46",
+      "39",
+      "27",
+      "45"
+    ],
+    "answer": 0,
+    "explanation": "A Bíblia Católica possui 46 livros no Antigo Testamento.",
+    "reference": "Concílio de Trento",
+    "id": 64
+  },
+  {
+    "category": "biblia",
+    "difficulty": "MEDIUM",
+    "question": "Qual profeta anunciou que o Messias nasceria em Belém?",
+    "options": [
+      "Miqueias",
+      "Amós",
+      "Oséias",
+      "Joel"
+    ],
+    "answer": 0,
+    "explanation": "Miqueias profetizou que de Belém sairia o governante de Israel.",
+    "reference": "Miqueias 5:2",
+    "id": 65
+  },
+  {
+    "category": "biblia",
+    "difficulty": "MEDIUM",
+    "question": "Em qual evangelho encontramos a parábola do Bom Samaritano?",
+    "options": [
+      "Lucas",
+      "Mateus",
+      "Marcos",
+      "João"
+    ],
+    "answer": 0,
+    "explanation": "A parábola do Bom Samaritano está somente no Evangelho de Lucas.",
+    "reference": "Lucas 10:30-37",
+    "id": 66
+  },
+  {
+    "category": "biblia",
+    "difficulty": "MEDIUM",
+    "question": "Qual sumo sacerdote presidiu o julgamento de Jesus?",
+    "options": [
+      "Caifás",
+      "Anás",
+      "Zaqueu",
+      "Gamaliel"
+    ],
+    "answer": 0,
+    "explanation": "Caifás, sumo sacerdote, presidiu o tribunal que condenou Jesus.",
+    "reference": "Mateus 26:57-65",
+    "id": 67
+  },
+  {
+    "category": "santos",
+    "difficulty": "MEDIUM",
+    "question": "Qual apóstolo foi crucificado de cabeça para baixo, segundo a tradição?",
+    "options": [
+      "Pedro",
+      "Paulo",
+      "André",
+      "Tiago"
+    ],
+    "answer": 0,
+    "explanation": "A tradição afirma que Pedro pediu para ser crucificado de cabeça para baixo.",
+    "reference": "Tradição da Igreja",
+    "id": 68
+  },
+  {
+    "category": "biblia",
+    "difficulty": "MEDIUM",
+    "question": "Qual oficial romano pediu a Jesus a cura de seu servo?",
+    "options": [
+      "O centurião de Cafarnaum",
+      "Cornélio",
+      "Lísias",
+      "Félix"
+    ],
+    "answer": 0,
+    "explanation": "Um centurião de Cafarnaum pediu a Jesus que curasse seu servo.",
+    "reference": "Mateus 8:5-13",
+    "id": 69
+  },
+  {
+    "category": "biblia",
+    "difficulty": "MEDIUM",
+    "question": "Qual irmã de Lázaro escolheu sentar-se para ouvir o Senhor?",
+    "options": [
+      "Maria de Betânia",
+      "Marta",
+      "Maria Madalena",
+      "Salomé"
+    ],
+    "answer": 0,
+    "explanation": "Maria de Betânia ouviu Jesus, enquanto Marta se preocupava com os afazeres.",
+    "reference": "Lucas 10:38-42",
+    "id": 70
+  },
+  {
+    "category": "biblia",
+    "difficulty": "EASY",
+    "question": "Qual profeta foi levado ao céu num carro de fogo?",
+    "options": [
+      "Elias",
+      "Eliseu",
+      "Enoque",
+      "Moisés"
+    ],
+    "answer": 0,
+    "explanation": "Elias foi arrebatado ao céu num redemoinho, num carro de fogo.",
+    "reference": "2 Reis 2:11",
+    "id": 71
+  },
+  {
+    "category": "biblia",
+    "difficulty": "MEDIUM",
+    "question": "Com quantos dias de vida Jesus foi apresentado no Templo?",
+    "options": [
+      "Quarenta dias",
+      "Oito dias",
+      "Um ano",
+      "Doze anos"
+    ],
+    "answer": 0,
+    "explanation": "Maria e José apresentaram Jesus ao Senhor aos quarenta dias.",
+    "reference": "Lucas 2:22",
+    "id": 72
+  },
+  {
+    "category": "biblia",
+    "difficulty": "MEDIUM",
+    "question": "Qual apóstolo é tradicionalmente considerado o autor do primeiro Evangelho?",
+    "options": [
+      "Mateus",
+      "Marcos",
+      "Lucas",
+      "João"
+    ],
+    "answer": 0,
+    "explanation": "O Evangelho de Mateus é atribuído ao apóstolo e cobrador de impostos.",
+    "reference": "Mateus 9:9",
+    "id": 73
+  },
+  {
+    "category": "biblia",
+    "difficulty": "MEDIUM",
+    "question": "Qual palavra aramaica Jesus disse à filha de Jairo para ressuscitá-la?",
+    "options": [
+      "Talita cum",
+      "Efata",
+      "Abba",
+      "Rabboni"
+    ],
+    "answer": 0,
+    "explanation": "Jesus disse \"Talita cum\", que significa \"menina, levanta-te\".",
+    "reference": "Marcos 5:41",
+    "id": 74
+  },
+  {
+    "category": "biblia",
+    "difficulty": "MEDIUM",
+    "question": "Em qual ilha Paulo foi mordido por uma cobra sem sofrer mal?",
+    "options": [
+      "Malta",
+      "Creta",
+      "Chipre",
+      "Sardenha"
+    ],
+    "answer": 0,
+    "explanation": "Em Malta, Paulo foi mordido por uma víbora e nada sofreu.",
+    "reference": "Atos 28:3-6",
+    "id": 75
+  },
+  {
+    "category": "biblia",
+    "difficulty": "MEDIUM",
+    "question": "Qual casal instruiu o pregador Apolo no caminho de Deus?",
+    "options": [
+      "Áquila e Priscila",
+      "Barnabé e Maria",
+      "Filipe e Lídia",
+      "Ananias e Safira"
+    ],
+    "answer": 0,
+    "explanation": "Áquila e Priscila instruíram Apolo em Éfeso.",
+    "reference": "Atos 18:26",
+    "id": 76
+  },
+  {
+    "category": "biblia",
+    "difficulty": "EASY",
+    "question": "Quantos filhos teve o patriarca Jacó?",
+    "options": [
+      "12",
+      "10",
+      "13",
+      "7"
+    ],
+    "answer": 0,
+    "explanation": "Jacó teve doze filhos, que originaram as doze tribos de Israel.",
+    "reference": "Gênesis 35:22-26",
+    "id": 77
+  },
+  {
+    "category": "biblia",
+    "difficulty": "MEDIUM",
+    "question": "Qual filho de Davi e Bate-Seba sucedeu o pai no trono?",
+    "options": [
+      "Salomão",
+      "Absalão",
+      "Adonias",
+      "Amnom"
+    ],
+    "answer": 0,
+    "explanation": "Salomão, filho de Davi e Bate-Seba, reinou após o pai.",
+    "reference": "1 Reis 1:30",
+    "id": 78
+  },
+  {
+    "category": "biblia",
+    "difficulty": "MEDIUM",
+    "question": "Qual profeta foi chamado por Deus ainda no ventre materno?",
+    "options": [
+      "Jeremias",
+      "Isaías",
+      "Ezequiel",
+      "Daniel"
+    ],
+    "answer": 0,
+    "explanation": "Deus disse a Jeremias que o havia conhecido antes de formá-lo no ventre.",
+    "reference": "Jeremias 1:5",
+    "id": 79
+  },
+  {
+    "category": "biblia",
+    "difficulty": "MEDIUM",
+    "question": "Qual profeta teve a visão dos serafins cantando \"Santo, Santo, Santo\"?",
+    "options": [
+      "Isaías",
+      "Ezequiel",
+      "Daniel",
+      "Amós"
+    ],
+    "answer": 0,
+    "explanation": "Em Isaías 6, o profeta vê o Senhor e ouve os serafins.",
+    "reference": "Isaías 6:1-3",
+    "id": 80
+  },
+  {
+    "category": "biblia",
+    "difficulty": "MEDIUM",
+    "question": "Qual é a primeira bem-aventurança do Sermão da Montanha?",
+    "options": [
+      "Bem-aventurados os pobres em espírito",
+      "Bem-aventurados os mansos",
+      "Bem-aventurados os puros de coração",
+      "Bem-aventurados os que têm fome"
+    ],
+    "answer": 0,
+    "explanation": "A primeira bem-aventurança promete o Reino dos Céus aos pobres em espírito.",
+    "reference": "Mateus 5:3",
+    "id": 81
+  },
+  {
+    "category": "biblia",
+    "difficulty": "EASY",
+    "question": "Quem sucedeu Moisés na liderança de Israel?",
+    "options": [
+      "Josué",
+      "Calebe",
+      "Arão",
+      "Eleazar"
+    ],
+    "answer": 0,
+    "explanation": "Josué sucedeu Moisés e conduziu o povo à terra prometida.",
+    "reference": "Deuteronômio 34:9",
+    "id": 82
+  },
+  {
+    "category": "biblia",
+    "difficulty": "EASY",
+    "question": "Qual torre o povo tentou construir para alcançar o céu?",
+    "options": [
+      "Torre de Babel",
+      "Torre de Jericó",
+      "Torre de Siloé",
+      "Torre de Davi"
+    ],
+    "answer": 0,
+    "explanation": "A Torre de Babel simboliza o orgulho humano, dispersado por Deus.",
+    "reference": "Gênesis 11:4-9",
+    "id": 83
+  },
+  {
+    "category": "biblia",
+    "difficulty": "MEDIUM",
+    "question": "Qual profeta é conhecido como o \"profeta chorão\"?",
+    "options": [
+      "Jeremias",
+      "Oséias",
+      "Joel",
+      "Zacarias"
+    ],
+    "answer": 0,
+    "explanation": "Jeremias, autor das Lamentações, é chamado de profeta chorão.",
+    "reference": "Livro das Lamentações",
+    "id": 84
+  },
+  {
+    "category": "biblia",
+    "difficulty": "MEDIUM",
+    "question": "Qual dos quatro evangelistas é tradicionalmente simbolizado pelo leão?",
+    "options": [
+      "Marcos",
+      "Mateus",
+      "Lucas",
+      "João"
+    ],
+    "answer": 0,
+    "explanation": "São Marcos é simbolizado pelo leão.",
+    "reference": "Ezequiel 1:10",
+    "id": 85
+  },
+  {
+    "category": "biblia",
+    "difficulty": "MEDIUM",
+    "question": "Qual dos quatro evangelistas é tradicionalmente simbolizado pelo touro?",
+    "options": [
+      "Lucas",
+      "Marcos",
+      "Mateus",
+      "João"
+    ],
+    "answer": 0,
+    "explanation": "São Lucas é simbolizado pelo touro, ligado ao sacrifício.",
+    "reference": "Ezequiel 1:10",
+    "id": 86
+  },
+  {
+    "category": "biblia",
+    "difficulty": "MEDIUM",
+    "question": "Qual tribuno romano resgatou Paulo da multidão em Jerusalém?",
+    "options": [
+      "Lísias",
+      "Félix",
+      "Festo",
+      "Agripa"
+    ],
+    "answer": 0,
+    "explanation": "O tribuno Lísias interveio para salvar Paulo da multidão.",
+    "reference": "Atos 21:33",
+    "id": 87
+  },
+  {
+    "category": "biblia",
+    "difficulty": "MEDIUM",
+    "question": "O que significa a palavra aramaica \"Maranata\"?",
+    "options": [
+      "Vem, Senhor!",
+      "Senhor é Deus",
+      "Deus é amor",
+      "Salve o Rei"
+    ],
+    "answer": 0,
+    "explanation": "Maranata significa \"Vem, Senhor!\" e encerra a primeira carta aos Coríntios.",
+    "reference": "1 Coríntios 16:22",
+    "id": 88
+  },
+  {
+    "category": "biblia",
+    "difficulty": "MEDIUM",
+    "question": "Quantas cartas de São Paulo estão no Novo Testamento?",
+    "options": [
+      "13",
+      "14",
+      "12",
+      "10"
+    ],
+    "answer": 0,
+    "explanation": "Há 13 cartas atribuídas a São Paulo no Novo Testamento.",
+    "reference": "Índice do Novo Testamento",
+    "id": 89
+  },
+  {
+    "category": "biblia",
+    "difficulty": "MEDIUM",
+    "question": "Qual era o nome do pai de João Batista?",
+    "options": [
+      "Zacarias",
+      "Simeão",
+      "Joaquim",
+      "José"
+    ],
+    "answer": 0,
+    "explanation": "Zacarias, sacerdote, foi o pai de João Batista.",
+    "reference": "Lucas 1:13",
+    "id": 90
+  },
+  {
+    "category": "biblia",
+    "difficulty": "MEDIUM",
+    "question": "Qual evangelista escreveu também o livro dos Atos dos Apóstolos?",
+    "options": [
+      "Lucas",
+      "Marcos",
+      "Mateus",
+      "João"
+    ],
+    "answer": 0,
+    "explanation": "Lucas escreveu o Evangelho e os Atos dos Apóstolos.",
+    "reference": "Atos 1:1",
+    "id": 91
+  },
+  {
+    "category": "biblia",
+    "difficulty": "MEDIUM",
+    "question": "Qual rei de Judá encontrou o Livro da Lei no Templo e promoveu uma reforma?",
+    "options": [
+      "Josias",
+      "Ezequias",
+      "Manassés",
+      "Acaz"
+    ],
+    "answer": 0,
+    "explanation": "O rei Josias promoveu uma grande reforma após achar o Livro da Lei.",
+    "reference": "2 Reis 22",
+    "id": 92
+  },
+  {
+    "category": "biblia",
+    "difficulty": "MEDIUM",
+    "question": "Qual profeta casou-se com Gômer como sinal do amor fiel de Deus?",
+    "options": [
+      "Oséias",
+      "Amós",
+      "Miqueias",
+      "Naum"
+    ],
+    "answer": 0,
+    "explanation": "Oséias casou-se com Gômer para simbolizar a fidelidade de Deus a Israel.",
+    "reference": "Oséias 1:2",
+    "id": 93
+  },
+  {
+    "category": "biblia",
+    "difficulty": "MEDIUM",
+    "question": "Em qual evangelho Jesus é apresentado como o Verbo que se fez carne?",
+    "options": [
+      "João",
+      "Mateus",
+      "Marcos",
+      "Lucas"
+    ],
+    "answer": 0,
+    "explanation": "João apresenta Jesus como o Verbo eterno que se fez carne.",
+    "reference": "João 1:14",
+    "id": 94
+  },
+  {
+    "category": "biblia",
+    "difficulty": "MEDIUM",
+    "question": "Qual mulher foi curada ao tocar na orla do manto de Jesus?",
+    "options": [
+      "A mulher com hemorragia",
+      "Marta",
+      "Maria Madalena",
+      "A sogra de Pedro"
+    ],
+    "answer": 0,
+    "explanation": "Uma mulher com hemorragia tocou o manto de Jesus e foi curada.",
+    "reference": "Marcos 5:25-34",
+    "id": 95
+  },
+  {
+    "category": "concilios",
+    "difficulty": "HARD",
+    "question": "Em quais concílios do século IV foi definido o cânon completo da Bíblia Católica?",
+    "options": [
+      "Hipona (393) e Cartago (397)",
+      "Nicéia (325)",
+      "Éfeso (431)",
+      "Calcedônia (451)"
+    ],
+    "answer": 0,
+    "explanation": "Os Concílios de Hipona (393) e Cartago (397) fixaram o cânon bíblico.",
+    "reference": "Concílio de Hipona e Cartago",
+    "id": 96
+  },
+  {
+    "category": "santos",
+    "difficulty": "HARD",
+    "question": "Qual dogma afirma que Maria foi preservada do pecado original desde a sua concepção?",
+    "options": [
+      "Imaculada Conceição",
+      "Assunção",
+      "Maternidade Divina",
+      "Virgindade Perpétua"
+    ],
+    "answer": 0,
+    "explanation": "A Imaculada Conceição foi definida em 1854 pelo Papa Pio IX.",
+    "reference": "Ineffabilis Deus",
+    "id": 97
+  },
+  {
+    "category": "santos",
+    "difficulty": "HARD",
+    "question": "Qual dogma define que Maria foi elevada ao céu em corpo e alma?",
+    "options": [
+      "Assunção de Maria",
+      "Imaculada Conceição",
+      "Medianeira de todas as graças",
+      "Corredentora"
+    ],
+    "answer": 0,
+    "explanation": "O dogma da Assunção foi proclamado em 1950 por Pio XII.",
+    "reference": "Munificentissimus Deus",
+    "id": 98
+  },
+  {
+    "category": "concilios",
+    "difficulty": "HARD",
+    "question": "Qual termo teológico designa a união das naturezas divina e humana na pessoa de Cristo?",
+    "options": [
+      "União hipostática",
+      "Kenosis",
+      "Transubstanciação",
+      "Pericorese"
+    ],
+    "answer": 0,
+    "explanation": "A união hipostática foi definida no Concílio de Calcedônia (451).",
+    "reference": "Concílio de Calcedônia",
+    "id": 99
+  },
+  {
+    "category": "concilios",
+    "difficulty": "HARD",
+    "question": "Qual concílio utilizou pela primeira vez o termo \"transubstanciação\"?",
+    "options": [
+      "Concílio de Latrão IV",
+      "Concílio de Trento",
+      "Concílio de Nicéia",
+      "Concílio de Éfeso"
+    ],
+    "answer": 0,
+    "explanation": "O Concílio de Latrão IV (1215) empregou o termo transubstanciação.",
+    "reference": "Concílio de Latrão IV",
+    "id": 100
+  },
+  {
+    "category": "biblia",
+    "difficulty": "HARD",
+    "question": "Qual é o nome da tradução latina da Bíblia feita por São Jerônimo?",
+    "options": [
+      "Vulgata",
+      "Septuaginta",
+      "Peshitta",
+      "Targum"
+    ],
+    "answer": 0,
+    "explanation": "São Jerônimo traduziu a Bíblia para o latim: a Vulgata.",
+    "reference": "Vulgata Latina",
+    "id": 101
+  },
+  {
+    "category": "igreja",
+    "difficulty": "MEDIUM",
+    "question": "Qual é a primeira Estação da Via-Sacra?",
+    "options": [
+      "Jesus é condenado à morte",
+      "Jesus recebe a cruz",
+      "Jesus cai pela primeira vez",
+      "Simão de Cirene ajuda Jesus"
+    ],
+    "answer": 0,
+    "explanation": "Na primeira estação, Pilatos condena Jesus à morte.",
+    "reference": "Via-Sacra",
+    "id": 102
+  },
+  {
+    "category": "biblia",
+    "difficulty": "HARD",
+    "question": "Qual pecado, segundo os evangelhos, não será perdoado?",
+    "options": [
+      "Blasfêmia contra o Espírito Santo",
+      "Apostasia",
+      "Idolatria",
+      "Renegação da fé"
+    ],
+    "answer": 0,
+    "explanation": "Jesus afirma que a blasfêmia contra o Espírito Santo não será perdoada.",
+    "reference": "Mateus 12:31-32",
+    "id": 103
+  },
+  {
+    "category": "biblia",
+    "difficulty": "HARD",
+    "question": "A quem a tradição atribui a autoria da Epístola aos Hebreus?",
+    "options": [
+      "A São Paulo",
+      "A São Pedro",
+      "A São Tiago",
+      "A São Judas"
+    ],
+    "answer": 0,
+    "explanation": "A tradição atribui a Epístola aos Hebreus a São Paulo.",
+    "reference": "Carta aos Hebreus",
+    "id": 104
+  },
+  {
+    "category": "biblia",
+    "difficulty": "HARD",
+    "question": "Qual é o significado teológico de \"Parusia\"?",
+    "options": [
+      "A segunda vinda gloriosa de Cristo",
+      "O dom do Espírito Santo",
+      "A transfiguração no monte",
+      "A ressurreição final"
+    ],
+    "answer": 0,
+    "explanation": "Parusia é a vinda gloriosa de Cristo no fim dos tempos.",
+    "reference": "1 Tessalonicenses 4:15-17",
+    "id": 105
+  },
+  {
+    "category": "concilios",
+    "difficulty": "HARD",
+    "question": "Em qual concílio foi definido o dogma da infalibilidade papal?",
+    "options": [
+      "Concílio Vaticano I",
+      "Concílio de Trento",
+      "Concílio Vaticano II",
+      "Concílio de Éfeso"
+    ],
+    "answer": 0,
+    "explanation": "O Vaticano I (1870) definiu a infalibilidade papal.",
+    "reference": "Pastor Aeternus",
+    "id": 106
+  },
+  {
+    "category": "igreja",
+    "difficulty": "HARD",
+    "question": "Qual é o significado da palavra grega \"Eucaristia\"?",
+    "options": [
+      "Ação de graças",
+      "Comunhão",
+      "Refeição sagrada",
+      "Benção"
+    ],
+    "answer": 0,
+    "explanation": "Eucaristia vem do grego \"eukharistia\", que significa ação de graças.",
+    "reference": "Lucas 22:19",
+    "id": 107
+  },
+  {
+    "category": "biblia",
+    "difficulty": "HARD",
+    "question": "Em qual epístola Paulo descreve as obras da carne e o fruto do Espírito?",
+    "options": [
+      "Gálatas",
+      "Efésios",
+      "Romanos",
+      "Colossenses"
+    ],
+    "answer": 0,
+    "explanation": "Em Gálatas 5, Paulo contrasta as obras da carne com o fruto do Espírito.",
+    "reference": "Gálatas 5:19-23",
+    "id": 108
+  },
+  {
+    "category": "biblia",
+    "difficulty": "HARD",
+    "question": "Qual parte do livro de Isaías é chamada de \"Livro da Consolação\" do exílio?",
+    "options": [
+      "Isaías 40-55",
+      "Isaías 1-12",
+      "Isaías 13-27",
+      "Isaías 56-66"
+    ],
+    "answer": 0,
+    "explanation": "Isaías 40-55 anuncia consolo e esperança ao povo exilado.",
+    "reference": "Isaías 40",
+    "id": 109
+  },
+  {
+    "category": "igreja",
+    "difficulty": "HARD",
+    "question": "Qual expressão do Credo designa a descida de Cristo aos infernos?",
+    "options": [
+      "Descensus ad inferos",
+      "Ascensão aos céus",
+      "Ressurreição da carne",
+      "Comunhão dos santos"
+    ],
+    "answer": 0,
+    "explanation": "O Credo professa que Cristo desceu aos infernos para libertar os justos.",
+    "reference": "Credo Apostólico",
+    "id": 110
+  },
+  {
+    "category": "biblia",
+    "difficulty": "MEDIUM",
+    "question": "Qual rei viu uma mão escrever na parede durante um banquete, interpretada por Daniel?",
+    "options": [
+      "Belsazar",
+      "Nabucodonosor",
+      "Dario",
+      "Ciro"
+    ],
+    "answer": 0,
+    "explanation": "Belsazar viu a mão que escrevia; Daniel interpretou a escrita.",
+    "reference": "Daniel 5",
+    "id": 111
+  },
+  {
+    "category": "biblia",
+    "difficulty": "MEDIUM",
+    "question": "Qual tetrarca governava a Galileia no tempo da pregação de Jesus?",
+    "options": [
+      "Herodes Antipas",
+      "Herodes, o Grande",
+      "Filipe",
+      "Arquelau"
+    ],
+    "answer": 0,
+    "explanation": "Herodes Antipas governava a Galileia quando Jesus pregou.",
+    "reference": "Lucas 3:1",
+    "id": 112
+  },
+  {
+    "category": "biblia",
+    "difficulty": "HARD",
+    "question": "Qual grupo religioso judaico negava a ressurreição?",
+    "options": [
+      "Saduceus",
+      "Fariseus",
+      "Zelotes",
+      "Essênios"
+    ],
+    "answer": 0,
+    "explanation": "Os saduceus negavam a ressurreição, os anjos e os espíritos.",
+    "reference": "Atos 23:8",
+    "id": 113
+  },
+  {
+    "category": "biblia",
+    "difficulty": "MEDIUM",
+    "question": "Em qual cidade Paulo teve a visão do varão macedônio que o chamava?",
+    "options": [
+      "Trôade",
+      "Filipos",
+      "Éfeso",
+      "Atenas"
+    ],
+    "answer": 0,
+    "explanation": "Em Trôade, Paulo viu em visão um macedônio pedindo sua ajuda.",
+    "reference": "Atos 16:9",
+    "id": 114
+  },
+  {
+    "category": "biblia",
+    "difficulty": "MEDIUM",
+    "question": "Qual rei persa permitiu que os judeus retornassem do exílio?",
+    "options": [
+      "Ciro",
+      "Dario",
+      "Xerxes",
+      "Artaxerxes"
+    ],
+    "answer": 0,
+    "explanation": "O rei Ciro autorizou o retorno dos judeus e a reconstrução do Templo.",
+    "reference": "Esdras 1:1-4",
+    "id": 115
+  },
+  {
+    "category": "biblia",
+    "difficulty": "HARD",
+    "question": "Qual profeta anunciou que o Messias nasceria de uma virgem?",
+    "options": [
+      "Isaías",
+      "Jeremias",
+      "Miqueias",
+      "Zacarias"
+    ],
+    "answer": 0,
+    "explanation": "Isaías 7:14 anuncia a virgem que conceberá o Emanuel.",
+    "reference": "Isaías 7:14",
+    "id": 116
+  },
+  {
+    "category": "biblia",
+    "difficulty": "MEDIUM",
+    "question": "Qual é o significado do nome \"Betel\"?",
+    "options": [
+      "Casa de Deus",
+      "Poço do juramento",
+      "Monte de Deus",
+      "Cidade da paz"
+    ],
+    "answer": 0,
+    "explanation": "Betel significa \"casa de Deus\", nome dado por Jacó após o sonho da escada.",
+    "reference": "Gênesis 28:19",
+    "id": 117
+  },
+  {
+    "category": "biblia",
+    "difficulty": "MEDIUM",
+    "question": "Em qual montanha Moisés viu a sarça ardente?",
+    "options": [
+      "Monte Horeb",
+      "Monte Sinai",
+      "Monte Nebo",
+      "Monte Carmelo"
+    ],
+    "answer": 0,
+    "explanation": "Moisés viu a sarça ardente no Monte Horeb, o monte de Deus.",
+    "reference": "Êxodo 3:1-2",
+    "id": 118
+  },
+  {
+    "category": "santos",
+    "difficulty": "HARD",
+    "question": "Qual termo grego, que significa testemunho, deu origem à palavra mártir?",
+    "options": [
+      "Martyria",
+      "Koinonia",
+      "Diakonia",
+      "Ekklesia"
+    ],
+    "answer": 0,
+    "explanation": "Mártir vem de \"martyria\", palavra grega que significa testemunho.",
+    "reference": "Grego do Novo Testamento",
+    "id": 119
+  },
+  {
+    "category": "igreja",
+    "difficulty": "MEDIUM",
+    "question": "Qual mulher é saudada por Paulo como diaconisa da igreja de Cencréia?",
+    "options": [
+      "Febe",
+      "Priscila",
+      "Lídia",
+      "Júnia"
+    ],
+    "answer": 0,
+    "explanation": "Paulo saúda Febe, diaconisa da igreja de Cencréia, em Romanos.",
+    "reference": "Romanos 16:1-2",
+    "id": 120
+  },
+  {
+    "category": "biblia",
+    "difficulty": "MEDIUM",
+    "question": "Qual profeta se zangou com a misericórdia de Deus sobre a cidade de Nínive?",
+    "options": [
+      "Jonas",
+      "Naum",
+      "Obadias",
+      "Amós"
+    ],
+    "answer": 0,
+    "explanation": "Jonas ficou irritado porque Deus perdoou o povo de Nínive.",
+    "reference": "Jonas 4",
+    "id": 121
+  },
+  {
+    "category": "biblia",
+    "difficulty": "MEDIUM",
+    "question": "Qual discípulo de Paulo recebeu duas cartas pastorais?",
+    "options": [
+      "Timóteo",
+      "Tito",
+      "Silas",
+      "Marcos"
+    ],
+    "answer": 0,
+    "explanation": "Paulo escreveu duas cartas a Timóteo e uma a Tito.",
+    "reference": "1 Timóteo 1:2",
+    "id": 122
+  },
+  {
+    "category": "biblia",
+    "difficulty": "MEDIUM",
+    "question": "Qual é o significado do nome \"Jesus\"?",
+    "options": [
+      "Deus salva",
+      "Deus conosco",
+      "Unção de Deus",
+      "Filho de Deus"
+    ],
+    "answer": 0,
+    "explanation": "Jesus, do hebraico Yeshua, significa \"Deus salva\".",
+    "reference": "Mateus 1:21",
+    "id": 123
+  },
+  {
+    "category": "igreja",
+    "difficulty": "HARD",
+    "question": "Qual expressão latina indica que o Espírito Santo procede do Pai e do Filho?",
+    "options": [
+      "Filioque",
+      "Solo Scriptura",
+      "Ex opere operato",
+      "Sensus fidelium"
+    ],
+    "answer": 0,
+    "explanation": "O Filioque declara que o Espírito Santo procede também do Filho.",
+    "reference": "Símbolo Atanasiano",
+    "id": 124
+  },
+  {
+    "category": "biblia",
+    "difficulty": "MEDIUM",
+    "question": "Em qual lugar os apóstolos receberam o Espírito Santo em Pentecostes?",
+    "options": [
+      "No Cenáculo em Jerusalém",
+      "No Monte das Oliveiras",
+      "No Templo",
+      "Em Cesaréia"
+    ],
+    "answer": 0,
+    "explanation": "No Cenáculo, o Espírito Santo desceu sobre os apóstolos em Pentecostes.",
+    "reference": "Atos 2:1-4",
+    "id": 125
+  },
+  {
+    "category": "igreja",
+    "difficulty": "MEDIUM",
+    "question": "Qual palavra grega significa \"assembleia\" e deu origem ao nome Igreja?",
+    "options": [
+      "Ekklesia",
+      "Synagoga",
+      "Koinonia",
+      "Baptisma"
+    ],
+    "answer": 0,
+    "explanation": "Ekklesia, do grego, significa assembleia, origem do nome Igreja.",
+    "reference": "Grego do Novo Testamento",
+    "id": 126
+  },
+  {
+    "category": "biblia",
+    "difficulty": "MEDIUM",
+    "question": "Qual rei de Judá queimou o rolo das profecias de Jeremias?",
+    "options": [
+      "Jeoaquim",
+      "Manassés",
+      "Josias",
+      "Sedecias"
+    ],
+    "answer": 0,
+    "explanation": "O rei Jeoaquim cortou e queimou o rolo das profecias de Jeremias.",
+    "reference": "Jeremias 36:23",
+    "id": 127
+  },
+  {
+    "category": "biblia",
+    "difficulty": "EASY",
+    "question": "Qual profeta desafiou os 450 profetas de Baal no Monte Carmelo?",
+    "options": [
+      "Elias",
+      "Eliseu",
+      "Isaías",
+      "Jeremias"
+    ],
+    "answer": 0,
+    "explanation": "Elias desafiou e venceu os profetas de Baal no Monte Carmelo, provando que só o Senhor é Deus.",
+    "reference": "1 Reis 18:19-40",
+    "id": 128
+  },
+  {
+    "category": "biblia",
+    "difficulty": "MEDIUM",
+    "question": "Qual cego de Jericó foi curado por Jesus?",
+    "options": [
+      "Bartimeu",
+      "Zaqueu",
+      "Jairo",
+      "Nicodemos"
+    ],
+    "answer": 0,
+    "explanation": "Bartimeu, o cego de Jericó, recuperou a vista ao chamar por Jesus.",
+    "reference": "Marcos 10:46-52",
+    "id": 129
+  },
+  {
+    "category": "santos",
+    "difficulty": "EASY",
+    "question": "Quem foi a mãe de Jesus?",
+    "options": [
+      "Maria",
+      "Marta",
+      "Isabel",
+      "Ana"
+    ],
+    "answer": 0,
+    "explanation": "Maria, a virgem de Nazaré, foi escolhida por Deus para ser a mãe do Salvador.",
+    "reference": "Lucas 1:26-38",
+    "id": 130
+  },
+  {
+    "category": "biblia",
+    "difficulty": "EASY",
+    "question": "Qual rei de Israel pediu a Deus o dom da sabedoria para governar?",
+    "options": [
+      "Salomão",
+      "Davi",
+      "Saul",
+      "Josias"
+    ],
+    "answer": 0,
+    "explanation": "Salomão pediu a Deus um coração sábio para governar, e Deus o atendeu generosamente.",
+    "reference": "1 Reis 3:9-12",
+    "id": 131
+  },
+  {
+    "category": "concilios",
+    "difficulty": "EASY",
+    "question": "O que foi decidido no Concílio de Jerusalém narrado em Atos 15?",
+    "options": [
+      "Que os cristãos vindos do paganismo não precisavam se circuncidar para serem salvos",
+      "Que todos os cristãos deveriam guardar toda a Lei de Moisés",
+      "Que os gentios não poderiam entrar na Igreja",
+      "Que a circuncisão era obrigatória para todos os cristãos"
+    ],
+    "answer": 0,
+    "explanation": "No Concílio de Jerusalém, a Igreja decidiu que os cristãos não judeus não precisavam se circuncidar, apenas evitar a idolatria e a impureza.",
+    "reference": "Atos 15:1-29",
+    "id": 132
+  },
+  {
+    "category": "santos",
+    "difficulty": "EASY",
+    "question": "Quem foi o primeiro papa da Igreja Católica?",
+    "options": [
+      "São Pedro",
+      "São Paulo",
+      "São Tiago",
+      "São João"
+    ],
+    "answer": 0,
+    "explanation": "São Pedro, apóstolo de Jesus, é considerado o primeiro papa, por nomeação do próprio Cristo.",
+    "reference": "Mateus 16:18",
+    "id": 133
+  },
+  {
+    "category": "santos",
+    "difficulty": "EASY",
+    "question": "Qual santo é conhecido como o padroeiro dos animais e da criação?",
+    "options": [
+      "São Francisco de Assis",
+      "Santo Antônio",
+      "São Jorge",
+      "São Bento"
+    ],
+    "answer": 0,
+    "explanation": "São Francisco de Assis é venerado como padroeiro dos animais e da ecologia, por seu amor a toda a criação.",
+    "reference": "Cântico das Criaturas",
+    "id": 134
+  },
+  {
+    "category": "santos",
+    "difficulty": "EASY",
+    "question": "Qual santo é famoso pela pregação aos peixes, em Rimini?",
+    "options": [
+      "Santo Antônio de Pádua",
+      "São Domingos",
+      "São Nicolau",
+      "São Boaventura"
+    ],
+    "answer": 0,
+    "explanation": "Santo Antônio, grande pregador, é lembrado pelo episódio em que pregou aos peixes em Rimini.",
+    "reference": "Vida de Santo Antônio",
+    "id": 135
+  },
+  {
+    "category": "santos",
+    "difficulty": "EASY",
+    "question": "Qual santa é conhecida como a Pequena Flor e Doutora da Igreja?",
+    "options": [
+      "Santa Teresinha do Menino Jesus",
+      "Santa Rita de Cássia",
+      "Santa Mônica",
+      "Santa Inês"
+    ],
+    "answer": 0,
+    "explanation": "Santa Teresinha de Lisieux, a Pequena Flor, é Doutora da Igreja por sua doutrina do caminho da infância espiritual.",
+    "reference": "História de uma Alma",
+    "id": 136
+  },
+  {
+    "category": "santos",
+    "difficulty": "EASY",
+    "question": "Qual santo, bispo de Hipona, escreveu as Confissões?",
+    "options": [
+      "Santo Agostinho",
+      "Santo Ambrósio",
+      "São Jerônimo",
+      "São Gregório Magno"
+    ],
+    "answer": 0,
+    "explanation": "Santo Agostinho, bispo de Hipona, é um dos maiores Doutores da Igreja.",
+    "reference": "Confissões de Santo Agostinho",
+    "id": 137
+  },
+  {
+    "category": "santos",
+    "difficulty": "EASY",
+    "question": "Qual santo beneditino é chamado de pai do monaquismo ocidental?",
+    "options": [
+      "São Bento de Núrsia",
+      "São Francisco de Assis",
+      "São Domingos",
+      "São Inácio de Loyola"
+    ],
+    "answer": 0,
+    "explanation": "São Bento de Núrsia fundou o mosteiro de Monte Cassino e escreveu a Regra que organizou o monaquismo ocidental.",
+    "reference": "Regra de São Bento",
+    "id": 138
+  },
+  {
+    "category": "santos",
+    "difficulty": "EASY",
+    "question": "Qual apóstolo recebeu de Cristo as chaves do Reino dos Céus?",
+    "options": [
+      "São Pedro",
+      "São Tiago",
+      "São João",
+      "Santo André"
+    ],
+    "answer": 0,
+    "explanation": "Jesus entregou a Pedro as chaves do Reino, tornando-o o primeiro papa.",
+    "reference": "Mateus 16:19",
+    "id": 139
+  },
+  {
+    "category": "santos",
+    "difficulty": "EASY",
+    "question": "Qual santa espanhola reformou o Carmelo e fundou as Carmelitas Descalças?",
+    "options": [
+      "Santa Teresa de Ávila",
+      "Santa Terezinha",
+      "Santa Teresa de Calcutá",
+      "Santa Brígida"
+    ],
+    "answer": 0,
+    "explanation": "Santa Teresa de Ávila, Doutora da Igreja, reformou o Carmelo no século XVI.",
+    "reference": "Livro da Vida",
+    "id": 140
+  },
+  {
+    "category": "santos",
+    "difficulty": "MEDIUM",
+    "question": "Qual santa é padroeira das mães e mãe de Santo Agostinho?",
+    "options": [
+      "Santa Mônica",
+      "Santa Helena",
+      "Santa Ana",
+      "Santa Isabel"
+    ],
+    "answer": 0,
+    "explanation": "Santa Mônica rezou por anos pela conversão de seu filho Agostinho.",
+    "reference": "Confissões de Santo Agostinho",
+    "id": 141
+  },
+  {
+    "category": "santos",
+    "difficulty": "MEDIUM",
+    "question": "Qual soldado romano martirizado é padroeiro dos atletas?",
+    "options": [
+      "São Sebastião",
+      "São Jorge",
+      "São Cristóvão",
+      "São Lourenço"
+    ],
+    "answer": 0,
+    "explanation": "São Sebastião, oficial romano, foi martirizado por sua fé e é padroeiro dos atletas e soldados.",
+    "reference": "Martirológio Romano",
+    "id": 142
+  },
+  {
+    "category": "santos",
+    "difficulty": "MEDIUM",
+    "question": "Qual santo é invocado como protetor dos viajantes?",
+    "options": [
+      "São Cristóvão",
+      "Santo Expedito",
+      "São Rafael",
+      "São Miguel"
+    ],
+    "answer": 0,
+    "explanation": "A piedade popular invoca São Cristóvão como protetor dos viajantes.",
+    "reference": "Tradição da Igreja",
+    "id": 143
+  },
+  {
+    "category": "santos",
+    "difficulty": "MEDIUM",
+    "question": "Qual santo fundou a Companhia de Jesus?",
+    "options": [
+      "Santo Inácio de Loyola",
+      "São Francisco Xavier",
+      "São Pedro Canísio",
+      "São Roberto Belarmino"
+    ],
+    "answer": 0,
+    "explanation": "Santo Inácio de Loyola fundou a Companhia de Jesus, aprovada em 1540.",
+    "reference": "Constituições da Companhia de Jesus",
+    "id": 144
+  },
+  {
+    "category": "santos",
+    "difficulty": "MEDIUM",
+    "question": "Qual santa italiana é conhecida como a santa das causas impossíveis?",
+    "options": [
+      "Santa Rita de Cássia",
+      "Santa Luzia",
+      "Santa Águeda",
+      "Santa Clara"
+    ],
+    "answer": 0,
+    "explanation": "Santa Rita de Cássia é invocada como padroeira das causas impossíveis.",
+    "reference": "Vida de Santa Rita",
+    "id": 145
+  },
+  {
+    "category": "santos",
+    "difficulty": "MEDIUM",
+    "question": "Qual diácono romano foi martirizado sobre uma grelha?",
+    "options": [
+      "São Lourenço",
+      "Santo Estêvão",
+      "São Tarcísio",
+      "São Ceferino"
+    ],
+    "answer": 0,
+    "explanation": "São Lourenço, diácono de Roma, foi martirizado sobre uma grelha no ano 258.",
+    "reference": "Martirológio Romano",
+    "id": 146
+  },
+  {
+    "category": "santos",
+    "difficulty": "MEDIUM",
+    "question": "Qual santa francesa, pastora, liderou os exércitos para libertar a França?",
+    "options": [
+      "Santa Joana d'Arc",
+      "Santa Bernadete",
+      "Santa Genoveva",
+      "Santa Margarida Maria"
+    ],
+    "answer": 0,
+    "explanation": "Santa Joana d'Arc, guiada por suas visões, conduziu os exércitos franceses e foi martirizada em 1431.",
+    "reference": "Processo de Joana d'Arc",
+    "id": 147
+  },
+  {
+    "category": "santos",
+    "difficulty": "MEDIUM",
+    "question": "Qual santo de Assis recebeu os estigmas de Cristo no Monte Alverne?",
+    "options": [
+      "São Francisco de Assis",
+      "Santo Antônio",
+      "São Pio de Pietrelcina",
+      "São João da Cruz"
+    ],
+    "answer": 0,
+    "explanation": "São Francisco recebeu os estigmas em 1224, no Monte Alverne, marcando seu corpo com as chagas de Cristo.",
+    "reference": "Vida de São Francisco",
+    "id": 148
+  },
+  {
+    "category": "santos",
+    "difficulty": "HARD",
+    "question": "Qual Doutor da Igreja é chamado de Doutor Angélico?",
+    "options": [
+      "São Tomás de Aquino",
+      "Santo Agostinho",
+      "São Boaventura",
+      "São João Damasceno"
+    ],
+    "answer": 0,
+    "explanation": "São Tomás de Aquino, autor da Suma Teológica, é o Doutor Angélico.",
+    "reference": "Suma Teológica",
+    "id": 149
+  },
+  {
+    "category": "santos",
+    "difficulty": "HARD",
+    "question": "Qual santo franciscano, autor do Itinerário da Mente para Deus, é o Doutor Seráfico?",
+    "options": [
+      "São Boaventura",
+      "São Duns Escoto",
+      "Santo Alberto Magno",
+      "São Tomás de Aquino"
+    ],
+    "answer": 0,
+    "explanation": "São Boaventura, mestre franciscano, é o Doutor Seráfico.",
+    "reference": "Itinerário da Mente para Deus",
+    "id": 150
+  },
+  {
+    "category": "santos",
+    "difficulty": "HARD",
+    "question": "Qual sacerdote, o Cura d'Ars, é o padroeiro dos párocos?",
+    "options": [
+      "São João Maria Vianney",
+      "São João Bosco",
+      "São Filipe Néri",
+      "São Vicente de Paulo"
+    ],
+    "answer": 0,
+    "explanation": "São João Maria Vianney, pároco de Ars, é o padroeiro dos sacerdotes que exercem a cura de almas.",
+    "reference": "Vida do Cura d'Ars",
+    "id": 151
+  },
+  {
+    "category": "santos",
+    "difficulty": "HARD",
+    "question": "Qual carmelita, autor da Noite Escura da Alma, é Doutor da Igreja?",
+    "options": [
+      "São João da Cruz",
+      "São João da Mata",
+      "São João de Deus",
+      "São João Eudes"
+    ],
+    "answer": 0,
+    "explanation": "São João da Cruz, com Santa Teresa, reformou o Carmelo e escreveu grandes obras místicas.",
+    "reference": "Noite Escura da Alma",
+    "id": 152
+  },
+  {
+    "category": "santos",
+    "difficulty": "HARD",
+    "question": "Qual papa do século XX, o Papa Bom, convocou o Concílio Vaticano II?",
+    "options": [
+      "São João XXIII",
+      "São Pio X",
+      "São Paulo VI",
+      "São João Paulo I"
+    ],
+    "answer": 0,
+    "explanation": "São João XXIII, o Papa Bom, convocou o Concílio Vaticano II em 1959.",
+    "reference": "Gaudet Mater Ecclesia",
+    "id": 153
+  },
+  {
+    "category": "santos",
+    "difficulty": "HARD",
+    "question": "Qual bispo evangelizador da Irlanda explicava a Trindade com um trevo?",
+    "options": [
+      "São Patrício",
+      "São Columbano",
+      "São Beda",
+      "São Bonifácio"
+    ],
+    "answer": 0,
+    "explanation": "São Patrício, apóstolo da Irlanda, usava o trevo de três folhas para falar da Santíssima Trindade.",
+    "reference": "Confissão de São Patrício",
+    "id": 154
+  },
+  {
+    "category": "santos",
+    "difficulty": "HARD",
+    "question": "Qual santa italiana, Doutora da Igreja, convenceu o Papa a voltar a Roma de Avinhão?",
+    "options": [
+      "Santa Catarina de Sena",
+      "Santa Brígida",
+      "Santa Teresa de Ávila",
+      "Santa Hildegarda"
+    ],
+    "answer": 0,
+    "explanation": "Santa Catarina de Sena exortou o Papa Gregório XI a retornar de Avinhão para Roma.",
+    "reference": "Diálogos de Santa Catarina",
+    "id": 155
+  },
+  {
+    "category": "concilios",
+    "difficulty": "EASY",
+    "question": "Qual concílio, no ano 325, definiu a divindade de Jesus Cristo contra o arianismo?",
+    "options": [
+      "Concílio de Nicéia",
+      "Concílio de Éfeso",
+      "Concílio de Calcedônia",
+      "Concílio de Trento"
+    ],
+    "answer": 0,
+    "explanation": "O Concílio de Nicéia (325) condenou o arianismo e redigiu o início do Credo.",
+    "reference": "Credo Niceno",
+    "id": 156
+  },
+  {
+    "category": "concilios",
+    "difficulty": "EASY",
+    "question": "O que significa um concílio ecumênico?",
+    "options": [
+      "Uma reunião de bispos da Igreja inteira",
+      "Uma reunião de uma só diocese",
+      "Uma assembleia somente de leigos",
+      "Um encontro de uma única nação"
+    ],
+    "answer": 0,
+    "explanation": "Ecumênico vem do grego oikoumene, o mundo habitado, e reúne os bispos da Igreja universal.",
+    "reference": "Código de Direito Canônico",
+    "id": 157
+  },
+  {
+    "category": "concilios",
+    "difficulty": "EASY",
+    "question": "Qual concílio definiu o dogma da infalibilidade papal em 1870?",
+    "options": [
+      "Concílio Vaticano I",
+      "Concílio Vaticano II",
+      "Concílio de Trento",
+      "Concílio de Florença"
+    ],
+    "answer": 0,
+    "explanation": "O Concílio Vaticano I definiu o primado e a infalibilidade papal.",
+    "reference": "Pastor Aeternus",
+    "id": 158
+  },
+  {
+    "category": "concilios",
+    "difficulty": "EASY",
+    "question": "Qual concílio do século XVI respondeu à Reforma Protestante reafirmando os sacramentos?",
+    "options": [
+      "Concílio de Trento",
+      "Concílio de Latrão IV",
+      "Concílio de Vienne",
+      "Concílio de Constança"
+    ],
+    "answer": 0,
+    "explanation": "O Concílio de Trento (1545-1563) definiu a doutrina sobre a justificação e os sete sacramentos.",
+    "reference": "Decretos de Trento",
+    "id": 159
+  },
+  {
+    "category": "concilios",
+    "difficulty": "MEDIUM",
+    "question": "Em qual cidade foi celebrado o Concílio de Nicéia?",
+    "options": [
+      "Nicéia",
+      "Roma",
+      "Jerusalém",
+      "Alexandria"
+    ],
+    "answer": 0,
+    "explanation": "O Concílio de Nicéia ocorreu em 325, na cidade de Nicéia, na Ásia Menor.",
+    "reference": "História dos Concílios",
+    "id": 160
+  },
+  {
+    "category": "concilios",
+    "difficulty": "MEDIUM",
+    "question": "Qual concílio condenou a heresia de Nestório, que dividia a pessoa de Cristo?",
+    "options": [
+      "Concílio de Éfeso",
+      "Concílio de Calcedônia",
+      "Concílio de Nicéia",
+      "Concílio de Constantinopla I"
+    ],
+    "answer": 0,
+    "explanation": "O Concílio de Éfeso (431) condenou Nestório e proclamou Maria como Mãe de Deus.",
+    "reference": "Concílio de Éfeso",
+    "id": 161
+  },
+  {
+    "category": "concilios",
+    "difficulty": "MEDIUM",
+    "question": "Qual concílio ecumênico foi convocado por São João XXIII como um novo Pentecostes?",
+    "options": [
+      "Concílio Vaticano II",
+      "Concílio Vaticano I",
+      "Concílio de Trento",
+      "Concílio de Florença"
+    ],
+    "answer": 0,
+    "explanation": "O Concílio Vaticano II (1962-1965) renovou a liturgia e a vida da Igreja.",
+    "reference": "Sacrosanctum Concilium",
+    "id": 162
+  },
+  {
+    "category": "concilios",
+    "difficulty": "MEDIUM",
+    "question": "Qual concílio definiu a divindade do Espírito Santo?",
+    "options": [
+      "Concílio de Constantinopla I",
+      "Concílio de Éfeso",
+      "Concílio de Calcedônia",
+      "Concílio de Nicéia"
+    ],
+    "answer": 0,
+    "explanation": "O Concílio de Constantinopla I (381) ampliou o Credo, afirmando a divindade do Espírito Santo.",
+    "reference": "Credo Niceno-Constantinopolitano",
+    "id": 163
+  },
+  {
+    "category": "concilios",
+    "difficulty": "MEDIUM",
+    "question": "Qual concílio do século XV buscou a união com as Igrejas Orientais?",
+    "options": [
+      "Concílio de Florença",
+      "Concílio de Lião",
+      "Concílio de Basileia",
+      "Concílio de Vienne"
+    ],
+    "answer": 0,
+    "explanation": "O Concílio de Florença (1439) proclamou a união com as Igrejas Orientais.",
+    "reference": "Laetentur Caeli",
+    "id": 164
+  },
+  {
+    "category": "concilios",
+    "difficulty": "MEDIUM",
+    "question": "Qual concílio definiu solenemente o cânon dos livros bíblicos?",
+    "options": [
+      "Concílio de Trento",
+      "Concílio de Florença",
+      "Concílio de Vienne",
+      "Concílio de Latrão V"
+    ],
+    "answer": 0,
+    "explanation": "Trento, em 1546, confirmou solenemente o cânon das Sagradas Escrituras.",
+    "reference": "Decreto de Trento sobre as Escrituras",
+    "id": 165
+  },
+  {
+    "category": "concilios",
+    "difficulty": "HARD",
+    "question": "Qual concílio definiu o dogma da Assunção de Maria?",
+    "options": [
+      "Nenhum concílio; foi definido por Pio XII em 1950",
+      "Concílio Vaticano I",
+      "Concílio de Éfeso",
+      "Concílio de Trento"
+    ],
+    "answer": 0,
+    "explanation": "A Assunção foi proclamada dogma pelo Papa Pio XII, sem convocação de concílio.",
+    "reference": "Munificentissimus Deus",
+    "id": 166
+  },
+  {
+    "category": "concilios",
+    "difficulty": "HARD",
+    "question": "Qual concílio afirmou que o Filho é da mesma substância que o Pai?",
+    "options": [
+      "Concílio de Nicéia",
+      "Concílio de Constantinopla I",
+      "Concílio de Éfeso",
+      "Concílio de Calcedônia"
+    ],
+    "answer": 0,
+    "explanation": "Nicéia (325) introduziu no Credo o termo da mesma substância, igual ao Pai.",
+    "reference": "Credo Niceno",
+    "id": 167
+  },
+  {
+    "category": "concilios",
+    "difficulty": "MEDIUM",
+    "question": "Qual concílio definiu a veneração das sagradas imagens, encerrando a iconoclastia?",
+    "options": [
+      "Concílio de Nicéia II",
+      "Concílio de Nicéia I",
+      "Concílio de Constantinopla II",
+      "Concílio de Calcedônia"
+    ],
+    "answer": 0,
+    "explanation": "O Segundo Concílio de Nicéia (787) definiu a veneração das imagens.",
+    "reference": "Concílio de Nicéia II",
+    "id": 168
+  },
+  {
+    "category": "concilios",
+    "difficulty": "EASY",
+    "question": "Qual concílio condenou o pelagianismo, que negava a necessidade da graça?",
+    "options": [
+      "Concílio de Cartago",
+      "Concílio de Éfeso",
+      "Concílio de Nicéia",
+      "Concílio de Calcedônia"
+    ],
+    "answer": 0,
+    "explanation": "O Concílio de Cartago (418) condenou Pelágio, que minimizava a graça divina.",
+    "reference": "Decretos de Cartago",
+    "id": 169
+  },
+  {
+    "category": "concilios",
+    "difficulty": "HARD",
+    "question": "Qual concílio definiu o primado e a infalibilidade do Papa?",
+    "options": [
+      "Concílio Vaticano I",
+      "Concílio de Trento",
+      "Concílio Vaticano II",
+      "Concílio de Éfeso"
+    ],
+    "answer": 0,
+    "explanation": "O Vaticano I (1870) definiu o primado e a infalibilidade papal.",
+    "reference": "Pastor Aeternus",
+    "id": 170
+  },
+  {
+    "category": "concilios",
+    "difficulty": "HARD",
+    "question": "Qual concílio determinou a reforma litúrgica que deu origem à Missa de São Pio V?",
+    "options": [
+      "Concílio de Trento",
+      "Concílio de Latrão IV",
+      "Concílio de Vienne",
+      "Concílio de Florença"
+    ],
+    "answer": 0,
+    "explanation": "Trento mandou reformar os livros litúrgicos, resultando na Missa tridentina.",
+    "reference": "Bula Quo Primum",
+    "id": 171
+  },
+  {
+    "category": "concilios",
+    "difficulty": "HARD",
+    "question": "Qual concílio respondeu ao monofisismo de Eutiques, afirmando as duas naturezas de Cristo?",
+    "options": [
+      "Concílio de Calcedônia",
+      "Concílio de Constantinopla I",
+      "Concílio de Éfeso",
+      "Concílio de Nicéia"
+    ],
+    "answer": 0,
+    "explanation": "Calcedônia (451) respondeu a Eutiques, que confundia as naturezas de Cristo.",
+    "reference": "Definição de Calcedônia",
+    "id": 172
+  },
+  {
+    "category": "concilios",
+    "difficulty": "HARD",
+    "question": "Qual concílio obrigou a confissão anual e a comunhão pascal dos fiéis?",
+    "options": [
+      "Concílio de Latrão IV",
+      "Concílio de Trento",
+      "Concílio de Vienne",
+      "Concílio de Lyon II"
+    ],
+    "answer": 0,
+    "explanation": "Latrão IV (1215) tornou obrigatória a confissão ao menos uma vez por ano.",
+    "reference": "Cânon 21 do Latrão IV",
+    "id": 173
+  },
+  {
+    "category": "igreja",
+    "difficulty": "EASY",
+    "question": "Qual sacramento é a porta de entrada para a vida cristã?",
+    "options": [
+      "Batismo",
+      "Crisma",
+      "Eucaristia",
+      "Penitência"
+    ],
+    "answer": 0,
+    "explanation": "O Batismo inicia a vida cristã, perdoando o pecado original.",
+    "reference": "Catecismo da Igreja Católica 1213",
+    "id": 174
+  },
+  {
+    "category": "igreja",
+    "difficulty": "EASY",
+    "question": "Qual é a fonte e o ápice de toda a vida cristã?",
+    "options": [
+      "A Eucaristia",
+      "O Batismo",
+      "O Matrimônio",
+      "A Confirmação"
+    ],
+    "answer": 0,
+    "explanation": "A Eucaristia é a fonte e o ápice de toda a vida cristã.",
+    "reference": "Lumen Gentium 11",
+    "id": 175
+  },
+  {
+    "category": "igreja",
+    "difficulty": "EASY",
+    "question": "Quem é o sucessor de São Pedro à frente da Igreja Católica?",
+    "options": [
+      "O Papa",
+      "O cardeal decano",
+      "O patriarca",
+      "O arcebispo primaz"
+    ],
+    "answer": 0,
+    "explanation": "O Papa, bispo de Roma, é o sucessor de Pedro e chefe visível da Igreja.",
+    "reference": "Lumen Gentium 18",
+    "id": 176
+  },
+  {
+    "category": "igreja",
+    "difficulty": "EASY",
+    "question": "Quantos sacramentos existem na Igreja Católica?",
+    "options": [
+      "Sete",
+      "Cinco",
+      "Dez",
+      "Três"
+    ],
+    "answer": 0,
+    "explanation": "A Igreja tem sete sacramentos: Batismo, Crisma, Eucaristia, Penitência, Unção, Ordem e Matrimônio.",
+    "reference": "Catecismo 1210",
+    "id": 177
+  },
+  {
+    "category": "igreja",
+    "difficulty": "EASY",
+    "question": "Qual parte da Missa traz as leituras, o salmo e o Evangelho?",
+    "options": [
+      "Liturgia da Palavra",
+      "Liturgia Eucarística",
+      "Ritos Iniciais",
+      "Ritos Finais"
+    ],
+    "answer": 0,
+    "explanation": "Na Liturgia da Palavra se proclamam as leituras e o Evangelho.",
+    "reference": "Sacrosanctum Concilium 56",
+    "id": 178
+  },
+  {
+    "category": "igreja",
+    "difficulty": "EASY",
+    "question": "Em que momento da Missa o pão e o vinho se tornam o Corpo e o Sangue de Cristo?",
+    "options": [
+      "Na consagração",
+      "Na apresentação dos dons",
+      "Na comunhão",
+      "No ato penitencial"
+    ],
+    "answer": 0,
+    "explanation": "Na consagração ocorre a transubstanciação, pela força do Espírito Santo e das palavras de Cristo.",
+    "reference": "Catecismo 1333",
+    "id": 179
+  },
+  {
+    "category": "igreja",
+    "difficulty": "EASY",
+    "question": "Qual gesto os fiéis fazem ao entrar na igreja com água benta?",
+    "options": [
+      "O sinal da cruz",
+      "Ajoelhar-se",
+      "Rezar o Creio",
+      "A prostração"
+    ],
+    "answer": 0,
+    "explanation": "O sinal da cruz com água benta recorda o nosso Batismo.",
+    "reference": "Bênção da água batismal",
+    "id": 180
+  },
+  {
+    "category": "igreja",
+    "difficulty": "EASY",
+    "question": "Qual oração Jesus ensinou aos discípulos quando lhe pediram que os ensinasse a rezar?",
+    "options": [
+      "Pai-Nosso",
+      "Ave-Maria",
+      "Creio",
+      "Glória"
+    ],
+    "answer": 0,
+    "explanation": "Jesus ensinou o Pai-Nosso aos seus discípulos.",
+    "reference": "Mateus 6:9-13",
+    "id": 181
+  },
+  {
+    "category": "igreja",
+    "difficulty": "MEDIUM",
+    "question": "Qual é o sacramento que confere o sacerdócio ministerial?",
+    "options": [
+      "A Ordem",
+      "O Matrimônio",
+      "A Confirmação",
+      "A Penitência"
+    ],
+    "answer": 0,
+    "explanation": "O Sacramento da Ordem institui os diáconos, padres e bispos.",
+    "reference": "Catecismo 1536",
+    "id": 182
+  },
+  {
+    "category": "igreja",
+    "difficulty": "MEDIUM",
+    "question": "Qual parte da Missa precede a Liturgia da Palavra?",
+    "options": [
+      "Os Ritos Iniciais",
+      "Os Ritos Finais",
+      "A Liturgia Eucarística",
+      "A Oração Eucarística"
+    ],
+    "answer": 0,
+    "explanation": "Os Ritos Iniciais incluem o canto de entrada, a saudação, o ato penitencial, o Glória e a coleta.",
+    "reference": "Sacrosanctum Concilium",
+    "id": 183
+  },
+  {
+    "category": "igreja",
+    "difficulty": "MEDIUM",
+    "question": "Qual é o coração da Liturgia Eucarística, iniciada pelo prefácio?",
+    "options": [
+      "A Oração Eucarística",
+      "A apresentação das oferendas",
+      "A comunhão",
+      "O Pai-Nosso"
+    ],
+    "answer": 0,
+    "explanation": "A Oração Eucarística, que culmina na consagração, é o coração da Missa.",
+    "reference": "Catecismo 1352",
+    "id": 184
+  },
+  {
+    "category": "igreja",
+    "difficulty": "MEDIUM",
+    "question": "Qual óleo perfumado é usado no sacramento da Crisma?",
+    "options": [
+      "O Santo Crisma",
+      "O óleo dos catecúmenos",
+      "O óleo dos enfermos",
+      "O bálsamo"
+    ],
+    "answer": 0,
+    "explanation": "A unção com o Santo Crisma sela o dom do Espírito Santo no Crisma.",
+    "reference": "Catecismo 1293",
+    "id": 185
+  },
+  {
+    "category": "igreja",
+    "difficulty": "MEDIUM",
+    "question": "Quem pode celebrar a Santa Missa validamente?",
+    "options": [
+      "O bispo ou o presbítero",
+      "Qualquer batizado",
+      "O diácono",
+      "Um leigo designado"
+    ],
+    "answer": 0,
+    "explanation": "A celebração eucarística é confiada ao ministro ordenado, bispo ou presbítero.",
+    "reference": "Catecismo 1411",
+    "id": 186
+  },
+  {
+    "category": "igreja",
+    "difficulty": "MEDIUM",
+    "question": "Qual dia os cristãos celebram a Ressurreição de Cristo?",
+    "options": [
+      "Domingo",
+      "Sábado",
+      "Sexta-feira",
+      "Segunda-feira"
+    ],
+    "answer": 0,
+    "explanation": "O Domingo é o dia do Senhor, memorial da Ressurreição.",
+    "reference": "Dies Domini",
+    "id": 187
+  },
+  {
+    "category": "igreja",
+    "difficulty": "MEDIUM",
+    "question": "Qual é o momento em que os fiéis recebem o Corpo e o Sangue de Cristo?",
+    "options": [
+      "A Comunhão",
+      "A Consagração",
+      "A Bênção",
+      "A Adoração"
+    ],
+    "answer": 0,
+    "explanation": "Na Comunhão, os fiéis recebem o Corpo e o Sangue de Cristo.",
+    "reference": "Catecismo 1382",
+    "id": 188
+  },
+  {
+    "category": "igreja",
+    "difficulty": "MEDIUM",
+    "question": "Qual vestimenta o sacerdote usa sobre a alva durante a Missa?",
+    "options": [
+      "A casula",
+      "O solidéu",
+      "O báculo",
+      "A mitra"
+    ],
+    "answer": 0,
+    "explanation": "A casula é o paramento próprio do sacerdote na celebração eucarística.",
+    "reference": "Paramentos litúrgicos",
+    "id": 189
+  },
+  {
+    "category": "igreja",
+    "difficulty": "HARD",
+    "question": "O que é a transubstanciação?",
+    "options": [
+      "A conversão total da substância do pão e do vinho no Corpo e Sangue de Cristo",
+      "A presença simbólica de Cristo na Eucaristia",
+      "A presença espiritual de Cristo",
+      "A consagração do altar"
+    ],
+    "answer": 0,
+    "explanation": "Na transubstanciação, muda a substância do pão e do vinho, permanecendo apenas as aparências.",
+    "reference": "Catecismo 1376",
+    "id": 190
+  },
+  {
+    "category": "igreja",
+    "difficulty": "HARD",
+    "question": "Qual sacramento é chamado de Penitência ou Reconciliação?",
+    "options": [
+      "O sacramento que perdoa os pecados após o Batismo",
+      "O sacramento dos doentes",
+      "O sacramento do batismo",
+      "A unção dos enfermos"
+    ],
+    "answer": 0,
+    "explanation": "A Reconciliação perdoa os pecados cometidos depois do Batismo.",
+    "reference": "Catecismo 1422",
+    "id": 191
+  },
+  {
+    "category": "igreja",
+    "difficulty": "HARD",
+    "question": "Como se chama a presença de Cristo na Eucaristia, verdadeira, real e substancial?",
+    "options": [
+      "Presença real",
+      "Presença figurada",
+      "Presença espiritual somente",
+      "Presença simbólica"
+    ],
+    "answer": 0,
+    "explanation": "Cristo está presente na Eucaristia de modo verdadeiro, real e substancial.",
+    "reference": "Catecismo 1374",
+    "id": 192
+  },
+  {
+    "category": "igreja",
+    "difficulty": "HARD",
+    "question": "Qual parte da Oração Eucarística repete as palavras de Jesus na Última Ceia?",
+    "options": [
+      "A narrativa da instituição",
+      "O prefácio",
+      "O Sanctus",
+      "O Agnus Dei"
+    ],
+    "answer": 0,
+    "explanation": "Na narrativa da instituição, o sacerdote repete as palavras de Cristo sobre o pão e o vinho.",
+    "reference": "Catecismo 1339",
+    "id": 193
+  },
+  {
+    "category": "igreja",
+    "difficulty": "HARD",
+    "question": "Quem preside por direito a celebração eucarística em uma diocese?",
+    "options": [
+      "O bispo",
+      "O pároco",
+      "O diácono",
+      "O cardeal"
+    ],
+    "answer": 0,
+    "explanation": "O bispo é o sumo sacerdote de sua diocese e presidente natural da Eucaristia.",
+    "reference": "Catecismo 1569",
+    "id": 194
+  },
+  {
+    "category": "igreja",
+    "difficulty": "HARD",
+    "question": "Qual sacramento fortalece os enfermos e moribundos?",
+    "options": [
+      "A Unção dos Enfermos",
+      "A Penitência",
+      "O Batismo",
+      "A Ordem"
+    ],
+    "answer": 0,
+    "explanation": "A Unção dos Enfermos conforta e fortalece os doentes graves.",
+    "reference": "Catecismo 1520",
+    "id": 195
+  },
+  {
+    "category": "igreja",
+    "difficulty": "HARD",
+    "question": "Quais são os três graus do Sacramento da Ordem?",
+    "options": [
+      "Bispo, presbítero e diácono",
+      "Papa, cardeal e bispo",
+      "Sacerdote, monge e leigo",
+      "Patriarca, arcebispo e cônego"
+    ],
+    "answer": 0,
+    "explanation": "O Sacramento da Ordem tem três graus: episcopado, presbiterado e diaconato.",
+    "reference": "Catecismo 1536",
+    "id": 196
+  },
+  {
+    "category": "biblia",
+    "difficulty": "HARD",
+    "question": "Em qual passagem São Paulo ensina que o corpo do cristão é templo do Espírito Santo?",
+    "options": [
+      "1 Coríntios 6:19",
+      "Romanos 12:1",
+      "Efésios 5:18",
+      "Gálatas 5:16"
+    ],
+    "answer": 0,
+    "explanation": "Paulo exorta a fugir da imoralidade porque o corpo do fiel é templo do Espírito Santo.",
+    "reference": "1 Coríntios 6:19",
+    "id": 197
+  },
+  {
+    "category": "biblia",
+    "difficulty": "HARD",
+    "question": "Segundo o Deuteronômio, o que o sábado recorda ao povo de Israel?",
+    "options": [
+      "A libertação do Egito",
+      "A colheita anual",
+      "A construção do Templo",
+      "O reinado de Davi"
+    ],
+    "answer": 0,
+    "explanation": "O Deuteronômio liga o sábado à libertação da escravidão do Egito, memorial da aliança.",
+    "reference": "Deuteronômio 5:12-15",
+    "id": 198
+  },
+  {
+    "category": "biblia",
+    "difficulty": "HARD",
+    "question": "Em qual evangelho Jesus afirma: Eu sou a videira, vós os ramos?",
+    "options": [
+      "João",
+      "Mateus",
+      "Marcos",
+      "Lucas"
+    ],
+    "answer": 0,
+    "explanation": "Em João 15, Jesus usa a imagem da videira para ensinar sobre a união com Ele.",
+    "reference": "João 15:1-5",
+    "id": 199
+  },
+  {
+    "category": "biblia",
+    "difficulty": "HARD",
+    "question": "O que o título Filho do Homem, usado por Jesus, evoca no livro de Daniel?",
+    "options": [
+      "A figura messiânica que recebe poder e reino",
+      "Um simples ofício do templo",
+      "Um título dos sacerdotes",
+      "Um nome dado pelos romanos"
+    ],
+    "answer": 0,
+    "explanation": "Em Daniel 7, o Filho do Homem recebe de Deus o reino eterno, figura do Messias.",
+    "reference": "Daniel 7:13-14",
+    "id": 200
+  },
+  {
+    "category": "biblia",
+    "difficulty": "HARD",
+    "question": "Qual era a missão principal do profeta no Antigo Testamento?",
+    "options": [
+      "Falar em nome de Deus ao povo e aos reis",
+      "Prever apenas o futuro distante",
+      "Substituir o rei no trono",
+      "Administrar os sacrifícios do Templo"
+    ],
+    "answer": 0,
+    "explanation": "O profeta transmitia a palavra de Deus, denunciava o pecado e anunciava a esperança.",
+    "reference": "Amós 3:7",
+    "id": 201
+  },
+  {
+    "category": "santos",
+    "difficulty": "EASY",
+    "question": "Qual santa fundou as Missionárias da Caridade e dedicou a vida aos pobres de Calcutá?",
+    "options": [
+      "Santa Teresa de Calcutá",
+      "Santa Luísa de Marillac",
+      "Santa Clara",
+      "Santa Rosa de Lima"
+    ],
+    "answer": 0,
+    "explanation": "Santa Teresa de Calcutá serviu os mais pobres na Índia e foi canonizada em 2016.",
+    "reference": "Vida de Santa Teresa de Calcutá",
+    "id": 202
+  },
+  {
+    "category": "santos",
+    "difficulty": "EASY",
+    "question": "Qual apóstolo é o padroeiro da Escócia?",
+    "options": [
+      "Santo André",
+      "São Tiago",
+      "São Filipe",
+      "São Bartolomeu"
+    ],
+    "answer": 0,
+    "explanation": "Santo André, irmão de Pedro, é venerado como padroeiro da Escócia.",
+    "reference": "Tradição da Igreja",
+    "id": 203
+  },
+  {
+    "category": "santos",
+    "difficulty": "EASY",
+    "question": "Qual papa do século XX, nascido na Polônia, é chamado de Papa da Família?",
+    "options": [
+      "São João Paulo II",
+      "São João XXIII",
+      "São Pio X",
+      "São Paulo VI"
+    ],
+    "answer": 0,
+    "explanation": "São João Paulo II dedicou grande parte de seu pontificado à defesa da família.",
+    "reference": "Familiaris Consortio",
+    "id": 204
+  },
+  {
+    "category": "santos",
+    "difficulty": "EASY",
+    "question": "Qual santo fundou a Congregação Salesiana para a educação dos jovens?",
+    "options": [
+      "São João Bosco",
+      "São Domingos Sávio",
+      "São Luís Gonzaga",
+      "São João Batista de la Salle"
+    ],
+    "answer": 0,
+    "explanation": "Dom Bosco dedicou a vida à formação cristã da juventude.",
+    "reference": "Vida de Dom Bosco",
+    "id": 205
+  },
+  {
+    "category": "santos",
+    "difficulty": "EASY",
+    "question": "Qual santo, bispo de Tours, partilhou seu manto com um mendigo?",
+    "options": [
+      "São Martinho de Tours",
+      "São Nicolau",
+      "São Bento",
+      "São Remígio"
+    ],
+    "answer": 0,
+    "explanation": "São Martinho dividiu seu manto com um pobre e depois viu Cristo em sonho.",
+    "reference": "Vida de São Martinho",
+    "id": 206
+  },
+  {
+    "category": "santos",
+    "difficulty": "EASY",
+    "question": "Qual santo é invocado para encontrar objetos perdidos?",
+    "options": [
+      "Santo Antônio de Pádua",
+      "São Cristóvão",
+      "São Judas Tadeu",
+      "São Rafael"
+    ],
+    "answer": 0,
+    "explanation": "A devoção popular invoca Santo Antônio para achar o que foi perdido.",
+    "reference": "Devoção popular",
+    "id": 207
+  },
+  {
+    "category": "santos",
+    "difficulty": "EASY",
+    "question": "Qual santa mártir romana, cujo nome lembra a palavra cordeirinha, é invocada pelas jovens?",
+    "options": [
+      "Santa Inês",
+      "Santa Cecília",
+      "Santa Luzia",
+      "Santa Águeda"
+    ],
+    "answer": 0,
+    "explanation": "Santa Inês, mártir dos primeiros séculos, é modelo de pureza e fidelidade a Cristo.",
+    "reference": "Martirológio Romano",
+    "id": 208
+  },
+  {
+    "category": "santos",
+    "difficulty": "EASY",
+    "question": "Qual santa é a padroeira dos músicos e cantores?",
+    "options": [
+      "Santa Cecília",
+      "Santa Filomena",
+      "Santa Apolônia",
+      "Santa Bárbara"
+    ],
+    "answer": 0,
+    "explanation": "Santa Cecília, mártir romana, é invocada por músicos e cantores.",
+    "reference": "Tradição da Igreja",
+    "id": 209
+  },
+  {
+    "category": "santos",
+    "difficulty": "EASY",
+    "question": "Qual santo é chamado de Apóstolo da Alemanha?",
+    "options": [
+      "São Bonifácio",
+      "São Pedro Canísio",
+      "São Norberto",
+      "São Ruperto"
+    ],
+    "answer": 0,
+    "explanation": "São Bonifácio evangelizou a Germânia no século VIII e organizou a Igreja local.",
+    "reference": "Vida de São Bonifácio",
+    "id": 210
+  },
+  {
+    "category": "santos",
+    "difficulty": "EASY",
+    "question": "Qual santo eremita do deserto do Egito é considerado o pai do monaquismo cristão?",
+    "options": [
+      "Santo Antão",
+      "São Pacômio",
+      "São Simeão Estilita",
+      "São Macário"
+    ],
+    "answer": 0,
+    "explanation": "Santo Antão, com sua vida de oração e penitência, inspirou o monaquismo.",
+    "reference": "Vida de Santo Antão",
+    "id": 211
+  },
+  {
+    "category": "santos",
+    "difficulty": "MEDIUM",
+    "question": "Qual santo é o fundador da Ordem dos Frades Menores?",
+    "options": [
+      "São Francisco de Assis",
+      "São Domingos",
+      "Santo Inácio de Loyola",
+      "São Boaventura"
+    ],
+    "answer": 0,
+    "explanation": "São Francisco fundou a Ordem dos Frades Menores em 1209.",
+    "reference": "Vida de São Francisco",
+    "id": 212
+  },
+  {
+    "category": "santos",
+    "difficulty": "MEDIUM",
+    "question": "Qual santo fundou a Ordem dos Pregadores, conhecida como dominicanos?",
+    "options": [
+      "São Domingos de Gusmão",
+      "São Francisco de Assis",
+      "São Pedro Nolasco",
+      "Santo Alberto Magno"
+    ],
+    "answer": 0,
+    "explanation": "São Domingos de Gusmão fundou a Ordem dos Pregadores para a pregação e o estudo.",
+    "reference": "Vida de São Domingos",
+    "id": 213
+  },
+  {
+    "category": "santos",
+    "difficulty": "MEDIUM",
+    "question": "Qual santa, esposa de um rei da Hungria, doou seus bens aos pobres após ficar viúva?",
+    "options": [
+      "Santa Isabel da Hungria",
+      "Santa Edwiges",
+      "Santa Clotilde",
+      "Santa Margarida"
+    ],
+    "answer": 0,
+    "explanation": "Santa Isabel da Hungria, princesa e viúva, dedicou a vida à caridade.",
+    "reference": "Vida de Santa Isabel",
+    "id": 214
+  },
+  {
+    "category": "santos",
+    "difficulty": "MEDIUM",
+    "question": "Qual santo, chamado de Doutor da Graça, é o autor da obra A Cidade de Deus?",
+    "options": [
+      "Santo Agostinho",
+      "São Jerônimo",
+      "São Tomás de Aquino",
+      "Santo Ambrósio"
+    ],
+    "answer": 0,
+    "explanation": "Santo Agostinho escreveu A Cidade de Deus e as Confissões.",
+    "reference": "A Cidade de Deus",
+    "id": 215
+  },
+  {
+    "category": "santos",
+    "difficulty": "MEDIUM",
+    "question": "Qual santo fundou a Congregação da Missão, conhecida como lazaristas, para servir os pobres?",
+    "options": [
+      "São Vicente de Paulo",
+      "São Camilo de Lélis",
+      "São João de Deus",
+      "São José Calasanz"
+    ],
+    "answer": 0,
+    "explanation": "São Vicente de Paulo dedicou a vida aos pobres e fundou os lazaristas.",
+    "reference": "Vida de São Vicente de Paulo",
+    "id": 216
+  },
+  {
+    "category": "santos",
+    "difficulty": "MEDIUM",
+    "question": "Qual santa, mãe do imperador Constantino, peregrinou à Terra Santa e venerou a Santa Cruz?",
+    "options": [
+      "Santa Helena",
+      "Santa Pulquéria",
+      "Santa Mônica",
+      "Santa Bárbara"
+    ],
+    "answer": 0,
+    "explanation": "A tradição diz que Santa Helena encontrou a Cruz de Cristo em Jerusalém.",
+    "reference": "Tradição da Igreja",
+    "id": 217
+  },
+  {
+    "category": "santos",
+    "difficulty": "MEDIUM",
+    "question": "Qual santo, sacerdote polonês, ofereceu sua vida no lugar de um pai de família em Auschwitz?",
+    "options": [
+      "São Maximiliano Kolbe",
+      "São José Cottolengo",
+      "São Pio de Pietrelcina",
+      "São João Bosco"
+    ],
+    "answer": 0,
+    "explanation": "São Maximiliano Kolbe morreu no lugar de outro prisioneiro no campo de concentração.",
+    "reference": "Martírio de São Maximiliano",
+    "id": 218
+  },
+  {
+    "category": "santos",
+    "difficulty": "MEDIUM",
+    "question": "Qual santa é invocada para os males dos olhos e é a padroeira dos cegos?",
+    "options": [
+      "Santa Luzia",
+      "Santa Águeda",
+      "Santa Apolônia",
+      "Santa Bárbara"
+    ],
+    "answer": 0,
+    "explanation": "Santa Luzia, mártir de Siracusa, é invocada para a proteção dos olhos.",
+    "reference": "Martirológio Romano",
+    "id": 219
+  },
+  {
+    "category": "santos",
+    "difficulty": "MEDIUM",
+    "question": "Qual santo jesuíta é chamado de Apóstolo da Índia e do Japão?",
+    "options": [
+      "São Francisco Xavier",
+      "São Pedro Canísio",
+      "São Roberto Belarmino",
+      "São Luís Gonzaga"
+    ],
+    "answer": 0,
+    "explanation": "São Francisco Xavier, companheiro de Inácio de Loyola, evangelizou o Oriente.",
+    "reference": "Cartas de São Francisco Xavier",
+    "id": 220
+  },
+  {
+    "category": "santos",
+    "difficulty": "MEDIUM",
+    "question": "Qual santa fundou a Ordem das Ursulinas para a educação das meninas?",
+    "options": [
+      "Santa Ângela Mérici",
+      "Santa Rosa de Lima",
+      "Santa Teresa de Ávila",
+      "Santa Clara"
+    ],
+    "answer": 0,
+    "explanation": "Santa Ângela Mérici fundou as Ursulinas no século XVI.",
+    "reference": "Vida de Santa Ângela",
+    "id": 221
+  },
+  {
+    "category": "santos",
+    "difficulty": "MEDIUM",
+    "question": "Qual santo, abade de Claraval, é chamado de Doutor Melífluo por sua doce pregação?",
+    "options": [
+      "São Bernardo de Claraval",
+      "Santo Anselmo",
+      "São Pedro Damião",
+      "São Bruno"
+    ],
+    "answer": 0,
+    "explanation": "São Bernardo, grande pregador medieval, foi proclamado Doutor da Igreja.",
+    "reference": "Vida de São Bernardo",
+    "id": 222
+  },
+  {
+    "category": "santos",
+    "difficulty": "HARD",
+    "question": "Qual santo, bispo de Milão, batizou Santo Agostinho?",
+    "options": [
+      "Santo Ambrósio",
+      "Santo Atanásio",
+      "São Basílio",
+      "São Cirilo de Jerusalém"
+    ],
+    "answer": 0,
+    "explanation": "Santo Ambrósio batizou Agostinho na Vigília Pascal de 387.",
+    "reference": "Confissões de Santo Agostinho",
+    "id": 223
+  },
+  {
+    "category": "santos",
+    "difficulty": "HARD",
+    "question": "Qual santo traduziu a Bíblia para o latim, produzindo a Vulgata?",
+    "options": [
+      "São Jerônimo",
+      "São João Crisóstomo",
+      "Santo Efrém",
+      "São Gregório de Nazianzo"
+    ],
+    "answer": 0,
+    "explanation": "São Jerônimo, por pedido do Papa Dâmaso, traduziu as Escrituras para o latim.",
+    "reference": "Vulgata Latina",
+    "id": 224
+  },
+  {
+    "category": "santos",
+    "difficulty": "HARD",
+    "question": "Qual santo, arcebispo de Constantinopla, é chamado de Boca de Ouro por seus sermões?",
+    "options": [
+      "São João Crisóstomo",
+      "São Basílio Magno",
+      "São Gregório de Nissa",
+      "São Gregório de Nazianzo"
+    ],
+    "answer": 0,
+    "explanation": "São João Crisóstomo foi grande pregador e patriarca de Constantinopla.",
+    "reference": "Homilias de São João Crisóstomo",
+    "id": 225
+  },
+  {
+    "category": "santos",
+    "difficulty": "HARD",
+    "question": "Qual santo compôs os hinos Pange Lingua e Tantum Ergo para a festa do Santíssimo Sacramento?",
+    "options": [
+      "São Tomás de Aquino",
+      "São Boaventura",
+      "Santo Alberto Magno",
+      "São Gregório Magno"
+    ],
+    "answer": 0,
+    "explanation": "São Tomás de Aquino compôs o Ofício do Santíssimo Sacramento a pedido do Papa.",
+    "reference": "Ofício de Corpus Christi",
+    "id": 226
+  },
+  {
+    "category": "santos",
+    "difficulty": "HARD",
+    "question": "Qual santo, papa, escreveu a Regra Pastoral para orientar o ministério dos bispos?",
+    "options": [
+      "São Gregório Magno",
+      "São Leão Magno",
+      "São Celestino",
+      "São Inocêncio"
+    ],
+    "answer": 0,
+    "explanation": "São Gregório Magno, papa e Doutor, escreveu a Regra Pastoral.",
+    "reference": "Regra Pastoral",
+    "id": 227
+  },
+  {
+    "category": "santos",
+    "difficulty": "HARD",
+    "question": "Qual santa peruana, a primeira canonizada do continente americano, é chamada de Rosa de Lima?",
+    "options": [
+      "Santa Rosa de Lima",
+      "Santa Teresa de Los Andes",
+      "Santa Catarina Labouré",
+      "Santa Josefina Bakhita"
+    ],
+    "answer": 0,
+    "explanation": "Santa Rosa de Lima, terciária dominicana, foi a primeira santa da América.",
+    "reference": "Vida de Santa Rosa de Lima",
+    "id": 228
+  },
+  {
+    "category": "santos",
+    "difficulty": "HARD",
+    "question": "Qual santo, com seu irmão Metódio, evangelizou os eslavos e criou um alfabeto próprio?",
+    "options": [
+      "São Cirilo",
+      "São Venceslau",
+      "Santo Adalberto",
+      "São Ruperto"
+    ],
+    "answer": 0,
+    "explanation": "São Cirilo e São Metódio, apóstolos dos eslavos, criaram o alfabeto glagolítico.",
+    "reference": "Vida de São Cirilo",
+    "id": 229
+  },
+  {
+    "category": "santos",
+    "difficulty": "HARD",
+    "question": "Qual santo português, fundador da Ordem Hospitaleira, é o padroeiro dos doentes e dos hospitais?",
+    "options": [
+      "São João de Deus",
+      "São João da Mata",
+      "São João Batista",
+      "São João Berchmans"
+    ],
+    "answer": 0,
+    "explanation": "São João de Deus dedicou a vida ao cuidado dos enfermos.",
+    "reference": "Vida de São João de Deus",
+    "id": 230
+  },
+  {
+    "category": "santos",
+    "difficulty": "HARD",
+    "question": "Qual santo, Doutor da Igreja, escreveu As Glórias de Maria e fundou os redentoristas?",
+    "options": [
+      "Santo Afonso Maria de Ligório",
+      "São Francisco de Sales",
+      "São Luís Maria de Montfort",
+      "São Pedro Julião Eymard"
+    ],
+    "answer": 0,
+    "explanation": "Santo Afonso de Ligório é doutor da moral e autor de obras marianas.",
+    "reference": "As Glórias de Maria",
+    "id": 231
+  },
+  {
+    "category": "santos",
+    "difficulty": "HARD",
+    "question": "Qual santa, mística carmelita e Doutora da Igreja, escreveu o Castelo Interior?",
+    "options": [
+      "Santa Teresa de Ávila",
+      "Santa Teresa de Lisieux",
+      "Santa Brígida",
+      "Santa Hildegarda"
+    ],
+    "answer": 0,
+    "explanation": "Santa Teresa de Ávila descreveu no Castelo Interior o caminho da alma a Deus.",
+    "reference": "Castelo Interior",
+    "id": 232
+  },
+  {
+    "category": "concilios",
+    "difficulty": "EASY",
+    "question": "Qual concílio, em 431, definiu Maria como Mãe de Deus?",
+    "options": [
+      "Concílio de Éfeso",
+      "Concílio de Nicéia",
+      "Concílio de Calcedônia",
+      "Concílio de Constantinopla"
+    ],
+    "answer": 0,
+    "explanation": "O Concílio de Éfeso definiu a Maternidade Divina de Maria contra Nestório.",
+    "reference": "Concílio de Éfeso",
+    "id": 233
+  },
+  {
+    "category": "concilios",
+    "difficulty": "EASY",
+    "question": "Qual concílio definiu que Cristo tem duas naturezas, divina e humana, sem confusão?",
+    "options": [
+      "Concílio de Calcedônia",
+      "Concílio de Éfeso",
+      "Concílio de Nicéia",
+      "Concílio de Latrão"
+    ],
+    "answer": 0,
+    "explanation": "Calcedônia (451) definiu a união das duas naturezas de Cristo.",
+    "reference": "Definição de Calcedônia",
+    "id": 234
+  },
+  {
+    "category": "concilios",
+    "difficulty": "EASY",
+    "question": "Qual concílio, em 381, completou o Credo afirmando a divindade do Espírito Santo?",
+    "options": [
+      "Concílio de Constantinopla I",
+      "Concílio de Nicéia",
+      "Concílio de Éfeso",
+      "Concílio de Calcedônia"
+    ],
+    "answer": 0,
+    "explanation": "Constantinopla I (381) ampliou o Credo sobre o Espírito Santo.",
+    "reference": "Credo Niceno-Constantinopolitano",
+    "id": 235
+  },
+  {
+    "category": "concilios",
+    "difficulty": "EASY",
+    "question": "Qual concílio confirmou o cânon dos 73 livros da Bíblia Católica em 1546?",
+    "options": [
+      "Concílio de Trento",
+      "Concílio de Florença",
+      "Concílio de Latrão",
+      "Concílio de Vienne"
+    ],
+    "answer": 0,
+    "explanation": "Trento confirmou solenemente o cânon bíblico.",
+    "reference": "Decreto sobre as Escrituras",
+    "id": 236
+  },
+  {
+    "category": "concilios",
+    "difficulty": "EASY",
+    "question": "Qual concílio ecumênico do século XX renovou a liturgia e a vida da Igreja?",
+    "options": [
+      "Concílio Vaticano II",
+      "Concílio Vaticano I",
+      "Concílio de Trento",
+      "Concílio de Éfeso"
+    ],
+    "answer": 0,
+    "explanation": "O Concílio Vaticano II (1962-1965) promoveu a renovação litúrgica e pastoral.",
+    "reference": "Sacrosanctum Concilium",
+    "id": 237
+  },
+  {
+    "category": "concilios",
+    "difficulty": "EASY",
+    "question": "Qual é considerado o primeiro concílio ecumênico da história?",
+    "options": [
+      "Concílio de Nicéia",
+      "Concílio de Constantinopla",
+      "Concílio de Éfeso",
+      "Concílio de Calcedônia"
+    ],
+    "answer": 0,
+    "explanation": "Nicéia (325) foi o primeiro concílio ecumênico, convocado para defender a fé.",
+    "reference": "História da Igreja",
+    "id": 238
+  },
+  {
+    "category": "concilios",
+    "difficulty": "EASY",
+    "question": "Quem convoca e preside atualmente os concílios ecumênicos?",
+    "options": [
+      "O Papa",
+      "O imperador",
+      "O cardeal decano",
+      "O rei"
+    ],
+    "answer": 0,
+    "explanation": "Os concílios ecumênicos são convocados e presididos pelo Papa.",
+    "reference": "Código de Direito Canônico",
+    "id": 239
+  },
+  {
+    "category": "concilios",
+    "difficulty": "EASY",
+    "question": "Qual concílio foi convocado pelo imperador Constantino para resolver a controvérsia ariana?",
+    "options": [
+      "Concílio de Nicéia",
+      "Concílio de Trento",
+      "Concílio de Éfeso",
+      "Concílio de Florença"
+    ],
+    "answer": 0,
+    "explanation": "Constantino convocou Nicéia (325) para pacificar a Igreja diante do arianismo.",
+    "reference": "História da Igreja",
+    "id": 240
+  },
+  {
+    "category": "concilios",
+    "difficulty": "EASY",
+    "question": "Qual concílio do século XIV suprimiu a Ordem dos Templários?",
+    "options": [
+      "Concílio de Vienne",
+      "Concílio de Lyon",
+      "Concílio de Constança",
+      "Concílio de Basileia"
+    ],
+    "answer": 0,
+    "explanation": "O Concílio de Vienne (1311-1312) suprimiu a Ordem do Templo.",
+    "reference": "Concílio de Vienne",
+    "id": 241
+  },
+  {
+    "category": "concilios",
+    "difficulty": "EASY",
+    "question": "Qual concílio do século XIII regulamentou a eleição do Papa em conclave?",
+    "options": [
+      "Concílio de Lyon II",
+      "Concílio de Vienne",
+      "Concílio de Latrão IV",
+      "Concílio de Constança"
+    ],
+    "answer": 0,
+    "explanation": "Lyon II (1274) promulgou as normas do conclave papal.",
+    "reference": "Ubi periculum",
+    "id": 242
+  },
+  {
+    "category": "concilios",
+    "difficulty": "EASY",
+    "question": "Qual concílio pôs fim ao Grande Cisma do Ocidente e elegeu o Papa Martinho V?",
+    "options": [
+      "Concílio de Constança",
+      "Concílio de Basileia",
+      "Concílio de Florença",
+      "Concílio de Pisa"
+    ],
+    "answer": 0,
+    "explanation": "Constança (1414-1418) encerrou a crise com três papas simultâneos.",
+    "reference": "Concílio de Constança",
+    "id": 243
+  },
+  {
+    "category": "concilios",
+    "difficulty": "EASY",
+    "question": "Qual concílio reafirmou a presença real de Cristo na Eucaristia contra os reformadores?",
+    "options": [
+      "Concílio de Trento",
+      "Concílio de Latrão IV",
+      "Concílio de Florença",
+      "Concílio de Vienne"
+    ],
+    "answer": 0,
+    "explanation": "Trento reafirmou a presença real e o sacrifício da Missa.",
+    "reference": "Decreto sobre a Eucaristia",
+    "id": 244
+  },
+  {
+    "category": "concilios",
+    "difficulty": "EASY",
+    "question": "Como os católicos devem acolher os decretos de um concílio ecumênico confirmados pelo Papa?",
+    "options": [
+      "Como doutrina de fé que deve ser seguida",
+      "Como simples sugestões",
+      "Como leis de um só país",
+      "Como regras opcionais"
+    ],
+    "answer": 0,
+    "explanation": "Os decretos dos concílios ecumênicos, com o Papa, pertencem ao Magistério da Igreja.",
+    "reference": "Lumen Gentium 25",
+    "id": 245
+  },
+  {
+    "category": "concilios",
+    "difficulty": "EASY",
+    "question": "Em que ano foi realizado o primeiro Concílio de Nicéia?",
+    "options": [
+      "325",
+      "381",
+      "431",
+      "451"
+    ],
+    "answer": 0,
+    "explanation": "O Concílio de Nicéia ocorreu no ano 325.",
+    "reference": "História da Igreja",
+    "id": 246
+  },
+  {
+    "category": "concilios",
+    "difficulty": "MEDIUM",
+    "question": "Qual heresia, que negava a divindade de Cristo, foi condenada no Concílio de Nicéia?",
+    "options": [
+      "O arianismo",
+      "O nestorianismo",
+      "O pelagianismo",
+      "O monofisismo"
+    ],
+    "answer": 0,
+    "explanation": "Nicéia (325) condenou Ário, que negava a divindade do Filho.",
+    "reference": "Credo Niceno",
+    "id": 247
+  },
+  {
+    "category": "concilios",
+    "difficulty": "MEDIUM",
+    "question": "Qual heresia, que confundia as naturezas de Cristo, foi condenada em Calcedônia?",
+    "options": [
+      "O monofisismo",
+      "O arianismo",
+      "O donatismo",
+      "O gnosticismo"
+    ],
+    "answer": 0,
+    "explanation": "Calcedônia (451) respondeu a Eutiques, que fundia as naturezas de Cristo.",
+    "reference": "Definição de Calcedônia",
+    "id": 248
+  },
+  {
+    "category": "concilios",
+    "difficulty": "MEDIUM",
+    "question": "Em qual cidade foi realizado o Concílio de 431, que definiu a maternidade divina de Maria?",
+    "options": [
+      "Éfeso",
+      "Roma",
+      "Alexandria",
+      "Antioquia"
+    ],
+    "answer": 0,
+    "explanation": "O Concílio de Éfeso ocorreu na cidade de Éfeso, na Ásia Menor.",
+    "reference": "Concílio de Éfeso",
+    "id": 249
+  },
+  {
+    "category": "concilios",
+    "difficulty": "MEDIUM",
+    "question": "O que significa a palavra heresia, no contexto dos concílios?",
+    "options": [
+      "Uma doutrina contrária à fé ensinada pela Igreja",
+      "Uma forma de oração",
+      "Um livro litúrgico",
+      "Um canto da Missa"
+    ],
+    "answer": 0,
+    "explanation": "Heresia é a negação obstinada de uma verdade de fé.",
+    "reference": "Catecismo da Igreja Católica 2089",
+    "id": 250
+  },
+  {
+    "category": "concilios",
+    "difficulty": "MEDIUM",
+    "question": "Qual concílio condenou o monotelismo, que afirmava haver uma só vontade em Cristo?",
+    "options": [
+      "Concílio de Constantinopla III",
+      "Concílio de Nicéia II",
+      "Concílio de Latrão",
+      "Concílio de Éfeso"
+    ],
+    "answer": 0,
+    "explanation": "Constantinopla III (680) definiu as duas vontades de Cristo, divina e humana.",
+    "reference": "Concílio de Constantinopla III",
+    "id": 251
+  },
+  {
+    "category": "concilios",
+    "difficulty": "MEDIUM",
+    "question": "Qual concílio do século XII definiu que a eleição do Papa exigia dois terços dos votos dos cardeais?",
+    "options": [
+      "Concílio de Latrão III",
+      "Concílio de Latrão IV",
+      "Concílio de Lyon I",
+      "Concílio de Vienne"
+    ],
+    "answer": 0,
+    "explanation": "Latrão III (1179) estabeleceu a maioria de dois terços para evitar cismas.",
+    "reference": "Concílio de Latrão III",
+    "id": 252
+  },
+  {
+    "category": "concilios",
+    "difficulty": "MEDIUM",
+    "question": "Qual concílio do século XIII reafirmou a união com as Igrejas orientais e o Filioque?",
+    "options": [
+      "Concílio de Lyon II",
+      "Concílio de Florença",
+      "Concílio de Constança",
+      "Concílio de Basileia"
+    ],
+    "answer": 0,
+    "explanation": "Lyon II (1274) proclamou a união com os gregos e reafirmou o Filioque.",
+    "reference": "Concílio de Lyon II",
+    "id": 253
+  },
+  {
+    "category": "concilios",
+    "difficulty": "MEDIUM",
+    "question": "Qual concílio condenou o pregador João Hus, executado em 1415?",
+    "options": [
+      "Concílio de Constança",
+      "Concílio de Basileia",
+      "Concílio de Pisa",
+      "Concílio de Florença"
+    ],
+    "answer": 0,
+    "explanation": "Constança julgou e condenou João Hus por suas teses.",
+    "reference": "Concílio de Constança",
+    "id": 254
+  },
+  {
+    "category": "concilios",
+    "difficulty": "MEDIUM",
+    "question": "Qual concílio, realizado entre 1545 e 1563, aconteceu em três períodos distintos?",
+    "options": [
+      "Concílio de Trento",
+      "Concílio de Latrão V",
+      "Concílio de Vienne",
+      "Concílio de Basileia"
+    ],
+    "answer": 0,
+    "explanation": "Trento durou dezoito anos, em três fases, com vários papas.",
+    "reference": "História do Concílio de Trento",
+    "id": 255
+  },
+  {
+    "category": "concilios",
+    "difficulty": "MEDIUM",
+    "question": "Qual concílio, no século IX, condenou o patriarca Fócio de Constantinopla?",
+    "options": [
+      "Concílio de Constantinopla IV",
+      "Concílio de Constantinopla III",
+      "Concílio de Nicéia II",
+      "Concílio de Latrão"
+    ],
+    "answer": 0,
+    "explanation": "Constantinopla IV (869-870) tratou da crise de Fócio.",
+    "reference": "Concílio de Constantinopla IV",
+    "id": 256
+  },
+  {
+    "category": "concilios",
+    "difficulty": "MEDIUM",
+    "question": "Qual concílio também tratou da controvérsia sobre a pobreza franciscana?",
+    "options": [
+      "Concílio de Vienne",
+      "Concílio de Lyon I",
+      "Concílio de Lyon II",
+      "Concílio de Latrão"
+    ],
+    "answer": 0,
+    "explanation": "Vienne (1311) discutiu a questão da pobreza evangélica dos franciscanos.",
+    "reference": "Concílio de Vienne",
+    "id": 257
+  },
+  {
+    "category": "concilios",
+    "difficulty": "MEDIUM",
+    "question": "Qual concílio foi convocado pelo imperador Teodósio I?",
+    "options": [
+      "Concílio de Constantinopla I",
+      "Concílio de Nicéia",
+      "Concílio de Éfeso",
+      "Concílio de Calcedônia"
+    ],
+    "answer": 0,
+    "explanation": "Teodósio I convocou o Concílio de Constantinopla (381).",
+    "reference": "História da Igreja",
+    "id": 258
+  },
+  {
+    "category": "concilios",
+    "difficulty": "MEDIUM",
+    "question": "Qual bispo de Alexandria presidiu o Concílio de Éfeso em 431?",
+    "options": [
+      "São Cirilo de Alexandria",
+      "Santo Atanásio",
+      "São Basílio",
+      "São Gregório Magno"
+    ],
+    "answer": 0,
+    "explanation": "São Cirilo de Alexandria presidiu os trabalhos de Éfeso.",
+    "reference": "Concílio de Éfeso",
+    "id": 259
+  },
+  {
+    "category": "concilios",
+    "difficulty": "HARD",
+    "question": "O que o Concílio de Nicéia decidiu sobre a data da Páscoa?",
+    "options": [
+      "Que a Páscoa não seguisse o calendário judaico",
+      "Que a Páscoa fosse em qualquer dia",
+      "Que a Páscoa fosse abolida",
+      "Que a Páscoa fosse em dezembro"
+    ],
+    "answer": 0,
+    "explanation": "Nicéia estabeleceu que a Páscoa seria celebrada no domingo, sem depender do calendário judaico.",
+    "reference": "Concílio de Nicéia",
+    "id": 260
+  },
+  {
+    "category": "concilios",
+    "difficulty": "HARD",
+    "question": "Qual concílio do século VI condenou os chamados Três Capítulos?",
+    "options": [
+      "Concílio de Constantinopla II",
+      "Concílio de Constantinopla III",
+      "Concílio de Nicéia II",
+      "Concílio de Latrão"
+    ],
+    "answer": 0,
+    "explanation": "Constantinopla II (553) condenou os Três Capítulos, textos de teólogos nestorianos.",
+    "reference": "Concílio de Constantinopla II",
+    "id": 261
+  },
+  {
+    "category": "concilios",
+    "difficulty": "HARD",
+    "question": "Qual concílio reafirmou a doutrina do purgatório e das indulgências?",
+    "options": [
+      "Concílio de Trento",
+      "Concílio de Latrão",
+      "Concílio de Florença",
+      "Concílio de Vienne"
+    ],
+    "answer": 0,
+    "explanation": "Trento reafirmou o purgatório e a validade das indulgências.",
+    "reference": "Decreto sobre o Purgatório",
+    "id": 262
+  },
+  {
+    "category": "concilios",
+    "difficulty": "HARD",
+    "question": "Qual concílio do século XV entrou em conflito com o Papa sobre a autoridade conciliar?",
+    "options": [
+      "Concílio de Basileia",
+      "Concílio de Constança",
+      "Concílio de Florença",
+      "Concílio de Pisa"
+    ],
+    "answer": 0,
+    "explanation": "Basileia-Ferrara-Florença teve tensões entre conciliarismo e primado papal.",
+    "reference": "Concílio de Basileia",
+    "id": 263
+  },
+  {
+    "category": "concilios",
+    "difficulty": "HARD",
+    "question": "Qual concílio do século XIII depôs o imperador Frederico II?",
+    "options": [
+      "Concílio de Lyon I",
+      "Concílio de Lyon II",
+      "Concílio de Latrão IV",
+      "Concílio de Vienne"
+    ],
+    "answer": 0,
+    "explanation": "Lyon I (1245) depôs Frederico II, em conflito com a Santa Sé.",
+    "reference": "Concílio de Lyon I",
+    "id": 264
+  },
+  {
+    "category": "concilios",
+    "difficulty": "HARD",
+    "question": "Qual concílio do início do século XII encerrou a chamada investidura leiga?",
+    "options": [
+      "Concílio de Latrão I",
+      "Concílio de Latrão II",
+      "Concílio de Vienne",
+      "Concílio de Constança"
+    ],
+    "answer": 0,
+    "explanation": "Latrão I (1123) confirmou a Concordata de Worms, fim da investidura por leigos.",
+    "reference": "Concílio de Latrão I",
+    "id": 265
+  },
+  {
+    "category": "concilios",
+    "difficulty": "HARD",
+    "question": "Qual documento do Concílio Vaticano II trata da liberdade religiosa?",
+    "options": [
+      "Dignitatis Humanae",
+      "Sacrosanctum Concilium",
+      "Lumen Gentium",
+      "Dei Verbum"
+    ],
+    "answer": 0,
+    "explanation": "Dignitatis Humanae, de 1965, trata da liberdade religiosa.",
+    "reference": "Dignitatis Humanae",
+    "id": 266
+  },
+  {
+    "category": "concilios",
+    "difficulty": "HARD",
+    "question": "O que significa o termo ex cathedra, usado na definição da infalibilidade papal?",
+    "options": [
+      "Quando o Papa fala como pastor supremo e define uma verdade de fé",
+      "Quando o Papa reza em latim",
+      "Quando o Papa assina um documento",
+      "Quando o Papa nomeia um bispo"
+    ],
+    "answer": 0,
+    "explanation": "Ex cathedra refere-se às definições solenes do Papa sobre fé e moral.",
+    "reference": "Pastor Aeternus",
+    "id": 267
+  },
+  {
+    "category": "concilios",
+    "difficulty": "HARD",
+    "question": "Qual imperador convocou o Concílio de Éfeso em 431?",
+    "options": [
+      "Teodósio II",
+      "Constantino",
+      "Teodósio I",
+      "Marciano"
+    ],
+    "answer": 0,
+    "explanation": "Teodósio II convocou o Concílio de Éfeso.",
+    "reference": "História da Igreja",
+    "id": 268
+  },
+  {
+    "category": "concilios",
+    "difficulty": "HARD",
+    "question": "Qual concílio definiu a colegialidade dos bispos com o Papa, no século XX?",
+    "options": [
+      "Concílio Vaticano II",
+      "Concílio Vaticano I",
+      "Concílio de Trento",
+      "Concílio de Florença"
+    ],
+    "answer": 0,
+    "explanation": "O Vaticano II apresentou a doutrina do colégio episcopal com o Papa.",
+    "reference": "Lumen Gentium 22",
+    "id": 269
+  },
+  {
+    "category": "igreja",
+    "difficulty": "EASY",
+    "question": "O que é o cibório, usado na liturgia católica?",
+    "options": [
+      "O vaso que guarda as hóstias consagradas",
+      "O livro das leituras",
+      "A veste do sacerdote",
+      "O sino da Missa"
+    ],
+    "answer": 0,
+    "explanation": "O cibório é o recipiente que guarda o Corpo de Cristo na Eucaristia.",
+    "reference": "Paramentos e objetos litúrgicos",
+    "id": 270
+  },
+  {
+    "category": "igreja",
+    "difficulty": "EASY",
+    "question": "O que o sinal da cruz recorda ao cristão?",
+    "options": [
+      "A Santíssima Trindade e a salvação por Cristo",
+      "A saudação entre amigos",
+      "O início da colheita",
+      "A aliança de Noé"
+    ],
+    "answer": 0,
+    "explanation": "Fazer o sinal da cruz é professar a fé na Trindade e na cruz de Cristo.",
+    "reference": "Catecismo da Igreja Católica 2157",
+    "id": 271
+  },
+  {
+    "category": "igreja",
+    "difficulty": "EASY",
+    "question": "Qual sacramento celebra a aliança de amor entre um homem e uma mulher, segundo a Igreja?",
+    "options": [
+      "O Matrimônio",
+      "O Batismo",
+      "A Crisma",
+      "A Ordem"
+    ],
+    "answer": 0,
+    "explanation": "O Matrimônio é o sacramento que une o homem e a mulher em aliança.",
+    "reference": "Catecismo 1601",
+    "id": 272
+  },
+  {
+    "category": "igreja",
+    "difficulty": "EASY",
+    "question": "Qual é o tempo litúrgico que prepara a celebração do Natal?",
+    "options": [
+      "O Advento",
+      "A Quaresma",
+      "A Páscoa",
+      "O Tempo Comum"
+    ],
+    "answer": 0,
+    "explanation": "O Advento é o tempo de preparação para o Natal.",
+    "reference": "Normas gerais do ano litúrgico",
+    "id": 273
+  },
+  {
+    "category": "igreja",
+    "difficulty": "EASY",
+    "question": "Qual é o tempo litúrgico de preparação para a Páscoa?",
+    "options": [
+      "A Quaresma",
+      "O Advento",
+      "O Natal",
+      "O Tempo Comum"
+    ],
+    "answer": 0,
+    "explanation": "A Quaresma, de quarenta dias, prepara a Páscoa.",
+    "reference": "Sacrosanctum Concilium 109",
+    "id": 274
+  },
+  {
+    "category": "igreja",
+    "difficulty": "EASY",
+    "question": "O que significa a palavra amém, dita ao final das orações?",
+    "options": [
+      "Assim seja",
+      "Louvado seja",
+      "Obrigado",
+      "Vem, Senhor"
+    ],
+    "answer": 0,
+    "explanation": "Amém é uma palavra hebraica que significa assim seja, firme e verdadeiro.",
+    "reference": "Catecismo 2856",
+    "id": 275
+  },
+  {
+    "category": "igreja",
+    "difficulty": "EASY",
+    "question": "Em que momento da Missa os fiéis rezam o Pai-Nosso?",
+    "options": [
+      "Pouco antes da Comunhão",
+      "No início da Missa",
+      "Após o Evangelho",
+      "No final da celebração"
+    ],
+    "answer": 0,
+    "explanation": "O Pai-Nosso é rezado antes da Comunhão, preparando o rito da paz.",
+    "reference": "Ordinário da Missa",
+    "id": 276
+  },
+  {
+    "category": "igreja",
+    "difficulty": "EASY",
+    "question": "Em caso de emergência, quem pode administrar o Batismo?",
+    "options": [
+      "Qualquer pessoa batizada",
+      "Apenas o padre",
+      "Apenas o bispo",
+      "Apenas o diácono"
+    ],
+    "answer": 0,
+    "explanation": "Diante de perigo de morte, qualquer pessoa pode batizar com a intenção da Igreja.",
+    "reference": "Catecismo 1256",
+    "id": 277
+  },
+  {
+    "category": "igreja",
+    "difficulty": "EASY",
+    "question": "Qual é a função principal do diácono na Igreja?",
+    "options": [
+      "Servir na liturgia e na caridade",
+      "Presidir a Missa",
+      "Governar a diocese",
+      "Celebrar a Eucaristia"
+    ],
+    "answer": 0,
+    "explanation": "O diácono serve ao altar, à Palavra e à caridade.",
+    "reference": "Catecismo 1570",
+    "id": 278
+  },
+  {
+    "category": "igreja",
+    "difficulty": "EASY",
+    "question": "O que é a homilia, feita na Missa?",
+    "options": [
+      "A explicação da Palavra de Deus pelo sacerdote",
+      "O canto de entrada",
+      "A leitura do Evangelho",
+      "A oração dos fiéis"
+    ],
+    "answer": 0,
+    "explanation": "A homilia explica as leituras e aplica a Palavra à vida dos fiéis.",
+    "reference": "Sacrosanctum Concilium 52",
+    "id": 279
+  },
+  {
+    "category": "igreja",
+    "difficulty": "EASY",
+    "question": "Qual anjo acompanha e protege cada pessoa, segundo a tradição cristã?",
+    "options": [
+      "O Anjo da Guarda",
+      "O Arcanjo Miguel",
+      "O Arcanjo Gabriel",
+      "O Arcanjo Rafael"
+    ],
+    "answer": 0,
+    "explanation": "Cada fiel tem um anjo da guarda que o acompanha.",
+    "reference": "Catecismo 336",
+    "id": 280
+  },
+  {
+    "category": "igreja",
+    "difficulty": "EASY",
+    "question": "Por que os fiéis se ajoelham diante do Santíssimo Sacramento?",
+    "options": [
+      "Para adorar a Cristo realmente presente",
+      "Para descansar durante a Missa",
+      "Para pedir uma bênção especial",
+      "Para imitar os apóstolos"
+    ],
+    "answer": 0,
+    "explanation": "A genuflexão diante do Santíssimo é sinal de adoração a Cristo presente.",
+    "reference": "Catecismo 1378",
+    "id": 281
+  },
+  {
+    "category": "igreja",
+    "difficulty": "MEDIUM",
+    "question": "Qual é o significado da imposição das mãos no sacramento da Crisma?",
+    "options": [
+      "Sinal da vinda do Espírito Santo",
+      "Sinal de amizade",
+      "Bênção final da Missa",
+      "Saudação aos fiéis"
+    ],
+    "answer": 0,
+    "explanation": "A imposição das mãos invoca o Espírito Santo no sacramento.",
+    "reference": "Catecismo 1299",
+    "id": 282
+  },
+  {
+    "category": "igreja",
+    "difficulty": "MEDIUM",
+    "question": "Qual parte da Missa apresenta o pão e o vinho ao altar antes da Oração Eucarística?",
+    "options": [
+      "Apresentação das Oferendas",
+      "A Consagração",
+      "A Comunhão",
+      "Os Ritos Finais"
+    ],
+    "answer": 0,
+    "explanation": "Na apresentação das oferendas se levam ao altar o pão e o vinho.",
+    "reference": "Ordinário da Missa",
+    "id": 283
+  },
+  {
+    "category": "igreja",
+    "difficulty": "MEDIUM",
+    "question": "O que significa a expressão ex opere operato, sobre os sacramentos?",
+    "options": [
+      "Os sacramentos agem pela força do próprio sacramento de Cristo",
+      "Os sacramentos dependem da santidade do ministro",
+      "Os sacramentos dependem da fé do sacerdote",
+      "Os sacramentos são apenas símbolos"
+    ],
+    "answer": 0,
+    "explanation": "Os sacramentos conferem a graça por si mesmos, pela ação de Cristo.",
+    "reference": "Catecismo 1128",
+    "id": 284
+  },
+  {
+    "category": "igreja",
+    "difficulty": "MEDIUM",
+    "question": "Qual sacramento confirma e fortalece a graça recebida no Batismo?",
+    "options": [
+      "A Crisma",
+      "A Eucaristia",
+      "A Penitência",
+      "A Ordem"
+    ],
+    "answer": 0,
+    "explanation": "A Crisma aumenta e confirma a graça batismal com o selo do Espírito.",
+    "reference": "Catecismo 1303",
+    "id": 285
+  },
+  {
+    "category": "igreja",
+    "difficulty": "MEDIUM",
+    "question": "O que o Papa abre no início de um Ano Jubilar?",
+    "options": [
+      "A Porta Santa",
+      "A porta do Palácio",
+      "A cripta de São Pedro",
+      "O cofre do tesouro"
+    ],
+    "answer": 0,
+    "explanation": "No Ano Jubilar o Papa abre a Porta Santa, símbolo do perdão de Deus.",
+    "reference": "Bula de indição do jubileu",
+    "id": 286
+  },
+  {
+    "category": "igreja",
+    "difficulty": "MEDIUM",
+    "question": "O que governa um bispo na Igreja Católica?",
+    "options": [
+      "Uma diocese",
+      "Uma paróquia",
+      "Uma ordem religiosa",
+      "Um seminário"
+    ],
+    "answer": 0,
+    "explanation": "O bispo é o pastor de uma diocese.",
+    "reference": "Catecismo 886",
+    "id": 287
+  },
+  {
+    "category": "igreja",
+    "difficulty": "MEDIUM",
+    "question": "O que significa a palavra liturgia?",
+    "options": [
+      "Serviço público e culto de adoração a Deus",
+      "Estudo da Bíblia",
+      "Reunião dos fiéis em casa",
+      "Um canto gregoriano"
+    ],
+    "answer": 0,
+    "explanation": "Liturgia vem do grego leitourgia, o serviço público do povo de Deus.",
+    "reference": "Sacrosanctum Concilium 7",
+    "id": 288
+  },
+  {
+    "category": "igreja",
+    "difficulty": "MEDIUM",
+    "question": "Qual é o caminho para receber o perdão de Deus no sacramento da Penitência?",
+    "options": [
+      "Confessar os pecados e receber a absolvição do sacerdote",
+      "Ler a Bíblia em casa",
+      "Rezar o terço em voz alta",
+      "Fazer jejum por um dia"
+    ],
+    "answer": 0,
+    "explanation": "A confissão dos pecados e a absolvição são essenciais na Reconciliação.",
+    "reference": "Catecismo 1424",
+    "id": 289
+  },
+  {
+    "category": "igreja",
+    "difficulty": "MEDIUM",
+    "question": "O que a Igreja celebra na Solenidade de Corpus Christi?",
+    "options": [
+      "O Santíssimo Sacramento da Eucaristia",
+      "O nascimento de Jesus",
+      "A ressurreição do Senhor",
+      "A descida do Espírito Santo"
+    ],
+    "answer": 0,
+    "explanation": "Corpus Christi celebra solenemente o Corpo e o Sangue de Cristo.",
+    "reference": "Liturgia de Corpus Christi",
+    "id": 290
+  },
+  {
+    "category": "igreja",
+    "difficulty": "HARD",
+    "question": "Qual é o papel do Papa em relação ao Magistério da Igreja?",
+    "options": [
+      "Guardar e ensinar a doutrina com autoridade",
+      "Apenas administrar os bens da Igreja",
+      "Somente celebrar a Missa",
+      "Representar a Igreja nos países"
+    ],
+    "answer": 0,
+    "explanation": "O Papa, com os bispos, exerce o Magistério, ensinando e guardando a fé.",
+    "reference": "Lumen Gentium 25",
+    "id": 291
+  },
+  {
+    "category": "igreja",
+    "difficulty": "HARD",
+    "question": "Quem possui o carisma da infalibilidade, segundo a doutrina católica?",
+    "options": [
+      "O Papa e o colégio dos bispos em comunhão com ele",
+      "Apenas os cardeais",
+      "Todos os fiéis",
+      "Os teólogos"
+    ],
+    "answer": 0,
+    "explanation": "A infalibilidade pertence ao Papa e ao colégio episcopal quando ensinam ex cathedra.",
+    "reference": "Lumen Gentium 25",
+    "id": 292
+  },
+  {
+    "category": "igreja",
+    "difficulty": "HARD",
+    "question": "O que é um sacramento, segundo a Igreja?",
+    "options": [
+      "Um sinal sensível e eficaz da graça, instituído por Cristo",
+      "Um objeto bento",
+      "Uma oração especial",
+      "Uma festa litúrgica"
+    ],
+    "answer": 0,
+    "explanation": "Os sacramentos são sinais eficazes da graça, instituídos por Cristo.",
+    "reference": "Catecismo 1131",
+    "id": 293
+  },
+  {
+    "category": "igreja",
+    "difficulty": "HARD",
+    "question": "O que era o catecumenato na Igreja antiga?",
+    "options": [
+      "O período de preparação dos adultos para o Batismo",
+      "O ensino das crianças na escola",
+      "A reunião dos bispos",
+      "O canto das igrejas"
+    ],
+    "answer": 0,
+    "explanation": "Os catecúmenos eram preparados por um caminho de formação antes do Batismo.",
+    "reference": "Catecismo 1247",
+    "id": 294
+  },
+  {
+    "category": "igreja",
+    "difficulty": "HARD",
+    "question": "Qual é a diferença entre o sacerdócio comum e o sacerdócio ministerial?",
+    "options": [
+      "O ministerial vem do sacramento da Ordem; o comum, do Batismo",
+      "O comum é superior ao ministerial",
+      "Não há diferença entre eles",
+      "O ministerial vem da família"
+    ],
+    "answer": 0,
+    "explanation": "Pelo Batismo há o sacerdócio comum; pela Ordem, o ministerial.",
+    "reference": "Lumen Gentium 10",
+    "id": 295
+  },
+  {
+    "category": "igreja",
+    "difficulty": "HARD",
+    "question": "O que significa o termo comunhão dos santos?",
+    "options": [
+      "A união espiritual de todos os membros da Igreja, vivos e falecidos",
+      "Uma festa religiosa",
+      "A reunião apenas dos santos do céu",
+      "Um sacramento da Igreja"
+    ],
+    "answer": 0,
+    "explanation": "A comunhão dos santos une a Igreja militante, purgante e triunfante.",
+    "reference": "Catecismo 946-948",
+    "id": 296
+  },
+  {
+    "category": "igreja",
+    "difficulty": "HARD",
+    "question": "Segundo a liturgia, quando Cristo está presente na sua Palavra?",
+    "options": [
+      "Quando as Escrituras são proclamadas na celebração",
+      "Apenas na hóstia consagrada",
+      "Somente na pregação",
+      "Apenas na leitura pessoal"
+    ],
+    "answer": 0,
+    "explanation": "Cristo está presente na sua Palavra quando as Escrituras são proclamadas.",
+    "reference": "Sacrosanctum Concilium 7",
+    "id": 297
+  },
+  {
+    "category": "igreja",
+    "difficulty": "HARD",
+    "question": "O que expressa o Ósculo da Paz durante a Missa?",
+    "options": [
+      "A reconciliação e a comunhão com o próximo",
+      "Uma saudação cultural",
+      "O início da celebração",
+      "O final da Missa"
+    ],
+    "answer": 0,
+    "explanation": "O rito da paz prepara para a Comunhão, sinal de reconciliação.",
+    "reference": "Ordinário da Missa",
+    "id": 298
+  },
+  {
+    "category": "igreja",
+    "difficulty": "HARD",
+    "question": "O que é o Missal na liturgia católica?",
+    "options": [
+      "O livro com as orações da celebração da Missa",
+      "O livro das leituras",
+      "O livro das Horas",
+      "O livro de cânticos"
+    ],
+    "answer": 0,
+    "explanation": "O Missal reúne as orações próprias da celebração eucarística.",
+    "reference": "Introdução ao Missal Romano",
+    "id": 299
+  },
+  {
+    "category": "igreja",
+    "difficulty": "HARD",
+    "question": "O que significa consagrar algo na liturgia da Igreja?",
+    "options": [
+      "Separar e dedicar algo a Deus de modo sagrado",
+      "Rezar em voz alta",
+      "Abençoar a água",
+      "Consagrar o altar com óleo"
+    ],
+    "answer": 0,
+    "explanation": "Consagrar é dedicar a Deus, tornando algo sagrado para o culto.",
+    "reference": "Catecismo 1184",
+    "id": 300
+  }
+]
