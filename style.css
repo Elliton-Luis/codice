@@ -145,6 +145,81 @@ header h1 {
     align-items: stretch;
 }
 
+.category-selection {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto 30px;
+    align-items: stretch;
+}
+
+.category-btn {
+    width: 100%;
+    padding: 18px 20px;
+    font-size: 1.25em;
+    background: rgba(255, 255, 255, 0.07);
+    color: var(--color-cream-soft);
+    border: 1px solid rgba(212, 175, 55, 0.5);
+    margin-top: 0;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.15s ease, border-color 0.3s ease;
+}
+
+.category-btn:hover {
+    transform: translateY(-2px);
+    border-color: var(--color-gold);
+}
+
+.category-name {
+    display: block;
+}
+
+.category-desc {
+    display: block;
+    font-size: 0.72em;
+    font-weight: normal;
+    margin-top: 5px;
+    opacity: 0.9;
+    color: var(--color-cream-dim);
+}
+
+.biblia-btn {
+    background: rgba(200, 162, 74, 0.18);
+    border-color: rgba(200, 162, 74, 0.45);
+}
+
+.biblia-btn:hover {
+    background: rgba(200, 162, 74, 0.3);
+}
+
+.santos-btn {
+    background: rgba(94, 151, 196, 0.18);
+    border-color: rgba(94, 151, 196, 0.4);
+}
+
+.santos-btn:hover {
+    background: rgba(94, 151, 196, 0.3);
+}
+
+.concilios-btn {
+    background: rgba(176, 137, 104, 0.25);
+    border-color: rgba(176, 137, 104, 0.45);
+}
+
+.concilios-btn:hover {
+    background: rgba(176, 137, 104, 0.4);
+}
+
+.igreja-btn {
+    background: rgba(90, 164, 105, 0.2);
+    border-color: rgba(90, 164, 105, 0.4);
+}
+
+.igreja-btn:hover {
+    background: rgba(90, 164, 105, 0.32);
+}
+
 .selection-prompt {
     grid-column: 1 / -1;
     font-size: 1.4em;
@@ -218,6 +293,7 @@ header h1 {
 .badge-lite { background-color: #5A9E6A; color: white; }
 .badge-record { background-color: var(--color-gold); color: var(--color-dark-brown); }
 .badge-stats { background-color: var(--color-brown); color: white; }
+.badge-category { background-color: var(--color-gold); color: var(--color-dark-brown); }
 
 .game-over-container {
     background: rgba(255, 255, 255, 0.05);
@@ -641,6 +717,48 @@ header h1 {
     margin-bottom: 20px;
 }
 
+.stats-filters {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.filter-group {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--color-gold-border);
+    border-radius: 12px;
+    padding: 14px 18px;
+    text-align: left;
+    min-width: 190px;
+}
+
+.filter-title {
+    margin: 0 0 10px;
+    color: var(--color-gold);
+    font-weight: bold;
+    font-size: 1.05em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.filter-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1em;
+    color: var(--color-cream-soft);
+    padding: 4px 0;
+    cursor: pointer;
+}
+
+.filter-option input {
+    accent-color: var(--color-gold);
+    width: 16px;
+    height: 16px;
+}
+
 .stats-card {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid var(--color-gold-border);
@@ -704,8 +822,10 @@ header h1 {
     color: var(--color-gold);
 }
 
-.stats-table td:first-child,
-.stats-table th:first-child {
+.stats-table td:nth-child(-n+2),
+.stats-table th:nth-child(-n+2),
+.print-table td:nth-child(-n+2),
+.print-table th:nth-child(-n+2) {
     text-align: left;
 }
 

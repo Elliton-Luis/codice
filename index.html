@@ -25,22 +25,49 @@
             </div>
         </header>
         <main>
-            <div id="difficulty-selection" class="difficulty-selection">
-                <p class="selection-prompt">Escolha o nível de dificuldade:</p>
-                <button class="button difficulty-btn easy-btn" data-difficulty="EASY">Fácil</button>
-                <button class="button difficulty-btn medium-btn" data-difficulty="MEDIUM">Médio</button>
-                <button class="button difficulty-btn hard-btn" data-difficulty="HARD">Difícil</button>
-                <button class="button difficulty-btn hardcore-btn" data-difficulty="HARD" data-hardcore="true">Hardcore</button>
-                <button class="button difficulty-btn fun-btn" data-difficulty="LITE" data-fun="true">Sem Pressão</button>
+            <div id="category-selection" class="category-selection">
+                <p class="selection-prompt">Escolha uma categoria:</p>
+                <button class="button category-btn biblia-btn" data-category="biblia">
+                    <span class="category-name">Bíblia</span>
+                    <span class="category-desc">Livros, personagens e passagens</span>
+                </button>
+                <button class="button category-btn santos-btn" data-category="santos">
+                    <span class="category-name">Santos</span>
+                    <span class="category-desc">Vidas, virtudes e martírios</span>
+                </button>
+                <button class="button category-btn concilios-btn" data-category="concilios">
+                    <span class="category-name">Concílios</span>
+                    <span class="category-desc">Definições e decisões da Igreja</span>
+                </button>
+                <button class="button category-btn igreja-btn" data-category="igreja">
+                    <span class="category-name">Igreja</span>
+                    <span class="category-desc">Missa, sacramentos e estrutura</span>
+                </button>
                 <div class="secondary-buttons">
                     <button id="help-btn" class="button help-btn">Ajuda</button>
                     <button id="stats-btn" class="button stats-btn">Estatísticas</button>
                 </div>
             </div>
 
+            <div id="difficulty-selection" class="difficulty-selection hidden">
+                <p class="selection-prompt" id="difficulty-prompt">Escolha o nível de dificuldade:</p>
+                <button class="button difficulty-btn easy-btn" data-difficulty="EASY">Fácil</button>
+                <button class="button difficulty-btn medium-btn" data-difficulty="MEDIUM">Médio</button>
+                <button class="button difficulty-btn hard-btn" data-difficulty="HARD">Difícil</button>
+                <button class="button difficulty-btn hardcore-btn" data-difficulty="HARD" data-hardcore="true">Hardcore</button>
+                <button class="button difficulty-btn fun-btn" data-difficulty="LITE" data-fun="true">Sem Pressão</button>
+                <div class="secondary-buttons">
+                    <button id="change-category-btn" class="button">Trocar Categoria</button>
+                </div>
+            </div>
+
             <div id="help-screen" class="help-screen hidden">
                 <h2 class="help-title">Como Jogar</h2>
                 <div class="help-list">
+                    <div class="help-item">
+                        <span class="badge badge-category">Categorias</span>
+                        <p class="help-text">Antes de escolher a dificuldade, você escolhe uma categoria: <b>Bíblia</b>, <b>Santos</b>, <b>Concílios</b> ou <b>Igreja</b>. As perguntas do jogo vêm apenas da categoria escolhida.</p>
+                    </div>
                     <div class="help-item">
                         <span class="badge badge-timer">Tempo</span>
                         <p class="help-text">O tempo de jogo começa em 30 segundos.</p>
@@ -71,7 +98,7 @@
                     </div>
                     <div class="help-item">
                         <span class="badge badge-stats">Estatísticas</span>
-                        <p class="help-text">A tela <b>Estatísticas</b> reúne as respostas por nível, o aproveitamento geral e o maior winstreak. De lá você pode <b>Exportar</b> uma imagem bonita dos resultados ou <b>Zerar Tudo</b> (com confirmação).</p>
+                        <p class="help-text">A tela <b>Estatísticas</b> reúne as respostas por categoria e nível, o aproveitamento geral e o maior winstreak. Você pode <b>filtrar</b> por categorias e dificuldades, <b>Exportar</b> uma imagem bonita dos resultados filtrados ou <b>Zerar Tudo</b> (com confirmação).</p>
                     </div>
                 </div>
                 <button id="help-back-btn" class="button">Voltar ao Início</button>
@@ -79,6 +106,23 @@
 
             <div id="stats-screen" class="stats-screen hidden">
                 <h2 class="stats-title">Estatísticas Gerais</h2>
+                <div class="stats-filters">
+                    <div class="filter-group">
+                        <p class="filter-title">Categorias</p>
+                        <label class="filter-option"><input type="checkbox" class="filter-category" value="biblia" checked> Bíblia</label>
+                        <label class="filter-option"><input type="checkbox" class="filter-category" value="santos" checked> Santos</label>
+                        <label class="filter-option"><input type="checkbox" class="filter-category" value="concilios" checked> Concílios</label>
+                        <label class="filter-option"><input type="checkbox" class="filter-category" value="igreja" checked> Igreja</label>
+                    </div>
+                    <div class="filter-group">
+                        <p class="filter-title">Dificuldades</p>
+                        <label class="filter-option"><input type="checkbox" class="filter-difficulty" value="facil" checked> Fácil</label>
+                        <label class="filter-option"><input type="checkbox" class="filter-difficulty" value="medio" checked> Médio</label>
+                        <label class="filter-option"><input type="checkbox" class="filter-difficulty" value="dificil" checked> Difícil</label>
+                        <label class="filter-option"><input type="checkbox" class="filter-difficulty" value="hardcore" checked> Hardcore</label>
+                        <label class="filter-option"><input type="checkbox" class="filter-difficulty" value="lite" checked> Sem Pressão</label>
+                    </div>
+                </div>
                 <div class="stats-card">
                     <p class="stats-total">Questões respondidas: <span id="stats-total-answered">0</span></p>
                     <p class="stats-total">Acertos: <span id="stats-total-correct">0</span></p>
@@ -89,6 +133,7 @@
                     <table>
                         <thead>
                             <tr>
+                                <th>Categoria</th>
                                 <th>Nível</th>
                                 <th>Respondidas</th>
                                 <th>Acertos</th>
@@ -188,7 +233,7 @@
                     </div>
                     <table class="print-table" id="print-table">
                         <thead>
-                            <tr><th>Nível</th><th>Respondidas</th><th>Acertos</th><th>Aproveitamento</th></tr>
+                            <tr><th>Categoria</th><th>Nível</th><th>Respondidas</th><th>Acertos</th><th>Aproveitamento</th></tr>
                         </thead>
                         <tbody id="print-table-body"></tbody>
                     </table>

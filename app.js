@@ -13,8 +13,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const loadingMessage = document.getElementById('loading-message');
     const quizCard = document.getElementById('quiz-card');
     const cronometerDisplay = document.getElementById('cronometer-display');
+    const categorySelection = document.getElementById('category-selection');
+    const categoryButtons = document.querySelectorAll('.category-btn');
     const difficultySelection = document.getElementById('difficulty-selection');
+    const difficultyPrompt = document.getElementById('difficulty-prompt');
     const difficultyButtons = document.querySelectorAll('.difficulty-btn');
+    const changeCategoryBtn = document.getElementById('change-category-btn');
     const timerElement = document.querySelector('.timer');
     const scoreElement = document.querySelector('.score');
     const timeBonusElement = document.getElementById('time-bonus');
@@ -58,6 +62,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const printStatCorrectElement = document.getElementById('print-stat-correct');
     const printStatRateElement = document.getElementById('print-stat-rate');
     const printStatStreakElement = document.getElementById('print-stat-streak');
+    const filterCategoryInputs = document.querySelectorAll('.filter-category');
+    const filterDifficultyInputs = document.querySelectorAll('.filter-difficulty');
 
     // ---- Game state ----
     let allQuestions = [];
@@ -70,6 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let timerInterval;
     let bonusFlashTimeout;
     let gameOver = false;
+    let selectedCategory = '';
     let selectedDifficulty = '';
     let hardcoreMode = false;
     let funMode = false;
@@ -79,10 +86,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const WINSTREAKS_KEY = 'quizWinstreaks';
     const STATS_KEY = 'quizStats';
     const INITIAL_TIME = 30;
-    const CATEGORY_LABELS = { facil: 'Fácil', medio: 'Médio', dificil: 'Difícil', hardcore: 'Hardcore', lite: 'Sem Pressão' };
+    const CATEGORIES = { biblia: 'Bíblia', santos: 'Santos', concilios: 'Concílios', igreja: 'Igreja' };
+    const DIFFICULTY_LABELS = { facil: 'Fácil', medio: 'Médio', dificil: 'Difícil', hardcore: 'Hardcore', lite: 'Sem Pressão' };
 
     // ---- Storage helpers ----
-    function getCategoryKey(difficulty, hardcore) {
+    function getDifficultyKey(difficulty, hardcore) {
         if (hardcore) return 'hardcore';
         switch (difficulty) {
             case 'EASY': return 'facil';
@@ -91,6 +99,10 @@ document.addEventListener('DOMContentLoaded', () => {
             case 'LITE': return 'lite';
             default: return '';
         }
+    }
+
+    function getComboKey(category, difficultyKey) {
+        return `${category}|${difficultyKey}`;
     }
 
     function readStorage(key) {
@@ -109,40 +121,69 @@ document.addEventListener('DOMContentLoaded', () => {
         return readStorage(STATS_KEY);
     }
 
-    function saveAnswerStat(category, correct) {
-        if (!category) return;
+    function saveAnswerStat(comboKey, correct) {
+        if (!comboKey) return;
         const stats = getStats();
-        if (!stats[category]) {
-            stats[category] = { answered: 0, correct: 0 };
+        if (!stats[comboKey]) {
+            stats[comboKey] = { answered: 0, correct: 0 };
         }
-        stats[category].answered++;
+        stats[comboKey].answered++;
         if (correct) {
-            stats[category].correct++;
+            stats[comboKey].correct++;
         }
         localStorage.setItem(STATS_KEY, JSON.stringify(stats));
     }
 
     function maxWinstreak() {
-        return Object.values(getWinstreaks()).reduce((max, v) => Math.max(max, v), 0);
+        const streaks = getWinstreaks();
+        let max = 0;
+        getSelectedCategories().forEach(catKey => {
+            getSelectedDifficulties().forEach(diffKey => {
+                max = Math.max(max, streaks[getComboKey(catKey, diffKey)] || 0);
+            });
+        });
+        return max;
+    }
+
+    function getSelectedCategories() {
+        const checked = Array.from(filterCategoryInputs).filter(el => el.checked).map(el => el.value);
+        return checked.length > 0 ? checked : Object.keys(CATEGORIES);
+    }
+
+    function getSelectedDifficulties() {
+        const checked = Array.from(filterDifficultyInputs).filter(el => el.checked).map(el => el.value);
+        return checked.length > 0 ? checked : Object.keys(DIFFICULTY_LABELS);
     }
 
     // ---- Stats / export shared helpers ----
     function computeTotals() {
         const stats = getStats();
-        const rows = Object.entries(CATEGORY_LABELS).map(([key, label]) => {
-            const s = stats[key] || { answered: 0, correct: 0 };
-            const rate = s.answered > 0 ? Math.round((s.correct / s.answered) * 100) : 0;
-            return { label, answered: s.answered, correct: s.correct, rate };
+        const rows = [];
+        let totalAnswered = 0;
+        let totalCorrect = 0;
+        getSelectedCategories().forEach(catKey => {
+            getSelectedDifficulties().forEach(diffKey => {
+                const key = getComboKey(catKey, diffKey);
+                const s = stats[key] || { answered: 0, correct: 0 };
+                const rate = s.answered > 0 ? Math.round((s.correct / s.answered) * 100) : 0;
+                rows.push({
+                    categoryLabel: CATEGORIES[catKey],
+                    difficultyLabel: DIFFICULTY_LABELS[diffKey],
+                    answered: s.answered,
+                    correct: s.correct,
+                    rate
+                });
+                totalAnswered += s.answered;
+                totalCorrect += s.correct;
+            });
         });
-        const totalAnswered = rows.reduce((sum, r) => sum + r.answered, 0);
-        const totalCorrect = rows.reduce((sum, r) => sum + r.correct, 0);
         return { rows, totalAnswered, totalCorrect };
     }
 
     function displayStatsScreen() {
         const { rows, totalAnswered, totalCorrect } = computeTotals();
         statsTableBodyElement.innerHTML = rows.map(r =>
-            `<tr><td class="stats-label">${r.label}</td><td>${r.answered}</td><td>${r.correct}</td><td>${r.rate}%</td></tr>`
+            `<tr><td class="stats-label">${r.categoryLabel}</td><td>${r.difficultyLabel}</td><td>${r.answered}</td><td>${r.correct}</td><td>${r.rate}%</td></tr>`
         ).join('');
         statsTotalAnsweredElement.textContent = totalAnswered;
         statsTotalCorrectElement.textContent = totalCorrect;
@@ -160,7 +201,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const nonZeroRows = rows.filter(r => r.answered > 0);
         printTableBodyElement.innerHTML = nonZeroRows.map(r =>
-            `<tr><td>${r.label}</td><td>${r.answered}</td><td>${r.correct}</td><td>${r.rate}%</td></tr>`
+            `<tr><td>${r.categoryLabel}</td><td>${r.difficultyLabel}</td><td>${r.answered}</td><td>${r.correct}</td><td>${r.rate}%</td></tr>`
         ).join('');
 
         printTotalAnsweredElement.textContent = totalAnswered;
@@ -179,9 +220,10 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateDifficultyRecords() {
         const streaks = getWinstreaks();
         difficultyButtons.forEach(button => {
-            const category = getCategoryKey(button.dataset.difficulty, button.dataset.hardcore === 'true');
-            if (!category) return;
-            const record = streaks[category] || 0;
+            const difficultyKey = getDifficultyKey(button.dataset.difficulty, button.dataset.hardcore === 'true');
+            if (!difficultyKey || !selectedCategory) return;
+            const key = getComboKey(selectedCategory, difficultyKey);
+            const record = streaks[key] || 0;
             let recordSpan = button.querySelector('.difficulty-record');
             if (!recordSpan) {
                 recordSpan = document.createElement('span');
@@ -194,6 +236,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ---- Screen navigation ----
     function hideAllScreens() {
+        categorySelection.classList.add('hidden');
         difficultySelection.classList.add('hidden');
         helpScreen.classList.add('hidden');
         statsScreen.classList.add('hidden');
@@ -204,6 +247,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function showHome() {
+        hideAllScreens();
+        categorySelection.classList.remove('hidden');
+    }
+
+    function showDifficultySelection() {
+        difficultyPrompt.textContent = `Categoria: ${CATEGORIES[selectedCategory] || ''} — Escolha o nível de dificuldade:`;
         hideAllScreens();
         difficultySelection.classList.remove('hidden');
         updateDifficultyRecords();
@@ -217,8 +266,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // ---- Record tag ----
     function updateRecordTag() {
         if (gameOver) return;
-        const category = getCategoryKey(selectedDifficulty, hardcoreMode);
-        const record = getWinstreaks()[category] || 0;
+        const key = getComboKey(selectedCategory, getDifficultyKey(selectedDifficulty, hardcoreMode));
+        const record = getWinstreaks()[key] || 0;
         if (record <= 0 || correctScore <= 0) {
             recordTagElement.classList.add('hidden');
             return;
@@ -271,7 +320,8 @@ document.addEventListener('DOMContentLoaded', () => {
                         correctAnswerIndex: parseInt(parts[5]),
                         explanation: parts[6],
                         reference: parts[7],
-                        difficulty: parts[8].trim()
+                        difficulty: parts[8].trim(),
+                        category: parts.length > 9 ? parts[9].trim() : 'biblia'
                     };
                 });
             loadingMessage.classList.add('hidden');
@@ -285,9 +335,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ---- Game flow ----
     function buildQuestions() {
+        const base = allQuestions.filter(q => q.category === selectedCategory);
         if (funMode) {
             const grouped = {};
-            allQuestions.forEach(q => {
+            base.forEach(q => {
                 (grouped[q.difficulty] = grouped[q.difficulty] || []).push(q);
             });
             questions = [];
@@ -296,7 +347,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
             currentQuestionIndex = 0;
         } else {
-            questions = shuffleArray(allQuestions.filter(q => q.difficulty === (hardcoreMode ? 'HARD' : selectedDifficulty)));
+            questions = shuffleArray(base.filter(q => q.difficulty === (hardcoreMode ? 'HARD' : selectedDifficulty)));
         }
     }
 
@@ -316,6 +367,10 @@ document.addEventListener('DOMContentLoaded', () => {
         gameOver = false;
         resetGameState();
         buildQuestions();
+        if (questions.length === 0) {
+            showHome();
+            return;
+        }
         hideAllScreens();
         quizCard.classList.remove('hidden');
         scoreElement.classList.remove('hidden');
@@ -369,15 +424,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function showGameOverScreen(forcedLoss) {
         const lost = forcedLoss || correctScore < 2 * incorrectScore;
-        const category = getCategoryKey(selectedDifficulty, hardcoreMode);
-        const categoryLabel = CATEGORY_LABELS[category] || '';
-        let currentRecord = getWinstreaks()[category] || 0;
+        const difficultyKey = getDifficultyKey(selectedDifficulty, hardcoreMode);
+        const key = getComboKey(selectedCategory, difficultyKey);
+        const categoryLabel = CATEGORIES[selectedCategory] || '';
+        const difficultyLabel = DIFFICULTY_LABELS[difficultyKey] || '';
+        let currentRecord = getWinstreaks()[key] || 0;
         let newRecord = false;
 
         // In Lite mode the winstreak always counts when the game ends; otherwise only on a win.
-        if ((funMode || !lost) && category && correctScore > currentRecord) {
+        if ((funMode || !lost) && key && correctScore > currentRecord) {
             const streaks = getWinstreaks();
-            streaks[category] = correctScore;
+            streaks[key] = correctScore;
             localStorage.setItem(WINSTREAKS_KEY, JSON.stringify(streaks));
             newRecord = true;
             currentRecord = correctScore;
@@ -395,10 +452,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if (funMode) {
             // Lite: no win/lose result, only errors, corrects and the record.
             if (newRecord) {
-                gameOverNewRecordElement.textContent = `Novo recorde em ${categoryLabel}: ${currentRecord} acertos!`;
+                gameOverNewRecordElement.textContent = `Novo recorde em ${categoryLabel} · ${difficultyLabel}: ${currentRecord} acertos!`;
                 gameOverNewRecordElement.classList.remove('hidden');
-            } else if (category && currentRecord > 0) {
-                gameOverRecordElement.textContent = `Seu recorde em ${categoryLabel}: ${currentRecord} acertos`;
+            } else if (key && currentRecord > 0) {
+                gameOverRecordElement.textContent = `Seu recorde em ${categoryLabel} · ${difficultyLabel}: ${currentRecord} acertos`;
                 gameOverRecordElement.classList.remove('hidden');
             }
         } else {
@@ -406,10 +463,10 @@ document.addEventListener('DOMContentLoaded', () => {
             gameOverResultElement.classList.remove('hidden');
             gameOverResultElement.classList.add(lost ? 'lose' : 'win');
             if (newRecord) {
-                gameOverNewRecordElement.textContent = `Novo recorde em ${categoryLabel}: ${currentRecord} acertos!`;
+                gameOverNewRecordElement.textContent = `Novo recorde em ${categoryLabel} · ${difficultyLabel}: ${currentRecord} acertos!`;
                 gameOverNewRecordElement.classList.remove('hidden');
-            } else if (!lost && category && currentRecord > 0) {
-                gameOverRecordElement.textContent = `Seu recorde em ${categoryLabel}: ${currentRecord} acertos`;
+            } else if (!lost && key && currentRecord > 0) {
+                gameOverRecordElement.textContent = `Seu recorde em ${categoryLabel} · ${difficultyLabel}: ${currentRecord} acertos`;
                 gameOverRecordElement.classList.remove('hidden');
             }
         }
@@ -483,8 +540,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const currentQuestion = questions[currentQuestionIndex];
         const isCorrect = selectedIndex === currentQuestion.correctAnswerIndex;
-        const statCategory = funMode ? 'lite' : getCategoryKey(selectedDifficulty, hardcoreMode);
-        saveAnswerStat(statCategory, isCorrect);
+        const statKey = getComboKey(selectedCategory, getDifficultyKey(selectedDifficulty, hardcoreMode));
+        saveAnswerStat(statKey, isCorrect);
 
         Array.from(alternativesContainer.children).forEach(button => {
             button.disabled = true;
@@ -611,14 +668,27 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    helpBtn.addEventListener('click', () => openScreen(helpScreen, difficultySelection));
+    categoryButtons.forEach(button => {
+        button.addEventListener('click', (event) => {
+            const clickedButton = event.target.closest('.category-btn') || event.target;
+            selectedCategory = clickedButton.dataset.category;
+            showDifficultySelection();
+        });
+    });
+
+    changeCategoryBtn.addEventListener('click', () => showHome());
+
+    helpBtn.addEventListener('click', () => openScreen(helpScreen, categorySelection));
     helpBackBtn.addEventListener('click', () => showHome());
 
     statsBtn.addEventListener('click', () => {
         displayStatsScreen();
-        openScreen(statsScreen, difficultySelection);
+        openScreen(statsScreen, categorySelection);
     });
     statsBackBtn.addEventListener('click', () => showHome());
+
+    filterCategoryInputs.forEach(input => input.addEventListener('change', displayStatsScreen));
+    filterDifficultyInputs.forEach(input => input.addEventListener('change', displayStatsScreen));
 
     restartBtn.addEventListener('click', () => startGame());
     exitBtn.addEventListener('click', () => showHome());
