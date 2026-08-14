@@ -670,72 +670,152 @@ header h1 {
         padding: 20px 16px;
         font-size: 1.1em;
     }
+
+    .difficulty-selection {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .difficulty-btn {
+        min-height: 110px;
+        padding: 20px 16px;
+        font-size: 1.1em;
+    }
+
+    .fun-btn {
+        width: 100%;
+    }
 }
 
 
 .difficulty-btn {
     width: 100%;
-    padding: 15px 20px;
-    font-size: 1.2em;
-    background: rgba(255, 255, 255, 0.07);
+    padding: 24px 20px;
+    font-size: 1.15em;
+    background: rgba(255, 255, 255, 0.06);
     color: var(--color-cream-soft);
-    border: 1px solid rgba(212, 175, 55, 0.5);
-    margin-top: 0;
-    border-radius: 8px;
-    transition: background-color 0.3s ease, transform 0.15s ease, border-color 0.3s ease;
+    border: 1px solid var(--color-gold-border);
+    border-radius: 12px;
+    transition: background-color 0.3s ease, transform 0.15s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 130px;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
 }
 
 .difficulty-btn:hover {
-    transform: translateY(-2px);
+    transform: translateY(-3px);
     border-color: var(--color-gold);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
 
+/* Difficulty accent colors - subtle, within palette */
 .easy-btn {
-    background: rgba(243, 168, 162, 0.18); /* Muted pink */
-    border-color: rgba(243, 168, 162, 0.4);
+    background: linear-gradient(145deg, rgba(243, 168, 162, 0.12), rgba(243, 168, 162, 0.06));
+    border-color: rgba(243, 168, 162, 0.35);
+}
+.easy-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #F3A8A2, rgba(243, 168, 162, 0.5));
+    border-radius: 12px 12px 0 0;
+    opacity: 0.7;
+}
+.easy-btn:hover {
+    background: linear-gradient(145deg, rgba(243, 168, 162, 0.18), rgba(243, 168, 162, 0.1));
+    border-color: #F3A8A2;
 }
 
 .medium-btn {
-    background: rgba(231, 111, 81, 0.18); /* Muted orange */
-    border-color: rgba(231, 111, 81, 0.4);
+    background: linear-gradient(145deg, rgba(231, 111, 81, 0.12), rgba(231, 111, 81, 0.06));
+    border-color: rgba(231, 111, 81, 0.35);
+}
+.medium-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #E76F51, rgba(231, 111, 81, 0.5));
+    border-radius: 12px 12px 0 0;
+    opacity: 0.7;
+}
+.medium-btn:hover {
+    background: linear-gradient(145deg, rgba(231, 111, 81, 0.18), rgba(231, 111, 81, 0.1));
+    border-color: #E76F51;
 }
 
 .hard-btn {
-    background: rgba(214, 40, 40, 0.22); /* Muted red */
-    border-color: rgba(214, 40, 40, 0.45);
+    background: linear-gradient(145deg, rgba(214, 40, 40, 0.12), rgba(214, 40, 40, 0.06));
+    border-color: rgba(214, 40, 40, 0.35);
+}
+.hard-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #D62828, rgba(214, 40, 40, 0.5));
+    border-radius: 12px 12px 0 0;
+    opacity: 0.7;
+}
+.hard-btn:hover {
+    background: linear-gradient(145deg, rgba(214, 40, 40, 0.18), rgba(214, 40, 40, 0.1));
+    border-color: #D62828;
 }
 
 .hardcore-btn {
-    background: rgba(122, 29, 43, 0.45); /* Deep wine */
-    border-color: rgba(212, 175, 55, 0.55);
+    background: linear-gradient(145deg, rgba(122, 29, 43, 0.15), rgba(122, 29, 43, 0.08));
+    border-color: rgba(122, 29, 43, 0.4);
+}
+.hardcore-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #7A1D2B, rgba(122, 29, 43, 0.5));
+    border-radius: 12px 12px 0 0;
+    opacity: 0.7;
+}
+.hardcore-btn:hover {
+    background: linear-gradient(145deg, rgba(122, 29, 43, 0.22), rgba(122, 29, 43, 0.12));
+    border-color: #7A1D2B;
 }
 
 .fun-btn {
     grid-column: 1 / -1;
     justify-self: center;
     width: calc(50% - 7.5px);
-    background: rgba(90, 164, 105, 0.2); /* Muted green */
-    border-color: rgba(90, 164, 105, 0.4);
+    background: linear-gradient(145deg, rgba(90, 164, 105, 0.12), rgba(90, 164, 105, 0.06));
+    border-color: rgba(90, 164, 105, 0.35);
 }
-
-.easy-btn:hover {
-    background: rgba(243, 168, 162, 0.3); /* Slightly stronger pink on hover */
+.fun-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #5AA469, rgba(90, 164, 105, 0.5));
+    border-radius: 12px 12px 0 0;
+    opacity: 0.7;
 }
-
-.medium-btn:hover {
-    background: rgba(231, 111, 81, 0.3); /* Slightly stronger orange on hover */
-}
-
-.hard-btn:hover {
-    background: rgba(214, 40, 40, 0.35); /* Slightly stronger red on hover */
-}
-
-.hardcore-btn:hover {
-    background: rgba(122, 29, 43, 0.6); /* Slightly stronger wine on hover */
-}
-
 .fun-btn:hover {
-    background: rgba(90, 164, 105, 0.32); /* Slightly stronger green on hover */
+    background: linear-gradient(145deg, rgba(90, 164, 105, 0.18), rgba(90, 164, 105, 0.1));
+    border-color: #5AA469;
 }
 
 .difficulty-tag {
