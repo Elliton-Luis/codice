@@ -65,6 +65,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const filterCategoryInputs = document.querySelectorAll('.filter-category');
     const filterDifficultyInputs = document.querySelectorAll('.filter-difficulty');
 
+    // Time selection elements
+    const timeSelection = document.getElementById('time-selection');
+    const timePrompt = document.getElementById('time-prompt');
+    const timeButtons = document.querySelectorAll('.time-btn');
+    const changeDifficultyBtn = document.getElementById('change-difficulty-btn');
+    const customTimeInput = document.getElementById('custom-time-input');
+    const customTimeValue = document.getElementById('custom-time-value');
+    const confirmCustomTimeBtn = document.getElementById('confirm-custom-time');
+
     // ---- Game state ----
     let allQuestions = [];
     let questions = [];
@@ -82,10 +91,11 @@ document.addEventListener('DOMContentLoaded', () => {
     let funMode = false;
     let funCompleted = false;
     let timerPaused = false;
+    let selectedInitialTime = 30; // Default initial time
 
     const WINSTREAKS_KEY = 'quizWinstreaks';
     const STATS_KEY = 'quizStats';
-    const INITIAL_TIME = 30;
+    const DEFAULT_INITIAL_TIME = 30;
     const CATEGORIES = { biblia: 'Bíblia', santos: 'Santos', concilios: 'Concílios', igreja: 'Igreja' };
     const DIFFICULTY_LABELS = { facil: 'Fácil', medio: 'Médio', dificil: 'Difícil', hardcore: 'Hardcore', lite: 'Sem Pressão' };
 
@@ -238,6 +248,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function hideAllScreens() {
         categorySelection.classList.add('hidden');
         difficultySelection.classList.add('hidden');
+        timeSelection.classList.add('hidden');
         helpScreen.classList.add('hidden');
         statsScreen.classList.add('hidden');
         gameOverScreen.classList.add('hidden');
@@ -256,6 +267,19 @@ document.addEventListener('DOMContentLoaded', () => {
         hideAllScreens();
         difficultySelection.classList.remove('hidden');
         updateDifficultyRecords();
+    }
+
+    function showTimeSelection() {
+        const categoryLabel = CATEGORIES[selectedCategory] || '';
+        const difficultyLabel = DIFFICULTY_LABELS[getDifficultyKey(selectedDifficulty, hardcoreMode)] || '';
+        timePrompt.textContent = `${categoryLabel} · ${difficultyLabel} — Escolha o tempo inicial:`;
+        
+        // Hide custom input initially
+        customTimeInput.classList.add('hidden');
+        customTimeValue.value = '';
+        
+        hideAllScreens();
+        timeSelection.classList.remove('hidden');
     }
 
     function openScreen(open, close) {
@@ -349,7 +373,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function resetGameState() {
         correctScore = 0;
         incorrectScore = 0;
-        timeLeft = INITIAL_TIME;
+        timeLeft = selectedInitialTime;
         currentQuestionIndex = 0;
         answeredQuestions.clear();
         funCompleted = false;
@@ -385,7 +409,12 @@ document.addEventListener('DOMContentLoaded', () => {
         selectedDifficulty = difficulty;
         hardcoreMode = hardcore;
         funMode = fun;
-        startGame();
+        if (funMode) {
+            // Sem Pressão mode doesn't use timer, go straight to game
+            startGame();
+        } else {
+            showTimeSelection();
+        }
     }
 
     function startCronometer() {
@@ -670,6 +699,42 @@ document.addEventListener('DOMContentLoaded', () => {
             showDifficultySelection();
         });
     });
+
+    // Time selection event listeners
+    timeButtons.forEach(button => {
+        button.addEventListener('click', (event) => {
+            const clickedButton = event.target.closest('.time-btn') || event.target;
+            const timeValue = clickedButton.dataset.time;
+            
+            if (timeValue === 'custom') {
+                customTimeInput.classList.remove('hidden');
+                customTimeValue.focus();
+            } else {
+                selectedInitialTime = parseInt(timeValue, 10);
+                startGame();
+            }
+        });
+    });
+
+    confirmCustomTimeBtn.addEventListener('click', () => {
+        const value = parseInt(customTimeValue.value, 10);
+        if (isNaN(value) || value < 10 || value > 600) {
+            alert('Por favor, insira um valor entre 10 e 600 segundos.');
+            customTimeValue.focus();
+            return;
+        }
+        selectedInitialTime = value;
+        startGame();
+    });
+
+    // Allow Enter key in custom time input
+    customTimeValue.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') {
+            confirmCustomTimeBtn.click();
+        }
+    });
+
+    changeDifficultyBtn.addEventListener('click', () => showDifficultySelection());
 
     changeCategoryBtn.addEventListener('click', () => showHome());
 

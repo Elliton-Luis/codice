@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz Bíblico Católico</title>
+    <title>Códice - Quiz Teológico</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="cruz.jpg" type="image/x-icon">
 </head>
 <body>
     <div class="container">
-        <header>
-            <p class="header-ornament">✝</p>
-            <h1>Quiz Bíblico Católico</h1>
+<header>
+            <p class="header-ornament">���</p>
+            <h1>Códice</h1>
+            <p class="header-subtitle">Quiz Teológico</p>
             <div class="header-divider">
                 <span class="header-divider-line"></span>
                 <span class="header-divider-diamond">◆</span>
@@ -61,6 +62,23 @@
                 </div>
             </div>
 
+            <div id="time-selection" class="time-selection hidden">
+                <p class="selection-prompt" id="time-prompt">Escolha o tempo inicial da partida:</p>
+                <div class="time-options">
+                    <button class="button time-btn" data-time="30">30 segundos</button>
+                    <button class="button time-btn" data-time="45">45 segundos</button>
+                    <button class="button time-btn" data-time="60">60 segundos</button>
+                    <button class="button time-btn time-custom-btn" data-time="custom">Personalizado</button>
+                </div>
+                <div id="custom-time-input" class="custom-time-input hidden">
+                    <input type="number" id="custom-time-value" class="custom-time-field" min="10" max="600" placeholder="Segundos (10-600)">
+                    <button id="confirm-custom-time" class="button">Confirmar</button>
+                </div>
+                <div class="secondary-buttons">
+                    <button id="change-difficulty-btn" class="button">Trocar Dificuldade</button>
+                </div>
+            </div>
+
             <div id="help-screen" class="help-screen hidden">
                 <h2 class="help-title">Como Jogar</h2>
                 <div class="help-list">
@@ -70,7 +88,7 @@
                     </div>
                     <div class="help-item">
                         <span class="badge badge-timer">Tempo</span>
-                        <p class="help-text">O tempo de jogo começa em 30 segundos.</p>
+                        <p class="help-text">O tempo de jogo é escolhido antes de começar (30s, 45s, 60s ou personalizado).</p>
                     </div>
                     <div class="help-item">
                         <span class="badge badge-pause">Pausa</span>
@@ -197,10 +215,10 @@
     </div>
     <div id="print-area" class="print-area">
         <div class="print-card">
-            <div class="print-inner">
-                <div class="print-ornament">✝</div>
-                <h1 class="print-title">Quiz Bíblico Católico</h1>
-                <p class="print-subtitle">Meu desempenho no jogo</p>
+<div class="print-inner">
+                <div class="print-ornament">���</div>
+                <h1 class="print-title">Códice</h1>
+                <p class="print-subtitle">Quiz Teológico</p>
                 <div class="print-divider">
                     <span class="print-divider-line"></span>
                     <span class="print-divider-diamond">◆</span>
@@ -244,7 +262,7 @@
                     <p class="print-quote-author">— São Tomás de Aquino</p>
                 </div>
                 <div class="print-footer">
-                    <p class="print-footer-brand">Quiz Bíblico Católico</p>
+                    <p class="print-footer-brand">Códice - Quiz Teológico</p>
                     <p class="print-footer-date"><span id="print-date"></span></p>
                 </div>
             </div>
